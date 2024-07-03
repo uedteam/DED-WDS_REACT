@@ -2,10 +2,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   root: __dirname,
   cacheDir: './node_modules/.vite/AUO-DED-WDS',
+  resolve: {
+    alias: {
+      '@ui': '/src/ui',
+      '@style': '/src/style',
+      '@assets': '/src/assets',
+    },
+  },
 
   server: {
     port: 4200,
@@ -17,7 +25,7 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [react(), nxViteTsPaths(), svgr()],
 
   // Uncomment this if you are using workers.
   // worker: {
