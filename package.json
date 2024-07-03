@@ -10,8 +10,9 @@
     "reset": "nx reset",
     "report": "nx report",
     "storybook": "nx storybook",
+    "deploy": "nx build && gh-pages -d dist/AUO-DED-WDS",
     "build-storybook": "nx build-storybook",
-    "deploy": "nx build-storybook && gh-pages -d dist/storybook/ui"
+    "deploy-storybook": "nx build-storybook && gh-pages -d dist/storybook/ui"
   },
   "private": true,
   "dependencies": {
