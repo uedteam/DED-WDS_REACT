@@ -2,6 +2,7 @@
   "name": "@auo-ded-wds/source",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://uedteam.github.io/AUO-DED-WDS",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
