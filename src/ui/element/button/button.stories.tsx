@@ -66,7 +66,7 @@ export const Primary: Story = {
     children: '標準按鈕',
     suffix: <Account />,
     onClick: () => action('onClick')('點擊事件'),
-    className: 'btn-contained',
+    className: 'btn-custom',
   },
   render(args) {
     return <Button {...args}>{args.children}</Button>;

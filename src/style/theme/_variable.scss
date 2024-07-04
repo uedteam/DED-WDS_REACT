@@ -1,0 +1,144 @@
+$primary-default: #533BD4;
+$primary-hover: #533BD4;
+$secondary-default: #68E1FE;
+$secondary-hover: #4DC8E4;
+$tertiary-default: #EF68FF;
+$tertiary-hover: #D94DE4;
+$disabled: #EEEEEE;
+$black: #000000;
+$white: #ffffff;
+
+// 色彩設定
+// 佈局位置: 依照需求填入色票
+// e.g. header: #5F6873
+$color-layout-header: #5F6873;
+$color-layout-background: #5F6873;
+$color-layout-sidebar: #5F6873;
+
+// 色彩設定
+// 圖示背景: 依照需求填入色票
+// e.g. header: #5F6873
+$color-icon-primary: $primary-default;
+$color-icon-secondary: $secondary-default;
+$color-icon-disabled: $disabled;
+
+// 色彩設定
+// 邊框: 依照需求填入色票
+// e.g. header: #5F6873
+$color-border-default: #D9D9D9;
+$color-border-selected: #FF6B00;
+$color-border-disabled: #D9D9D9;
+
+// 色彩設定
+// 文字: 依照需求填入色票
+// e.g. primary: #1C1C1C
+$color-text-primary: #1C1C1C;
+$color-text-secondary: #4D4D4D;
+$color-text-helper: #808080;
+$color-text-placeholder: #CCCCCC;
+
+// 色彩設定
+// 支援狀態: 依照需求填入色票
+// e.g. success: #B1F04C
+$color-support-success: #B1F04C;
+$color-support-warning: #FFBE77;
+$color-support-error: #FF5E5E;
+$color-support-info: #68C6F2;
+
+// 色彩設定
+// 骨架屏: 依照需求填入色票
+// e.g. element: #E0E0E0
+$color-skeleton-element: #E0E0E0;
+$color-skeleton-background: #F0F0F0;
+
+$color-btn-primary-default: $primary-default;
+$color-btn-primary-hover: $primary-hover;
+
+$color-btn-secondary-default: $secondary-default;
+$color-btn-secondary-hover: $secondary-hover;
+
+// 陰影設定
+// 亮版: 依照需求填入樣式參數
+// e.g. light1: 0px 1px 2px #0000001a
+$shadow-light1: 0px 1px 2px #0000001a;
+$shadow-light2: 0px 1px 2px #00000026, 0px 1px 4px #0000001a;
+$shadow-light3: 0px 4px 6px -1px #0000001a, 0px 2px 4px -1px #00000026;
+$shadow-light4: 0px 4px 6px -2px #00000026, 0px 3px 20px -5px #0000001a;
+$shadow-light5: 0px 10px 25px -5px #00000026, 0px 2px 6px -2px #0000001a;
+
+// 陰影設定
+// 暗版: 依照需求填入樣式參數
+// e.g. dark1: 0px 1px 2px #0000004d
+$shadow-dark1: 0px 1px 2px #0000004d;
+$shadow-dark2: 0px 1px 2px #00000033, 0px 1px 4px #00000066;
+$shadow-dark3: 0px 4px 6px -1px #0000001a, 0px 2px 4px -1px #0000004d;
+$shadow-dark4: 0px 4px 6px -2px #00000033, 0px 3px 20px -5px #00000033;
+$shadow-dark5: 0px 10px 25px -5px #0000004d, 0px 2px 6px -2px #00000040;
+
+// 圓角設定
+// 尺寸: 依照需求填入樣式參數
+// e.g. xsmall: 4px
+$radius-xsmall: 4px;
+$radius-small: 8px;
+$radius-medium: 16px;
+$radius-large: 24px;
+$radius-xlarge: 32px;
+$radius-circle: 50%;
+
+// 間距設定
+// 尺寸: 依照需求填入樣式參數
+// e.g. gap1: 8px
+$space-gap1: 8px;
+$space-gap2: 16px;
+$space-gap3: 24px;
+$space-gap4: 32px;
+$space-gap5: 40px;
+$space-gap6: 48px;
+$space-gap7: 56px;
+$space-gap8: 64px;
+
+// 斷點設定
+// 裝置: 依照需求填入樣式參數
+// e.g. mobile: 375px
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+$breakpoint-large-desktop: 1920px;
+
+// 字體設定
+// 語系: 依照需求填入字型
+// e.g. cn: Noto Sans, sans-serif
+$text-cn: 'Noto Sans, sans-serif';
+$text-en: 'Arial, sans-serif';
+
+// 字體設定
+// 字重: 依照需求填入字重 
+// e.g. regular: '400/regular', bold: '700/bold'
+$text-regular: 'regular';
+$text-bold: 'bold';
+
+// 字體設定
+// 斜體: 依照需求填入字型樣式
+// e.g. italic: 'italic'
+$text-italic: 'italic';
+
+// 字體設定
+// 標題: 依照需求填入字型大小
+// e.g. heading1: '40px'
+$text-heading1: 40px;
+$text-heading2: 30px;
+$text-heading3: 24px;
+$text-heading4: 20px;
+$text-heading5: 18px;
+$text-heading6: 16px;
+
+// 字體設定
+// 內文: 依照需求填入字型大小
+// e.g. body1: '16px'
+$text-body1: 16px;
+$text-body2: 15px;
+
+// 字體設定
+// 註解: 依照需求填入字型大小
+// e.g. caption1: '14px'
+$text-caption1: 14px;
+$text-caption2: 13px;

@@ -15,7 +15,11 @@ export function Button(props: ButtonProps) {
     props;
 
   return (
-    <button {...rest} className={getStyle(variant)} onClick={onClick}>
+    <button
+      {...rest}
+      className={`button ${className || getStyle(variant)}`}
+      onClick={onClick}
+    >
       {prefix}
       {children}
       {suffix}
