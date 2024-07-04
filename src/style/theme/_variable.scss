@@ -1,26 +1,68 @@
-$primary-default: #533BD4;
-$primary-hover: #533BD4;
-$secondary-default: #68E1FE;
-$secondary-hover: #4DC8E4;
-$tertiary-default: #EF68FF;
-$tertiary-hover: #D94DE4;
-$disabled: #EEEEEE;
-$black: #000000;
-$white: #ffffff;
+@use 'sass:color';
+
+$brightness-hover: 20%;
+
+// 主題色票
+// light
+$color-light-primary: #533BD4;
+$color-light-secondary: #4ADCFF;
+$color-light-tertiary: #F96CC0;
+
+// 主題色票
+// dark
+$color-dark-primary: #533BD4;
+$color-dark-secondary: #68E1FE;
+$color-dark-tertiary: #EF68FF;
+
+// 支援色票
+// light
+$color-light-success: #28C76F;
+$color-light-warning: #FF9F43;
+$color-light-error: #FF4C51;
+$color-light-info: #00BAD1;
+
+// 支援色票
+// dark
+$color-dark-success: #B1F04C;
+$color-dark-warning: #FFBE77;
+$color-dark-error: #FF5E5E;
+$color-dark-info: #68C6F2;
+
+// 灰階色票
+// e.g. $color-white: #FFFFFF
+$color-white: #FFFFFF;
+$color-gray10: #EEEEEE;
+$color-gray20: #CCCCCC;
+$color-gray30: #B2B2B2;
+$color-gray40: #999999;
+$color-gray50: #808080;
+$color-gray60: #666666;
+$color-gray70: #4D4D4D;
+$color-gray80: #333333;
+$color-gray90: #1C1C1C;
+$color-black: #000000;
+
+// 狀態色票
+$color-disabled: $color-gray10;
 
 // 色彩設定
-// 佈局位置: 依照需求填入色票
-// e.g. header: #5F6873
-$color-layout-header: #5F6873;
-$color-layout-background: #5F6873;
-$color-layout-sidebar: #5F6873;
+// light
+$color-light-layout-header: #EBEBEB;
+$color-light-layout-background: #FFFFFF;
+$color-light-layout-sidebar: #FFFFFF;
+
+// 色彩設定
+// dark
+$color-dark-layout-header: #020202;
+$color-dark-layout-background: #292929;
+$color-dark-layout-sidebar: #222222;
 
 // 色彩設定
 // 圖示背景: 依照需求填入色票
 // e.g. header: #5F6873
-$color-icon-primary: $primary-default;
-$color-icon-secondary: $secondary-default;
-$color-icon-disabled: $disabled;
+$color-icon-primary: $color-light-primary;
+$color-icon-secondary: $color-light-secondary;
+$color-icon-disabled: $color-disabled;
 
 // 色彩設定
 // 邊框: 依照需求填入色票
@@ -38,24 +80,16 @@ $color-text-helper: #808080;
 $color-text-placeholder: #CCCCCC;
 
 // 色彩設定
-// 支援狀態: 依照需求填入色票
-// e.g. success: #B1F04C
-$color-support-success: #B1F04C;
-$color-support-warning: #FFBE77;
-$color-support-error: #FF5E5E;
-$color-support-info: #68C6F2;
-
-// 色彩設定
 // 骨架屏: 依照需求填入色票
 // e.g. element: #E0E0E0
 $color-skeleton-element: #E0E0E0;
 $color-skeleton-background: #F0F0F0;
 
-$color-btn-primary-default: $primary-default;
-$color-btn-primary-hover: $primary-hover;
+$color-btn-primary-default: $color-light-primary;
+$color-btn-primary-hover: color.scale($color-light-primary, $lightness: $brightness-hover);
 
-$color-btn-secondary-default: $secondary-default;
-$color-btn-secondary-hover: $secondary-hover;
+$color-btn-secondary-default: $color-light-secondary;
+$color-btn-secondary-hover: color.scale($color-light-primary, $lightness: $brightness-hover);
 
 // 陰影設定
 // 亮版: 依照需求填入樣式參數

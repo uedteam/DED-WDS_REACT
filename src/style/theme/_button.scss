@@ -30,6 +30,10 @@
   &:hover {
     box-shadow: $shadow-dark1;
   }
+
+  &:active {
+    box-shadow: unset;
+  }
 }
 
 .btn-error {
