@@ -1,6 +1,7 @@
 {
-  "name": "@auo-ded-wds/source",
-  "version": "0.0.0",
+  "name": "wds",
+  "version": "1.0.4",
+  "description": "Web Design System",
   "license": "MIT",
   "homepage": "https://uedteam.github.io/DED-WDS",
   "scripts": {
@@ -14,7 +15,31 @@
     "build-storybook": "nx build-storybook",
     "deploy-storybook": "nx build-storybook && gh-pages -d dist/storybook/ui"
   },
-  "private": true,
+  "main": "dist/AUO-DED-WDS/assets/index-CmQYqbb6.js",
+  "author": "Kevin Yang <kevin.kk.yang@auo.com>",
+  "contributors": [
+    "Amos Lee <amos.lee@auo.com>"
+  ],
+  "engines": {
+    "node": ">=18",
+    "npm": ">=10"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uedteam/DED-WDS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uedteam/DED-WDS/issues"
+  },
+  "keywords": [
+    "ded",
+    "design system",
+    "wds",
+    "ds"
+  ],
   "dependencies": {
     "@nrwl/cli": "^15.9.3",
     "gh-pages": "^6.1.1",
