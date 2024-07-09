@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as r}from"./index-DbIxU3Ed.js";import{M as i,h as m}from"./index-BNxFl4Pv.js";import"./index-l2PZgWEW.js";import"./iframe-Cp4q1vLh.js";import"../sb-preview/runtime.js";import"./index-CaNG7YX3.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";const s=`## V1.0.0 (Mon July 1 2024)
+import{j as n}from"./jsx-runtime-DWbWqHZ-.js";import{useMDXComponents as r}from"./index-DbIxU3Ed.js";import{M as i,f as m}from"./index-CqZIRVww.js";import"./index-l2PZgWEW.js";import"./iframe-C0IkA0O7.js";import"../sb-preview/runtime.js";import"./index-CaNG7YX3.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";const s=`## V1.0.0 (Mon July 1 2024)
 
 ✨ New Feature
 
