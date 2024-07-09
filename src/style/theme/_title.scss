@@ -1,0 +1,33 @@
+.title {
+  font-size: $text-heading1;
+  font-weight: $text-regular;
+  color: currentColor;
+
+  &-primary {
+    color: $color-title-primary;
+  }
+
+  &-secondary {
+    color: $color-title-secondary;
+  }
+
+  &-tertiary {
+    color: $color-title-tertiary;
+  }
+
+  &-success {
+    color: $color-title-success;
+  }
+
+  &-warning {
+    color: $color-title-warning;
+  }
+
+  &-error {
+    color: $color-title-error;
+  }
+
+  &-info {
+    color: $color-title-info;
+  }
+}

@@ -1,6 +1,9 @@
-@use 'sass:color';
-
-$brightness-hover: 20%;
+$mode: 'dark';
+$lightness-hover: 20%;
+$darken-active: -20%;
+$input-border-width: 1px;
+$btn-border-width: 2px;
+$border-radius: 8px;
 
 // 主題色票
 // light
@@ -66,10 +69,10 @@ $color-icon-disabled: $color-disabled;
 
 // 色彩設定
 // 邊框: 依照需求填入色票
-// e.g. header: #5F6873
-$color-border-default: #D9D9D9;
-$color-border-selected: #FF6B00;
-$color-border-disabled: #D9D9D9;
+// e.g. color-border-default: #5F6873
+$color-border-default: $color-gray40;
+$color-border-selected: $color-light-primary;
+$color-border-disabled: $color-gray20;
 
 // 色彩設定
 // 文字: 依照需求填入色票
@@ -85,11 +88,63 @@ $color-text-placeholder: #CCCCCC;
 $color-skeleton-element: #E0E0E0;
 $color-skeleton-background: #F0F0F0;
 
-$color-btn-primary-default: $color-light-primary;
-$color-btn-primary-hover: color.scale($color-light-primary, $lightness: $brightness-hover);
+// 按鈕色彩設定
+// Primary
+$color-btn-primary-default: getDarkLightColor($mode, $color-light-primary, $color-dark-primary);
+$color-btn-primary-hover: getStatusColor(getDarkLightColor($mode, $color-light-primary, $color-dark-primary), $lightness-hover);
+$color-btn-primary-active: getStatusColor(getDarkLightColor($mode, $color-light-primary, $color-dark-primary), $darken-active);
 
-$color-btn-secondary-default: $color-light-secondary;
-$color-btn-secondary-hover: color.scale($color-light-primary, $lightness: $brightness-hover);
+// Secondary
+$color-btn-secondary-default: getDarkLightColor($mode, $color-light-secondary, $color-dark-secondary);
+$color-btn-secondary-hover: getStatusColor(getDarkLightColor($mode, $color-light-secondary, $color-dark-secondary), $lightness-hover);
+$color-btn-secondary-active: getStatusColor(getDarkLightColor($mode, $color-light-secondary, $color-dark-secondary), $darken-active);
+
+// tertiary
+$color-btn-tertiary-default: getDarkLightColor($mode, $color-light-tertiary, $color-dark-tertiary);
+$color-btn-tertiary-hover: getStatusColor(getDarkLightColor($mode, $color-light-tertiary, $color-dark-tertiary), $lightness-hover);
+$color-btn-tertiary-active: getStatusColor(getDarkLightColor($mode, $color-light-tertiary, $color-dark-tertiary), $darken-active);
+
+// success
+$color-btn-success-default: getDarkLightColor($mode, $color-light-success, $color-dark-success);
+$color-btn-success-hover: getStatusColor(getDarkLightColor($mode, $color-light-success, $color-dark-success), $lightness-hover);
+$color-btn-success-active: getStatusColor(getDarkLightColor($mode, $color-light-success, $color-dark-success), $darken-active);
+
+// warning
+$color-btn-warning-default: getDarkLightColor($mode, $color-light-warning, $color-dark-warning);
+$color-btn-warning-hover: getStatusColor(getDarkLightColor($mode, $color-light-warning, $color-dark-warning), $lightness-hover);
+$color-btn-warning-active: getStatusColor(getDarkLightColor($mode, $color-light-warning, $color-dark-warning), $darken-active);
+
+// warning
+$color-btn-error-default: getDarkLightColor($mode, $color-light-error, $color-dark-error);
+$color-btn-error-hover: getStatusColor(getDarkLightColor($mode, $color-light-error, $color-dark-error), $lightness-hover);
+$color-btn-error-active: getStatusColor(getDarkLightColor($mode, $color-light-error, $color-dark-error), $darken-active);
+
+// info
+$color-btn-info-default: getDarkLightColor($mode, $color-light-info, $color-dark-info);
+$color-btn-info-hover: getStatusColor(getDarkLightColor($mode, $color-light-info, $color-dark-info), $lightness-hover);
+$color-btn-info-active: getStatusColor(getDarkLightColor($mode, $color-light-info, $color-dark-info), $darken-active);
+
+// 標題顏色設定
+// Primary
+$color-title-primary: getDarkLightColor($mode, $color-light-primary, $color-dark-primary);
+
+// Secondary
+$color-title-secondary: getDarkLightColor($mode, $color-light-secondary, $color-dark-secondary);
+
+// Tertiary
+$color-title-tertiary: getDarkLightColor($mode, $color-light-tertiary, $color-dark-tertiary);
+
+// Success
+$color-title-success: getDarkLightColor($mode, $color-light-success, $color-dark-success);
+
+// Warning
+$color-title-warning: getDarkLightColor($mode, $color-light-warning, $color-dark-warning);
+
+// Error
+$color-title-error: getDarkLightColor($mode, $color-light-error, $color-dark-error);
+
+// Info
+$color-title-info: getDarkLightColor($mode, $color-light-info, $color-dark-info);
 
 // 陰影設定
 // 亮版: 依照需求填入樣式參數

@@ -1,7 +1,8 @@
+@import './theme/_function';
 @import './theme/_variable';
-// @import './theme/function';
-// @import './theme/_dark_light';
+@import './theme/_title';
 @import './theme/_button';
+@import './theme/_input';
 @import './custom';
 
 * {
@@ -13,9 +14,3 @@
   line-height: 1.5;
   font-family: 'Noto Sans', Arial, sans-serif;
 }
-
-
-// @font-face {
-//   font-family: 'Noto Sans';
-//   src: url();
-// }

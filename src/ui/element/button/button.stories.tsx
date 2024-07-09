@@ -1,7 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
+import { Title } from '../title';
 import { Button } from './button';
-import Account from '@assets/account_circle.svg?react';
+// import Account from '@assets/account_circle.svg?react';
 
 export default {
   title: 'Design System/Atoms/Button',
@@ -19,7 +20,22 @@ export default {
       description: '按鈕樣式',
       control: {
         type: 'select',
-        options: ['primary', 'secondary', 'alert'],
+        options: ['contained', 'outlined', 'text'],
+      },
+    },
+    themeColor: {
+      description: '按鈕顏色',
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'secondary',
+          'tertiary',
+          'success',
+          'warning',
+          'error',
+          'info',
+        ],
       },
     },
     children: {
@@ -28,18 +44,18 @@ export default {
         type: 'text',
       },
     },
-    prefix: {
-      description: '前置元素',
-      control: {
-        type: 'text',
-      },
-    },
-    suffix: {
-      description: '後置元素',
-      control: {
-        type: 'text',
-      },
-    },
+    // prefix: {
+    //   description: '前置元素',
+    //   control: {
+    //     type: 'text',
+    //   },
+    // },
+    // suffix: {
+    //   description: '後置元素',
+    //   control: {
+    //     type: 'text',
+    //   },
+    // },
     onClick: {
       description: '點擊事件',
       action: 'clicked',
@@ -62,11 +78,12 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   name: '標準按鈕',
   args: {
-    variant: 'contained',
-    children: '標準按鈕',
-    suffix: <Account />,
+    variant: 'outlined',
+    themeColor: 'primary',
+    children: <Title level={3}>標題按鈕</Title>,
+    // suffix: <Account />,
     onClick: () => action('onClick')('點擊事件'),
-    className: 'btn-custom',
+    className: '',
   },
   render(args) {
     return <Button {...args}>{args.children}</Button>;
