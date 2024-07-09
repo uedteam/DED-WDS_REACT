@@ -1,0 +1,14 @@
+.input {
+  padding: 2px;
+  height: 32px;
+  min-width: 300px;
+  font-size: 14px;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $color-border-default;
+  border-radius: $radius-xsmall;
+
+  &:focus {
+    border-color: $color-border-selected;
+  }
+}
