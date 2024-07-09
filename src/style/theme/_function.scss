@@ -1,0 +1,9 @@
+@use 'sass:color';
+
+@function getDarkLightColor($mode, $light-color, $dark-color) {
+  @return if($mode =='light', $light-color, $dark-color);
+}
+
+@function getStatusColor($themeColor, $status) {
+  @return color.scale($themeColor, $lightness: $status);
+}
