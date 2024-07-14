@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 import { Title } from '../title';
 import { Button } from './button';
-// import Account from '@assets/account_circle.svg?react';
+import Account from '@assets/account_circle.svg?react';
 
 export default {
   title: 'Design System/Atoms/Button',
@@ -44,18 +44,18 @@ export default {
         type: 'text',
       },
     },
-    // prefix: {
-    //   description: '前置元素',
-    //   control: {
-    //     type: 'text',
-    //   },
-    // },
-    // suffix: {
-    //   description: '後置元素',
-    //   control: {
-    //     type: 'text',
-    //   },
-    // },
+    prefix: {
+      description: '前置元素',
+      control: {
+        type: 'text',
+      },
+    },
+    suffix: {
+      description: '後置元素',
+      control: {
+        type: 'text',
+      },
+    },
     onClick: {
       description: '點擊事件',
       action: 'clicked',
@@ -81,7 +81,7 @@ export const Primary: Story = {
     variant: 'outlined',
     themeColor: 'primary',
     children: <Title level={3}>標題按鈕</Title>,
-    // suffix: <Account />,
+    prefix: <Account />,
     onClick: () => action('onClick')('點擊事件'),
     className: '',
   },

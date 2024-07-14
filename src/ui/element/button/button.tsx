@@ -12,8 +12,8 @@ interface ButtonProps {
     | 'error'
     | 'info';
   children: ReactNode;
-  // prefix?: ReactNode;
-  // suffix?: ReactNode;
+  prefix?: ReactNode;
+  suffix?: ReactNode;
   onClick?: () => void;
   className?: string;
 }
@@ -23,8 +23,8 @@ export function Button(props: ButtonProps) {
     variant,
     themeColor = '',
     children,
-    // prefix,
-    // suffix,
+    prefix,
+    suffix,
     className,
     onClick,
     ...rest
@@ -36,9 +36,9 @@ export function Button(props: ButtonProps) {
       className={`button ${className || getStyle(variant, themeColor)}`}
       onClick={onClick}
     >
-      {/* {prefix} */}
+      {prefix}
       {children}
-      {/* {suffix} */}
+      {suffix}
     </button>
   );
 }
