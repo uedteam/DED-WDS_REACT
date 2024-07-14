@@ -1,5 +1,5 @@
 .title {
-  font-size: $text-heading1;
+  font-size: $size-text-heading1;
   font-weight: $text-regular;
   color: currentColor;
 
@@ -29,5 +29,29 @@
 
   &-info {
     color: $color-title-info;
+  }
+
+  &-weight-1 {
+    font-size: $size-text-heading1;
+  }
+
+  &-weight-2 {
+    font-size: $size-text-heading2;
+  }
+
+  &-weight-3 {
+    font-size: $size-text-heading3;
+  }
+
+  &-weight-4 {
+    font-size: $size-text-heading4;
+  }
+
+  &-weight-5 {
+    font-size: $size-text-heading5;
+  }
+
+  &-weight-6 {
+    font-size: $size-text-heading6;
   }
 }
