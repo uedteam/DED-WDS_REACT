@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
+import Account from '@assets/account_circle.svg?react';
 import { Input } from './input';
 
 export default {
@@ -28,6 +29,13 @@ export default {
         ],
       },
     },
+    size: {
+      description: '輸入框尺寸',
+      control: {
+        type: 'radio',
+        options: ['small', 'medium', 'large'],
+      },
+    },
     children: {
       description: '標題內容',
       control: {
@@ -36,6 +44,24 @@ export default {
     },
     className: {
       description: '標題樣式',
+      control: {
+        type: 'text',
+      },
+    },
+    prefix: {
+      description: '前置元素',
+      control: {
+        type: 'text',
+      },
+    },
+    suffix: {
+      description: '後置元素',
+      control: {
+        type: 'text',
+      },
+    },
+    placeholder: {
+      description: '輸入提示',
       control: {
         type: 'text',
       },
@@ -57,6 +83,21 @@ export const Primary: Story = {
   args: {
     themeColor: 'primary',
     className: '',
+    prefix: <Account width={24} height={24} />,
+    placeholder: '請輸入帳號 ...',
+  },
+  render(args) {
+    return <Input {...args} />;
+  },
+};
+
+export const InputWithIcon: Story = {
+  name: '標題',
+  args: {
+    themeColor: 'primary',
+    className: '',
+    prefix: <Account />,
+    placeholder: '請輸入帳號 ...',
   },
   render(args) {
     return <Input {...args} />;
