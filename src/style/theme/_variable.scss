@@ -1,9 +1,12 @@
-$mode: 'dark';
+$mode: 'light';
 $lightness-hover: 20%;
+$lightness-focus: 50%;
 $darken-active: -20%;
 $input-border-width: 1px;
 $btn-border-width: 2px;
-$border-radius: 8px;
+
+$size-button-rounded: 8px;
+$size-textarea-rounded: 4px;
 
 $size-text-small: 14px;
 $size-text-medium: 16px;
@@ -95,6 +98,8 @@ $color-icon-disabled: $color-disabled;
 $color-border-default: $color-gray40;
 $color-border-selected: $color-light-primary;
 $color-border-disabled: $color-gray20;
+$color-border-focus: getStatusColor(getDarkLightColor($mode, $color-light-primary, $color-dark-primary), $lightness-focus);
+$color-border-error: getDarkLightColor($mode, $color-light-error, $color-dark-error);
 
 // 色彩設定
 // 文字: 依照需求填入色票
@@ -185,6 +190,14 @@ $color-title-error: getDarkLightColor($mode, $color-light-error, $color-dark-err
 // Info
 $color-title-info: getDarkLightColor($mode, $color-light-info, $color-dark-info);
 
+// 提示顏色設定
+// Description
+$color-hint-desc: getDarkLightColor($mode, $color-gray40, $color-gray40);
+
+// 提示顏色設定
+// Error
+$color-hint-error: getDarkLightColor($mode, $color-light-error, $color-dark-error);
+
 // 陰影設定
 // 亮版: 依照需求填入樣式參數
 $shadow-light1: 0px 1px 2px #0000001a;
@@ -235,8 +248,8 @@ $text-en: 'Arial, sans-serif';
 
 // 字體設定
 // 字重: 依照需求填入字重 
-$text-regular: '400';
-$text-bold: '700';
+$text-regular: 400;
+$text-bold: 700;
 
 // 字體設定
 // 斜體: 依照需求填入字型樣式
