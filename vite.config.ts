@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import svgr from 'vite-plugin-svgr';
+import { resolve } from 'path';
+import dts from 'vite-plugin-dts';
+import { join } from 'path';
 
 export default defineConfig({
   root: __dirname,
@@ -25,7 +28,18 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths(), svgr()],
+  plugins: [
+    react({ include: /\.(mdx|js|jsx|ts|tsx)$/ }),
+    nxViteTsPaths(),
+    svgr(),
+    dts({
+      entryRoot: 'src',
+      tsconfigPath: join(__dirname, 'tsconfig.json'),
+      include: ['AUO-DED-WDS/src/**/*.ts', 'AUO-DED-WDS/src/**/*.js'],
+      outDir: 'build/app',
+      // insertTypesEntry: true,
+    }),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {
@@ -33,12 +47,18 @@ export default defineConfig({
   // },
 
   build: {
-    outDir: './dist/AUO-DED-WDS',
+    outDir: './build/app',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    // lib: {
+    //   entry: resolve(__dirname, 'src/ui/index.js'),
+    //   name: 'ui',
+    //   formats: ['es', 'cjs', 'umd'],
+    //   fileName: (format) => `ui.${format}.js`,
+    // },
   },
 
   test: {
