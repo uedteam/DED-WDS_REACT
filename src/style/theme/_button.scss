@@ -244,3 +244,23 @@
     }
   }
 }
+
+.button-container-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: $color-gray20 !important;
+  color: $color-white !important;
+}
+
+.button-outline-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: transparent !important;
+  border: $btn-border-width solid $color-gray20 !important;
+}
+
+.button-text-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: transparent !important;
+}

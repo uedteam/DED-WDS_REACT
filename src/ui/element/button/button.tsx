@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { getStyle } from './styled';
+import { getDisableClass, getThemeClass } from './styled';
 
 interface ButtonProps {
   variant: 'contained' | 'outlined' | 'text';
@@ -11,6 +11,7 @@ interface ButtonProps {
     | 'warning'
     | 'error'
     | 'info';
+  isDisabled?: boolean;
   children: ReactNode;
   prefix?: ReactNode;
   suffix?: ReactNode;
@@ -22,6 +23,7 @@ export function Button(props: ButtonProps) {
   const {
     variant,
     themeColor = '',
+    isDisabled = false,
     children,
     prefix,
     suffix,
@@ -33,7 +35,11 @@ export function Button(props: ButtonProps) {
   return (
     <button
       {...rest}
-      className={`button ${className || getStyle(variant, themeColor)}`}
+      className={`button ${
+        isDisabled
+          ? getDisableClass(variant)
+          : className || getThemeClass(variant, themeColor)
+      }`}
       onClick={onClick}
     >
       {prefix}

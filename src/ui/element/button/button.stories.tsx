@@ -38,6 +38,12 @@ export default {
         ],
       },
     },
+    isDisabled: {
+      description: '是否禁用',
+      control: {
+        type: 'boolean',
+      },
+    },
     children: {
       description: '按鈕內容',
       control: {
@@ -80,7 +86,7 @@ export const Primary: Story = {
   args: {
     variant: 'outlined',
     themeColor: 'primary',
-    children: <Title level={3}>標題按鈕</Title>,
+    children: <Title level={4}>標題按鈕</Title>,
     prefix: <Account />,
     onClick: () => action('onClick')('點擊事件'),
     className: '',
@@ -90,19 +96,35 @@ export const Primary: Story = {
   },
 };
 
-// export const Light: Story = {
-//   name: '淺色按鈕',
-//   args: {
-//     variant: 'outlined',
-//     width: '200px',
-//     children: <Title level={3}>淺色按鈕</Title>,
-//     suffix: <Account width={36} height={36} />,
-//     onClick: () => action('onClick')('點擊事件'),
-//   },
-//   render(args) {
-//     return <Button {...args}>{args.children}</Button>;
-//   },
-// };
+export const Multiple: Story = {
+  name: '多個按鈕',
+  args: {
+    variant: 'outlined',
+    themeColor: 'primary',
+    children: <Title level={5}>標題按鈕</Title>,
+    prefix: <Account width={24} height={24} />,
+    onClick: () => action('onClick')('點擊事件'),
+    className: '',
+  },
+  render(args) {
+    return (
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <Button {...args} variant="contained">
+          {args.children}
+        </Button>
+        <Button {...args} variant="contained" themeColor="secondary">
+          {args.children}
+        </Button>
+        <Button {...args} variant="contained" themeColor="error">
+          {args.children}
+        </Button>
+        <Button {...args} variant="contained" themeColor="tertiary">
+          {args.children}
+        </Button>
+      </div>
+    );
+  },
+};
 
 // export const Disabled: Story = {
 //   name: '禁用按鈕',
