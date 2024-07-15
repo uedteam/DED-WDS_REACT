@@ -14,21 +14,6 @@ export default {
   // ],
   tags: ['autodocs'],
   argTypes: {
-    themeColor: {
-      description: '標題顏色',
-      control: {
-        type: 'select',
-        options: [
-          'primary',
-          'secondary',
-          'tertiary',
-          'success',
-          'warning',
-          'error',
-          'info',
-        ],
-      },
-    },
     size: {
       description: '輸入框尺寸',
       control: {
@@ -81,9 +66,7 @@ type Story = StoryObj<typeof Input>;
 export const Primary: Story = {
   name: '標題',
   args: {
-    themeColor: 'primary',
     className: '',
-    prefix: <Account width={24} height={24} />,
     placeholder: '請輸入帳號 ...',
   },
   render(args) {
@@ -94,9 +77,8 @@ export const Primary: Story = {
 export const InputWithIcon: Story = {
   name: '標題',
   args: {
-    themeColor: 'primary',
     className: '',
-    prefix: <Account />,
+    prefix: <Account width={24} height={24} />,
     placeholder: '請輸入帳號 ...',
   },
   render(args) {

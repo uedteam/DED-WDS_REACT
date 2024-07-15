@@ -2,14 +2,6 @@ import { getStyle, getSizeClass } from './styled';
 import { ReactNode } from 'react';
 
 interface InputProps {
-  themeColor?:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'success'
-    | 'warning'
-    | 'error'
-    | 'info';
   className?: string;
   placeholder?: string;
   prefix?: ReactNode;
@@ -19,7 +11,6 @@ interface InputProps {
 
 export function Input(props: InputProps) {
   const {
-    themeColor = '',
     className,
     placeholder = '請輸入...',
     size = 'medium',
@@ -29,11 +20,7 @@ export function Input(props: InputProps) {
   } = props;
 
   return (
-    <div
-      className={`input ${getSizeClass(size)} ${
-        className || getStyle(themeColor)
-      } `}
-    >
+    <div className={`input ${getSizeClass(size)} ${className} `}>
       {prefix}
       <input {...rest} placeholder={placeholder} />
       {suffix}
