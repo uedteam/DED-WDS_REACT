@@ -10,8 +10,8 @@
   border-radius: $size-radius-xsmall;
   background-color: $color-white;
 
-  &:focus {
-    border-color: $color-border-selected;
+  &:focus-within {
+    border: 3px solid $color-border-focus;
   }
 
   &::placeholder {

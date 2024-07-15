@@ -64,7 +64,7 @@ export default {
 type Story = StoryObj<typeof Input>;
 
 export const Primary: Story = {
-  name: '標題',
+  name: '文字輸入框',
   args: {
     className: '',
     placeholder: '請輸入帳號 ...',
@@ -75,7 +75,7 @@ export const Primary: Story = {
 };
 
 export const InputWithIcon: Story = {
-  name: '標題',
+  name: '帳號',
   args: {
     className: '',
     prefix: <Account width={24} height={24} />,
