@@ -1,4 +1,5 @@
 $mode: 'light';
+
 $lightness-hover: 20%;
 $lightness-focus: 50%;
 $darken-active: -20%;
@@ -66,7 +67,7 @@ $color-share5: #FFC8AA;
 $color-share6: #D2B496;
 
 // 狀態色票
-$color-disabled: $color-gray10;
+$color-disabled: $color-gray20;
 
 // 連結色票
 $color-link: getDarkLightColor($mode, $color-gray50, $color-gray20);
@@ -110,10 +111,14 @@ $color-text-placeholder: $color-gray40;
 
 // 色彩設定
 // 表格: 依照需求填入色票
+$color-switch-on: getDarkLightColor($mode, $color-light-success, $color-dark-success);
+$color-switch-off: getDarkLightColor($mode, $color-gray40, $color-gray40);
+
+// 色彩設定
+// 表格: 依照需求填入色票
 $color-table-header: getDarkLightColor($mode, #F1F1F1, #020202);
 $color-table-background: getDarkLightColor($mode, $color-white, #292929);
 $color-table-sprite: getDarkLightColor($mode, #FCFCFC, #666666);
-;
 
 // 色彩設定
 // 骨架屏: 依照需求填入色票

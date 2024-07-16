@@ -6,6 +6,7 @@
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
+      "vite-plugin-svgr/client",
       "vite/client"
     ]
   },
