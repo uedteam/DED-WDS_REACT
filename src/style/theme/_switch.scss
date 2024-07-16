@@ -2,9 +2,10 @@
   position: relative;
   cursor: pointer;
   display: inline-flex;
+  gap: 4px;
   justify-content: space-between;
   align-items: center;
-  width: 56px;
+  min-width: 56px;
   height: 24px;
   padding: 4px;
   font-size: 14px;
