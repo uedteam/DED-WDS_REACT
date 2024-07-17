@@ -28,11 +28,12 @@
   ],
   "scripts": {
     "start": "nx storybook",
-    "build": "rm -rf dist && nx build",
+    "build": "rm -rf dist/ui && nx build",
+    "build-storybook": "rm -rf dist/storybook && nx build-storybook",
     "test": "nx test",
     "reset": "nx reset",
     "report": "nx report",
-    "deploy": "rm -rf dist && nx build && gh-pages -d dist",
+    "deploy": "rm -rf dist/storybook && nx build-storybook && gh-pages -d dist/storybook",
     "artifactregistry-login": "npx google-artifactregistry-auth"
   },
   "dependencies": {

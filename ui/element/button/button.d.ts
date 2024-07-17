@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from '../../../../../node_modules/react';
 
 interface ButtonProps {
     variant: 'contained' | 'outlined' | 'text';
