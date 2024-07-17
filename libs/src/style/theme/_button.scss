@@ -1,0 +1,266 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    box-shadow: $shadow-dark1;
+  }
+
+  &:active {
+    box-shadow: unset;
+  }
+
+  &-text {
+    background-color: transparent;
+    color: $color-text-primary;
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+
+  &-text-primary {
+    color: $color-btn-primary-default;
+
+    &:hover {
+      color: $color-btn-primary-hover;
+    }
+  }
+
+  &-text-secondary {
+    color: $color-btn-secondary-default;
+
+    &:hover {
+      color: $color-btn-secondary-hover;
+    }
+  }
+
+  &-text-tertiary {
+    color: $color-btn-tertiary-default;
+
+    &:hover {
+      color: $color-btn-tertiary-hover;
+    }
+  }
+
+  &-text-success {
+    color: $color-btn-success-default;
+
+    &:hover {
+      color: $color-btn-success-hover;
+    }
+  }
+
+  &-text-warning {
+    color: $color-btn-warning-default;
+
+    &:hover {
+      color: $color-btn-warning-hover;
+    }
+  }
+
+  &-text-error {
+    color: $color-btn-error-default;
+
+    &:hover {
+      color: $color-btn-error-hover;
+    }
+  }
+
+  &-text-info {
+    color: $color-btn-info-default;
+
+    &:hover {
+      color: $color-btn-info-hover;
+    }
+  }
+
+  &-contained {
+    color: #fff;
+  }
+
+  &-contained-primary {
+    background-color: $color-btn-primary-default;
+
+    &:hover {
+      background-color: $color-btn-primary-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-primary-active
+    }
+  }
+
+  &-contained-secondary {
+    background-color: $color-btn-secondary-default;
+
+    &:hover {
+      background-color: $color-btn-secondary-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-secondary-active
+    }
+  }
+
+  &-contained-tertiary {
+    background-color: $color-btn-tertiary-default;
+
+    &:hover {
+      background-color: $color-btn-tertiary-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-tertiary-active
+    }
+  }
+
+  &-contained-success {
+    background-color: $color-btn-success-default;
+
+    &:hover {
+      background-color: $color-btn-success-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-success-active
+    }
+  }
+
+  &-contained-warning {
+    background-color: $color-btn-warning-default;
+
+    &:hover {
+      background-color: $color-btn-warning-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-warning-active
+    }
+  }
+
+  &-contained-error {
+    background-color: $color-btn-error-default;
+
+    &:hover {
+      background-color: $color-btn-error-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-error-active
+    }
+  }
+
+  &-contained-info {
+    background-color: $color-btn-info-default;
+
+    &:hover {
+      background-color: $color-btn-info-hover;
+    }
+
+    &:active {
+      background-color: $color-btn-info-active
+    }
+  }
+
+  &-outlined {
+    background-color: transparent;
+    border-width: $btn-border-width;
+    border-style: solid;
+  }
+
+  &-outlined-primary {
+    color: $color-btn-primary-default;
+    border-color: $color-btn-primary-default;
+
+    &:hover {
+      color: $color-btn-primary-hover;
+      border-color: $color-btn-primary-hover;
+    }
+  }
+
+  &-outlined-secondary {
+    color: $color-btn-secondary-default;
+    border-color: $color-btn-secondary-default;
+
+    &:hover {
+      color: $color-btn-secondary-hover;
+      border-color: $color-btn-secondary-hover;
+    }
+  }
+
+  &-outlined-tertiary {
+    color: $color-btn-tertiary-default;
+    border-color: $color-btn-tertiary-default;
+
+    &:hover {
+      color: $color-btn-tertiary-hover;
+      border-color: $color-btn-tertiary-hover;
+    }
+  }
+
+  &-outlined-success {
+    color: $color-btn-success-default;
+    border-color: $color-btn-success-default;
+
+    &:hover {
+      color: $color-btn-success-hover;
+      border-color: $color-btn-success-hover;
+    }
+  }
+
+  &-outlined-warning {
+    color: $color-btn-warning-default;
+    border-color: $color-btn-warning-default;
+
+    &:hover {
+      color: $color-btn-warning-hover;
+      border-color: $color-btn-warning-hover;
+    }
+  }
+
+  &-outlined-error {
+    color: $color-btn-error-default;
+    border-color: $color-btn-error-default;
+
+    &:hover {
+      color: $color-btn-error-hover;
+      border-color: $color-btn-error-hover;
+    }
+  }
+
+  &-outlined-info {
+    color: $color-btn-info-default;
+    border-color: $color-btn-info-default;
+
+    &:hover {
+      color: $color-btn-info-hover;
+      border-color: $color-btn-info-hover;
+    }
+  }
+}
+
+.button-container-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: $color-gray20 !important;
+  color: $color-white !important;
+}
+
+.button-outline-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: transparent !important;
+  border: $btn-border-width solid $color-gray20 !important;
+}
+
+.button-text-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  background-color: transparent !important;
+}
