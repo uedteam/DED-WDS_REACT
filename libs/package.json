@@ -1,6 +1,6 @@
 {
   "name": "ded-wds",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Web Design System",
   "license": "MIT",
   "author": "Kevin Yang <kevin.kk.yang@auo.com>",
@@ -8,8 +8,8 @@
     "Amos Lee <amos.lee@auo.com>"
   ],
   "homepage": "https://uedteam.github.io/DED-WDS",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -32,14 +32,8 @@
     "test": "nx test",
     "reset": "nx reset",
     "report": "nx report",
-    "deploy": "nx build && gh-pages -d dist",
+    "deploy": "rm -rf dist && nx build && gh-pages -d dist",
     "artifactregistry-login": "npx google-artifactregistry-auth"
-  },
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
   },
   "dependencies": {
     "@nrwl/cli": "^15.9.3",

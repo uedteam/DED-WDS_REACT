@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import NxWelcome from './nx-welcome';
 import { range } from 'lodash';
-import { Button, Title } from 'ded-wds-kevin';
+import { Button, Title } from 'ded-wds';
 
 export function App() {
   return (
