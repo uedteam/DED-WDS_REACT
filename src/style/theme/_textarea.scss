@@ -11,13 +11,13 @@
   padding: 16px;
   border-width: $input-border-width;
   border-style: solid;
-  border-color: $color-border-default;
-  border-radius: $size-textarea-rounded;
+  border-color: $border-color-default;
+  border-radius: $textarea-size-rounded;
   background-color: $color-white;
   overflow: hidden;
 
   &:focus-within {
-    border: 3px solid $color-border-focus;
+    box-shadow: 0 0 0 3px $border-color-focus;
   }
 
   .textarea {
@@ -36,7 +36,7 @@
 
   .textarea-hint-count {
     position: absolute;
-    font-size: $size-text-caption2;
+    font-size: $text-size-caption2;
     color: $color-gray40;
     right: 12px;
     bottom: 4px;
@@ -54,23 +54,23 @@
 }
 
 .textarea-border-error {
-  border-color: $color-border-error;
+  border-color: $border-color-error;
 }
 
 .textarea-label {
-  font-size: $size-text-caption1;
+  font-size: $text-size-caption1;
   color: $color-text-secondary;
 }
 
 .textarea-hint {
   display: block;
-  font-size: $size-text-caption2;
+  font-size: $text-size-caption2;
 }
 
 .textarea-hint-desc {
-  color: $color-hint-desc;
+  color: $hint-color-desc;
 }
 
 .textarea-hint-error {
-  color: $color-hint-error;
+  color: $hint-color-error;
 }

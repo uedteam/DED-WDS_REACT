@@ -15,6 +15,24 @@
     box-shadow: unset;
   }
 
+  &-contained {
+    color: #fff;
+  }
+
+  &-outlined {
+    background-color: transparent;
+    border-width: $btn-border-width;
+    border-style: solid;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $border-color-focus;
+    }
+
+    &:active {
+      box-shadow: unset;
+    }
+  }
+
   &-text {
     background-color: transparent;
     color: $color-text-primary;
@@ -24,223 +42,55 @@
     }
   }
 
-  &-text-primary {
-    color: $color-btn-primary-default;
+  @each $variant in $variants {
+    @each $theme in $themes {
+      &-#{$variant}-#{$theme} {
 
-    &:hover {
-      color: $color-btn-primary-hover;
-    }
-  }
+        @if($variant =='contained') {
+          background-color: getThemeColor($mode, $theme, 'default');
+        }
 
-  &-text-secondary {
-    color: $color-btn-secondary-default;
+        @else {
+          border-color: getThemeColor($mode, $theme, 'default');
+          color: getThemeColor($mode, $theme, 'default');
+        }
 
-    &:hover {
-      color: $color-btn-secondary-hover;
-    }
-  }
+        &:hover {
 
-  &-text-tertiary {
-    color: $color-btn-tertiary-default;
+          @if($variant =='contained') {
+            background-color: getThemeColor($mode, $theme, 'hover');
+          }
 
-    &:hover {
-      color: $color-btn-tertiary-hover;
-    }
-  }
+          @else {
+            border-color: getThemeColor($mode, $theme, 'hover');
+            color: getThemeColor($mode, $theme, 'hover');
+          }
+        }
 
-  &-text-success {
-    color: $color-btn-success-default;
+        &:focus {
 
-    &:hover {
-      color: $color-btn-success-hover;
-    }
-  }
+          @if($variant =='contained') {
+            background-color: getThemeColor($mode, $theme, 'focus');
+          }
 
-  &-text-warning {
-    color: $color-btn-warning-default;
+          @else {
+            border-color: getThemeColor($mode, $theme, 'focus');
+            color: getThemeColor($mode, $theme, 'focus');
+          }
+        }
 
-    &:hover {
-      color: $color-btn-warning-hover;
-    }
-  }
+        &:active {
 
-  &-text-error {
-    color: $color-btn-error-default;
+          @if($variant =='contained') {
+            background-color: getThemeColor($mode, $theme, 'active');
+          }
 
-    &:hover {
-      color: $color-btn-error-hover;
-    }
-  }
-
-  &-text-info {
-    color: $color-btn-info-default;
-
-    &:hover {
-      color: $color-btn-info-hover;
-    }
-  }
-
-  &-contained {
-    color: #fff;
-  }
-
-  &-contained-primary {
-    background-color: $color-btn-primary-default;
-
-    &:hover {
-      background-color: $color-btn-primary-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-primary-active
-    }
-  }
-
-  &-contained-secondary {
-    background-color: $color-btn-secondary-default;
-
-    &:hover {
-      background-color: $color-btn-secondary-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-secondary-active
-    }
-  }
-
-  &-contained-tertiary {
-    background-color: $color-btn-tertiary-default;
-
-    &:hover {
-      background-color: $color-btn-tertiary-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-tertiary-active
-    }
-  }
-
-  &-contained-success {
-    background-color: $color-btn-success-default;
-
-    &:hover {
-      background-color: $color-btn-success-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-success-active
-    }
-  }
-
-  &-contained-warning {
-    background-color: $color-btn-warning-default;
-
-    &:hover {
-      background-color: $color-btn-warning-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-warning-active
-    }
-  }
-
-  &-contained-error {
-    background-color: $color-btn-error-default;
-
-    &:hover {
-      background-color: $color-btn-error-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-error-active
-    }
-  }
-
-  &-contained-info {
-    background-color: $color-btn-info-default;
-
-    &:hover {
-      background-color: $color-btn-info-hover;
-    }
-
-    &:active {
-      background-color: $color-btn-info-active
-    }
-  }
-
-  &-outlined {
-    background-color: transparent;
-    border-width: $btn-border-width;
-    border-style: solid;
-  }
-
-  &-outlined-primary {
-    color: $color-btn-primary-default;
-    border-color: $color-btn-primary-default;
-
-    &:hover {
-      color: $color-btn-primary-hover;
-      border-color: $color-btn-primary-hover;
-    }
-  }
-
-  &-outlined-secondary {
-    color: $color-btn-secondary-default;
-    border-color: $color-btn-secondary-default;
-
-    &:hover {
-      color: $color-btn-secondary-hover;
-      border-color: $color-btn-secondary-hover;
-    }
-  }
-
-  &-outlined-tertiary {
-    color: $color-btn-tertiary-default;
-    border-color: $color-btn-tertiary-default;
-
-    &:hover {
-      color: $color-btn-tertiary-hover;
-      border-color: $color-btn-tertiary-hover;
-    }
-  }
-
-  &-outlined-success {
-    color: $color-btn-success-default;
-    border-color: $color-btn-success-default;
-
-    &:hover {
-      color: $color-btn-success-hover;
-      border-color: $color-btn-success-hover;
-    }
-  }
-
-  &-outlined-warning {
-    color: $color-btn-warning-default;
-    border-color: $color-btn-warning-default;
-
-    &:hover {
-      color: $color-btn-warning-hover;
-      border-color: $color-btn-warning-hover;
-    }
-  }
-
-  &-outlined-error {
-    color: $color-btn-error-default;
-    border-color: $color-btn-error-default;
-
-    &:hover {
-      color: $color-btn-error-hover;
-      border-color: $color-btn-error-hover;
-    }
-  }
-
-  &-outlined-info {
-    color: $color-btn-info-default;
-    border-color: $color-btn-info-default;
-
-    &:hover {
-      color: $color-btn-info-hover;
-      border-color: $color-btn-info-hover;
+          @else {
+            border-color: getThemeColor($mode, $theme, 'active');
+            color: getThemeColor($mode, $theme, 'active');
+          }
+        }
+      }
     }
   }
 }
