@@ -66,8 +66,18 @@ export default {
       description: '點擊事件',
       action: 'clicked',
     },
+    className: {
+      description: '按鈕客製化樣式',
+      control: {
+        type: 'text',
+      },
+    },
   },
   args: {
+    variant: 'contained',
+    themeColor: 'primary',
+    isDisabled: false,
+    children: '按鈕',
     onClick: action('onClick'),
   },
   parameters: {
@@ -84,7 +94,6 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   name: '標準按鈕',
   args: {
-    variant: 'outlined',
     themeColor: 'primary',
     children: <Title level={4}>標題按鈕</Title>,
     prefix: <Account />,

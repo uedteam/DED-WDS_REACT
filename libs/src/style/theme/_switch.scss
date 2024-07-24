@@ -12,7 +12,7 @@
   border-radius: 15px;
 
   &:focus {
-    box-shadow: 0 0 1px 2px $color-white, 0 0 1px 4px $color-border-focus;
+    box-shadow: 0 0 1px 2px $color-white, 0 0 1px 4px $border-color-focus;
   }
 
   &-thumb {
@@ -47,40 +47,40 @@
 
   &-on {
     flex-direction: row-reverse;
-    background-color: $color-switch-on;
+    background-color: $switch-color-on;
   }
 
   &-off {
     flex-direction: row;
-    background-color: $color-switch-off !important;
+    background-color: $switch-color-off !important;
   }
 
   &-primary {
-    background-color: $color-btn-primary-default;
+    background-color: $btn-color-primary-default;
   }
 
   &-secondary {
-    background-color: $color-btn-secondary-default;
+    background-color: $btn-color-secondary-default;
   }
 
   &-tertiary {
-    background-color: $color-btn-tertiary-default;
+    background-color: $btn-color-tertiary-default;
   }
 
   &-success {
-    background-color: $color-btn-success-default;
+    background-color: $btn-color-success-default;
   }
 
   &-warning {
-    background-color: $color-btn-warning-default;
+    background-color: $btn-color-warning-default;
   }
 
   &-error {
-    background-color: $color-btn-error-default;
+    background-color: $btn-color-error-default;
   }
 
   &-info {
-    background-color: $color-btn-info-default;
+    background-color: $btn-color-info-default;
   }
 
   &-disable {

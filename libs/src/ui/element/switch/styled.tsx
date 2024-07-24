@@ -9,3 +9,7 @@ export const getPositionClass = (checked: boolean) => {
 export const getLabelPositionClass = (checked: boolean) => {
   return checked ? 'switch-label-on' : 'switch-label-off';
 };
+
+export const getThumbPositionClass = (checked: boolean) => {
+  return checked ? 'switch-thumb-on' : 'switch-thumb-off';
+};

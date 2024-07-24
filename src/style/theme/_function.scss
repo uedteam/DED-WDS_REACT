@@ -1,9 +1,19 @@
-@use 'sass:color';
+@use 'sass:map';
 
-@function getDarkLightColor($mode, $light-color, $dark-color) {
-  @return if($mode =='light', $light-color, $dark-color);
+// @function getDarkLightColor($mode, $light-color, $dark-color) {
+//   @return if($mode =='light', $light-color, $dark-color);
+// }
+
+// @function getStatusColor($themeColor, $status) {
+//   @return color.scale($themeColor, $lightness: $status);
+// }
+
+// 動態獲取主題顏色
+@function getThemeColor($mode, $theme, $state) {
+  @return map-get(map-get(map-get($theme-colors, $theme), $mode), $state);
 }
 
-@function getStatusColor($themeColor, $status) {
-  @return color.scale($themeColor, $lightness: $status);
+// 動態獲取文字顏色
+@function getTextColor($mode, $type) {
+  @return map-get(map-get($text-colors, $type), $mode);
 }

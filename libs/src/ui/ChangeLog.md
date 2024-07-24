@@ -6,7 +6,6 @@
 - Add Title Story
 - Add Input Story
 - Add Textarea Story
-- Add Switch Story
 
 ---
 

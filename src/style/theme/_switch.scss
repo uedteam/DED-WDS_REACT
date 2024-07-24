@@ -2,32 +2,48 @@
   position: relative;
   cursor: pointer;
   display: inline-flex;
-  gap: 4px;
-  justify-content: space-between;
   align-items: center;
-  min-width: 56px;
   height: 24px;
-  padding: 4px;
+  padding: 4px 6px;
   font-size: 14px;
   border-radius: 15px;
 
   &:focus {
-    box-shadow: 0 0 1px 2px $color-white, 0 0 1px 4px $color-border-focus;
+    box-shadow: 0 0 1px 2px $color-white, 0 0 1px 4px $border-color-focus;
   }
 
   &-thumb {
-    width: 26px;
-    height: 26px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
     background-color: $color-white;
     border-radius: 50%;
+
 
     &-disable {
       pointer-events: none !important;
       background-color: $color-gray10 !important;
     }
+
+    &-on {
+      right: calc(0% + 3px);
+      transform: translateX(0%);
+      transition: all .3s ease-in-out;
+    }
+
+    &-off {
+      right: calc(100% - 3px);
+      transform: translateX(100%);
+      transition: all .3s ease-in-out;
+    }
   }
 
+
   &-label {
+    display: flex;
+    align-items: center;
+    min-width: 20px;
+    padding: 0 2px;
     color: $color-white;
     cursor: pointer;
 
@@ -38,49 +54,41 @@
   }
 
   &-label-on {
-    padding-left: 6px;
+    margin-right: 18px;
+    justify-content: flex-start;
   }
 
   &-label-off {
-    padding-right: 6px;
+    margin-left: 18px;
+    justify-content: flex-end;
   }
 
   &-on {
-    flex-direction: row-reverse;
-    background-color: $color-switch-on;
+    // flex-direction: row-reverse;
+    background-color: getThemeColor($mode, 'success', 'default');
   }
 
   &-off {
-    flex-direction: row;
-    background-color: $color-switch-off !important;
+    // flex-direction: row;
+    background-color: $color-gray40 !important;
   }
 
-  &-primary {
-    background-color: $color-btn-primary-default;
-  }
+  @each $theme in $themes {
+    &-#{$theme} {
+      background-color: getThemeColor($mode, $theme, 'default');
+      // &:hover {
+      //   background-color: getThemeColor($mode, $theme, 'hover');
+      // }
 
-  &-secondary {
-    background-color: $color-btn-secondary-default;
-  }
+      // &:focus {
+      //   background-color: getThemeColor($mode, $theme, 'focus');
+      // }
 
-  &-tertiary {
-    background-color: $color-btn-tertiary-default;
-  }
+      // &:active {
+      //   background-color: getThemeColor($mode, $theme, 'active');
 
-  &-success {
-    background-color: $color-btn-success-default;
-  }
-
-  &-warning {
-    background-color: $color-btn-warning-default;
-  }
-
-  &-error {
-    background-color: $color-btn-error-default;
-  }
-
-  &-info {
-    background-color: $color-btn-info-default;
+      // }
+    }
   }
 
   &-disable {

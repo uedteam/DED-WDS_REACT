@@ -5,6 +5,15 @@ import { Preview } from '@storybook/react';
 /* snipped for brevity */
 
 const preview: Preview = {
+  initialGlobals: {
+    styles: {
+      body: {
+        margin: 0,
+        padding: 0,
+        fontFamily: 'Arial, sans-serif',
+      },
+    },
+  },
   parameters: {
     options: {
       storySort: {
@@ -15,7 +24,7 @@ const preview: Preview = {
     },
   },
 
-  tags: ['autodocs']
+  tags: ['autodocs'],
 };
 
 export default preview;
