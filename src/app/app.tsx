@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import NxWelcome from './nx-welcome';
 import { range } from 'lodash';
-import { Button, Title } from 'ded-wds';
+import { Switch } from 'ded-wds';
 
 export function App() {
   return (
@@ -15,11 +15,12 @@ export function App() {
         }}
         className="container"
       >
-        {range(0, 10).map((i, index) => (
+        {/* {range(0, 10).map((i, index) => (
           <Button themeColor="primary" variant="contained">
             <Title level={3}>標題按鈕{index + 1}</Title>
           </Button>
-        ))}
+        ))} */}
+        <Switch isChecked />
       </div>
 
       <NxWelcome title="AUO-DED-WDS" />
