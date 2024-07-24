@@ -1,0 +1,91 @@
+.switch {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 56px;
+  height: 24px;
+  padding: 4px;
+  font-size: 14px;
+  border-radius: 15px;
+
+  &:focus {
+    box-shadow: 0 0 1px 2px $color-white, 0 0 1px 4px $color-border-focus;
+  }
+
+  &-thumb {
+    width: 26px;
+    height: 26px;
+    background-color: $color-white;
+    border-radius: 50%;
+
+    &-disable {
+      pointer-events: none !important;
+      background-color: $color-gray10 !important;
+    }
+  }
+
+  &-label {
+    color: $color-white;
+    cursor: pointer;
+
+    &-disable {
+      pointer-events: none !important;
+      color: $color-gray10 !important;
+    }
+  }
+
+  &-label-on {
+    padding-left: 6px;
+  }
+
+  &-label-off {
+    padding-right: 6px;
+  }
+
+  &-on {
+    flex-direction: row-reverse;
+    background-color: $color-switch-on;
+  }
+
+  &-off {
+    flex-direction: row;
+    background-color: $color-switch-off !important;
+  }
+
+  &-primary {
+    background-color: $color-btn-primary-default;
+  }
+
+  &-secondary {
+    background-color: $color-btn-secondary-default;
+  }
+
+  &-tertiary {
+    background-color: $color-btn-tertiary-default;
+  }
+
+  &-success {
+    background-color: $color-btn-success-default;
+  }
+
+  &-warning {
+    background-color: $color-btn-warning-default;
+  }
+
+  &-error {
+    background-color: $color-btn-error-default;
+  }
+
+  &-info {
+    background-color: $color-btn-info-default;
+  }
+
+  &-disable {
+    pointer-events: none !important;
+    background-color: $color-disabled !important;
+    color: $color-gray10 !important;
+  }
+}
