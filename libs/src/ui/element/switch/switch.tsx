@@ -3,6 +3,7 @@ import {
   getThemeClass,
   getPositionClass,
   getLabelPositionClass,
+  getThumbPositionClass,
 } from './styled';
 
 interface SwitchProps {
@@ -48,7 +49,10 @@ export function Switch(props: SwitchProps) {
       }}
     >
       <div
-        className={`switch-thumb ${isDisabled ? 'switch-label-disable' : ''}`}
+        className={`switch-thumb 
+          ${
+            isDisabled ? 'switch-label-disable' : getThumbPositionClass(checked)
+          }`}
       />
       <label
         className={`switch-label ${getLabelPositionClass(checked)} ${

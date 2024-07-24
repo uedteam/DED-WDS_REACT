@@ -33,7 +33,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: './dist',
+    outDir: './dist/lib',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -46,7 +46,14 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ["'react'", "'react-dom'", "'react/jsx-runtime'"],
+      // external: ["'react'", "'react-dom'", "'react/jsx-runtime'"],
+      external: ['react', 'react-dom'],
+      // output: {
+      //   globals: {
+      //     react: 'React',
+      //     'react-dom': 'ReactDOM',
+      //   },
+      // },
     },
   },
 });

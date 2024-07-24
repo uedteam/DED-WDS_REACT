@@ -6,12 +6,12 @@
 
   border-width: $input-border-width;
   border-style: solid;
-  border-color: $color-border-default;
-  border-radius: $size-radius-xsmall;
+  border-color: $border-color-default;
+  border-radius: $radius-size-xsmall;
   background-color: $color-white;
 
   &:focus-within {
-    border: 3px solid $color-border-focus;
+    border: 3px solid $border-color-focus;
   }
 
   &::placeholder {
@@ -19,21 +19,21 @@
   }
 
   &-small {
-    font-size: $size-text-small;
-    height: $size-input-small
+    font-size: $text-size-small;
+    height: $input-size-small
   }
 
   &-medium {
     padding-left: 12px;
     padding-right: 12px;
-    font-size: $size-text-medium;
-    height: $size-input-medium ;
+    font-size: $text-size-medium;
+    height: $input-size-medium ;
   }
 
   &-large {
     padding-left: 16px;
     padding-right: 16px;
-    font-size: $size-text-large;
-    height: $size-input-large ;
+    font-size: $text-size-large;
+    height: $input-size-large ;
   }
 }
