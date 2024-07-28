@@ -1,6 +1,6 @@
 {
   "name": "ded-wds-kevin",
-  "version": "1.1.11",
+  "version": "1.0.0",
   "description": "Web Design System",
   "license": "MIT",
   "homepage": "https://uedteam.github.io/DED-WDS",
@@ -13,7 +13,8 @@
     "storybook": "nx storybook",
     "deploy": "nx build && gh-pages -d build/DED-WDS",
     "build-storybook": "nx build-storybook",
-    "deploy-storybook": "nx build-storybook && gh-pages -d build/storybook",
+    "deploy-storybook": "nx build-storybook && gh-pages -d dist/storybook",
+    "sync": "cp -r src/ui libs/src/",
     "artifactregistry-login": "npx google-artifactregistry-auth"
   },
   "main": "build/app/ui.es.js",
@@ -43,7 +44,7 @@
   ],
   "dependencies": {
     "@nrwl/cli": "^15.9.3",
-    "ded-wds": "file:ded-wds-1.0.1.tgz",
+    "ded-wds": "^1.0.8",
     "gh-pages": "^6.1.1",
     "lodash": "^4.17.21",
     "react": "18.3.1",
