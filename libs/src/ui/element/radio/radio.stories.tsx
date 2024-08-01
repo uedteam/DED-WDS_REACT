@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Radio } from './radio';
-import { on } from 'events';
 
 export default {
   title: 'Design System/Atoms/Radio',
@@ -14,6 +13,30 @@ export default {
   // ],
   tags: ['autodocs'],
   argTypes: {
+    themeColor: {
+      description: '主題顏色',
+      options: [
+        'primary',
+        'secondary',
+        'tertiary',
+        'success',
+        'warning',
+        'error',
+        'info',
+      ],
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'secondary',
+          'tertiary',
+          'success',
+          'warning',
+          'error',
+          'info',
+        ],
+      },
+    },
     className: {
       description: '標題樣式',
       control: {
@@ -34,6 +57,12 @@ export default {
         options: ['row', 'column'],
       },
     },
+    value: {
+      description: '值',
+      control: {
+        type: 'text',
+      },
+    },
     onChange: {
       description: '選擇選項後的事件',
       action: 'onChange',
@@ -44,9 +73,9 @@ export default {
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: 'Radio Button',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: 'Radio Button 組件的呈現及說明。',
       },
     },
   },
@@ -54,7 +83,7 @@ export default {
 type Story = StoryObj<typeof Radio>;
 
 export const Primary: Story = {
-  name: '文字輸入框',
+  name: '標準 radio button',
   args: {
     className: '',
     options: [
@@ -62,6 +91,7 @@ export const Primary: Story = {
       { label: '選項二', value: 'option2' },
       { label: '選項三', value: 'option3' },
     ],
+    value: 'option3',
   },
   render(args) {
     return <Radio {...args} onChange={(value) => console.log(value)} />;

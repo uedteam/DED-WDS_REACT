@@ -59,7 +59,6 @@ export const Primary: Story = {
   name: '文字輸入框',
   args: {
     label: '留下你的想法',
-    className: '',
     placeholder: '請輸入 ...',
     total: 10,
     hint: { error: '', description: '' },

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Check from '@assets/check.svg?react';
 // import CheckBlank from '@assets/check_box_blank.svg?react';
 import { getThemeClass } from './styled';
@@ -14,20 +14,26 @@ interface InputProps {
     | 'info';
   className?: string;
   options?: { label: string; value: string }[];
+  value?: string[];
   direction?: 'row' | 'column';
   onChange?: (value: string[]) => void;
 }
 
-export function Checkbox(props: InputProps) {
+export const Checkbox: React.FC<InputProps> = (props: InputProps) => {
   const {
-    themeColor = '',
+    themeColor = 'primary',
     className,
     options = [],
     direction = 'row',
+    value = [],
     onChange,
     ...rest
   } = props;
   const [currOptions, setCurrOptions] = useState<string[]>([]);
+
+  useEffect(() => {
+    setCurrOptions(value || []);
+  }, [value]);
 
   return (
     <div
@@ -90,6 +96,6 @@ export function Checkbox(props: InputProps) {
       ))}
     </div>
   );
-}
+};
 
 export default Checkbox;

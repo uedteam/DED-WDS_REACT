@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "start": "nx storybook",
-    "build": "rm -rf dist/ui && nx build",
+    "build": "rm -rf dist/lib && nx build",
     "test": "nx test",
     "reset": "nx reset",
     "report": "nx report",

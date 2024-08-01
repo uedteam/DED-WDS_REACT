@@ -28,6 +28,13 @@ export default {
         ],
       },
     },
+    level: {
+      description: '標題等級',
+      control: {
+        type: 'select',
+        options: [0, 1, 2, 3, 4, 5, 6],
+      },
+    },
     children: {
       description: '標題內容',
       control: {
@@ -57,7 +64,6 @@ export const Primary: Story = {
   args: {
     themeColor: 'primary',
     children: '標題',
-    className: '',
   },
   render(args) {
     return <Title {...args}>{args.children}</Title>;

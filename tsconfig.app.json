@@ -12,17 +12,30 @@
   },
   "exclude": [
     "src/**/*.spec.ts",
-    "src/**/*.test.ts",
+    "src/**/*.spec.ts",
+    "libs/src/**/*.test.ts",
     "src/**/*.spec.tsx",
     "src/**/*.test.tsx",
+    "libs/src/**/*.test.tsx",
     "src/**/*.spec.js",
     "src/**/*.test.js",
+    "libs/src/**/*.test.js",
     "src/**/*.spec.jsx",
     "src/**/*.test.jsx",
+    "libs/src/**/*.test.jsx",
     "**/*.stories.ts",
     "**/*.stories.js",
     "**/*.stories.jsx",
     "**/*.stories.tsx"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "libs/src/**/*.js",
+    "libs/src/**/*.jsx",
+    "libs/src/**/*.ts",
+    "libs/src/**/*.tsx"
+  ]
 }

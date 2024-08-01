@@ -10,10 +10,10 @@ interface TextareaProps {
   hint?: { error: string; description: string };
 }
 
-export function Textarea(props: TextareaProps) {
+export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {
   const {
     label = '',
-    className,
+    className = '',
     placeholder = '請輸入...',
     isDisabled = false,
     total = 10,
@@ -24,7 +24,7 @@ export function Textarea(props: TextareaProps) {
   const [value, setValue] = useState('');
 
   return (
-    <div className={`textarea-container ${className}`}>
+    <div className={`textarea-container ${className ? className : ''}`}>
       {label && (
         <label
           className={`${isDisabled ? 'textarea-disable' : 'textarea-label'}`}
@@ -46,7 +46,7 @@ export function Textarea(props: TextareaProps) {
             console.log(e.target.value);
           }}
           maxLength={total || undefined}
-          className={`textarea ${isDisabled ? 'textarea-disable' : ''}`}
+          className={`${isDisabled ? 'textarea-disable' : 'textarea'}`}
           placeholder={placeholder}
         />
         {total > 0 && (
@@ -68,6 +68,6 @@ export function Textarea(props: TextareaProps) {
       </small>
     </div>
   );
-}
+};
 
 export default Textarea;
