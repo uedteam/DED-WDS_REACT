@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Breadcrumb } from './breadcrumb';
 
 export default {
-  title: 'Design System/Atoms/Breadcrumb',
+  title: 'Design System/Element/Breadcrumb',
   component: Breadcrumb,
   // decorators: [
   //   (Story) => (

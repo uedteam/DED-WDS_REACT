@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from './accordion';
 
 export default {
-  title: 'Design System/Atoms/Accordion',
+  title: 'Design System/Element/Accordion',
   component: Accordion,
   // decorators: [
   //   (Story) => (

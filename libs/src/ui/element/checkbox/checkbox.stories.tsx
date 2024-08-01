@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from './checkbox';
 
 export default {
-  title: 'Design System/Atoms/Checkbox',
+  title: 'Design System/Element/Checkbox',
   component: Checkbox,
   // decorators: [
   //   (Story) => (

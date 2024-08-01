@@ -5,6 +5,7 @@ import SearchIcon from '@assets/search.svg?react';
 
 interface SearchProps {
   onSearch: (query: string) => void;
+  size?: 'small' | 'medium' | 'large';
   buttonLabel?: string;
   isDisabled?: boolean;
   className?: string;

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Toggle } from './toggle';
 
 export default {
-  title: 'Design System/Atoms/Toggle',
+  title: 'Design System/Element/Toggle',
   component: Toggle,
   // decorators: [
   //   (Story) => (

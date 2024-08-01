@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Tabs } from './tabs';
 
 export default {
-  title: 'Design System/Atoms/Tabs',
+  title: 'Design System/Element/Tabs',
   component: Tabs,
   // decorators: [
   //   (Story) => (

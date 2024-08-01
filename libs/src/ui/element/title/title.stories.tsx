@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Title } from './title';
 
 export default {
-  title: 'Design System/Atoms/Title',
+  title: 'Design System/Element/Title',
   component: Title,
   // decorators: [
   //   (Story) => (

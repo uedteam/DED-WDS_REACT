@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from './textarea';
 
 export default {
-  title: 'Design System/Atoms/Textarea',
+  title: 'Design System/Element/Textarea',
   component: Textarea,
   // decorators: [
   //   (Story) => (

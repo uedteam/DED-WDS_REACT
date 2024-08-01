@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Radio } from './radio';
 
 export default {
-  title: 'Design System/Atoms/Radio',
+  title: 'Design System/Element/Radio',
   component: Radio,
   // decorators: [
   //   (Story) => (

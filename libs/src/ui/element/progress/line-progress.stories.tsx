@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { LineProgress } from './line-progress';
 
 export default {
-  title: 'Design System/Atoms/Line-Progress',
+  title: 'Design System/Element/Line-Progress',
   component: LineProgress,
   // decorators: [
   //   (Story) => (

@@ -17,7 +17,7 @@ export default {
     size: {
       description: '輸入框尺寸',
       control: {
-        type: 'radio',
+        type: 'select',
         options: ['small', 'medium', 'large'],
       },
     },
