@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+  display: grid;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: $image-size-rounded;
+  background-color: $color-white;
+  overflow: hidden;
+
+  // grid-template-columns: 1fr 1fr;
+
+  &-header {
+    width: 100%;
+    padding-inline: 24px;
+    padding-top: 16px;
+
+    .subtitle {
+      color: $text-color-helper;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card-icon {
+        color: $color-gray40;
+      }
+    }
+  }
+
+  &-pic {
+    width: 100%;
+    // grid-row: 1 / 4;
+
+    &-padding {
+      padding-inline: 24px;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-rounded {
+      border-radius: $image-size-rounded;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .card-desc {
+      padding-inline: 24px;
+      color: $text-color-primary;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    padding-inline: 24px;
+    padding-bottom: 16px;
+  }
+}
+
+.card-full-image {
+  &:has(.card-pic:first-child) {
+    padding-top: 16px;
+  }
+}

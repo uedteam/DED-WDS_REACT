@@ -13,7 +13,9 @@
 @import './component/_accordion';
 @import './component/_breadcrumb';
 @import './component/_progress';
-@import './component/module/search';
+@import './component/module/_search';
+@import './component/module/_slider';
+@import './component/section/_card';
 @import './custom';
 
 * {

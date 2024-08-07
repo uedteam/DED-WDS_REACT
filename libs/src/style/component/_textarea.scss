@@ -38,7 +38,7 @@
     padding-inline: 16px;
 
     &::placeholder {
-      color: $color-text-placeholder;
+      color: $text-color-placeholder;
     }
   }
 
@@ -67,7 +67,7 @@
 
 .textarea-label {
   font-size: $text-size-caption1;
-  color: $color-text-secondary;
+  color: $text-color-secondary;
 }
 
 .textarea-hint {
