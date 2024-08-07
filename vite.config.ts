@@ -12,9 +12,9 @@ export default defineConfig({
   cacheDir: './node_modules/.vite/AUO-DED-WDS',
   resolve: {
     alias: {
-      '@ui': '/src/ui',
-      '@style': '/src/style',
-      '@assets': '/src/assets',
+      '@ui': '/libs/src/ui',
+      '@style': '/libs/src/style',
+      '@assets': '/libs/src/assets',
     },
   },
 
@@ -35,7 +35,7 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: join(__dirname, 'tsconfig.json'),
-      include: ['AUO-DED-WDS/src/**/*.ts', 'AUO-DED-WDS/src/**/*.js'],
+      include: ['src/ui/**/*.ts', 'src/ui/**/*.js'],
       outDir: 'build/app',
       // insertTypesEntry: true,
     }),

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Title } from './title';
 
 export default {
-  title: 'Design System/Atoms/Title',
+  title: 'Design System/Element/Title',
   component: Title,
   // decorators: [
   //   (Story) => (
@@ -26,6 +26,13 @@ export default {
           'error',
           'info',
         ],
+      },
+    },
+    level: {
+      description: '標題等級',
+      control: {
+        type: 'select',
+        options: [0, 1, 2, 3, 4, 5, 6],
       },
     },
     children: {
@@ -57,7 +64,6 @@ export const Primary: Story = {
   args: {
     themeColor: 'primary',
     children: '標題',
-    className: '',
   },
   render(args) {
     return <Title {...args}>{args.children}</Title>;

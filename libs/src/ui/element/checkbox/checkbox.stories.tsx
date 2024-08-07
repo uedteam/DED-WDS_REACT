@@ -1,9 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from './checkbox';
-import { on } from 'events';
 
 export default {
-  title: 'Design System/Atoms/Checkbox',
+  title: 'Design System/Element/Checkbox',
   component: Checkbox,
   // decorators: [
   //   (Story) => (
@@ -58,6 +57,12 @@ export default {
         options: ['row', 'column'],
       },
     },
+    value: {
+      description: '選中的選項',
+      control: {
+        type: 'object',
+      },
+    },
     onChange: {
       description: '選擇選項後的事件',
       action: 'onChange',
@@ -65,6 +70,8 @@ export default {
   },
   args: {
     direction: 'row',
+    themeColor: 'primary',
+    value: '',
   },
   parameters: {
     docs: {
@@ -78,7 +85,7 @@ export default {
 type Story = StoryObj<typeof Checkbox>;
 
 export const Primary: Story = {
-  name: '文字輸入框',
+  name: '標準 checkbox',
   args: {
     className: '',
     options: [
@@ -86,6 +93,7 @@ export const Primary: Story = {
       { label: '選項二', value: 'option2' },
       { label: '選項三', value: 'option3' },
     ],
+    value: ['option2'],
   },
   render(args) {
     return <Checkbox {...args} onChange={(value) => console.log(value)} />;

@@ -5,7 +5,7 @@ import { Button } from './button';
 import Account from '@assets/account_circle.svg?react';
 
 export default {
-  title: 'Design System/Atoms/Button',
+  title: 'Design System/Element/Button',
   component: Button,
   // decorators: [
   //   (Story) => (
@@ -48,6 +48,13 @@ export default {
       description: '按鈕內容',
       control: {
         type: 'text',
+      },
+    },
+    size: {
+      description: '按鈕尺寸',
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
       },
     },
     prefix: {
@@ -95,9 +102,10 @@ export const Primary: Story = {
   name: '標準按鈕',
   args: {
     themeColor: 'primary',
-    children: <Title level={4}>標題按鈕</Title>,
+    children: <Title>標題按鈕</Title>,
+    size: 'large',
     prefix: <Account />,
-    onClick: () => action('onClick')('點擊事件'),
+    onClick: (e) => action('onClick')(e),
     className: '',
   },
   render(args) {
@@ -110,8 +118,8 @@ export const Multiple: Story = {
   args: {
     variant: 'outlined',
     themeColor: 'primary',
-    children: <Title level={5}>標題按鈕</Title>,
-    prefix: <Account width={24} height={24} />,
+    children: <Title>標題按鈕</Title>,
+    prefix: <Account />,
     onClick: () => action('onClick')('點擊事件'),
     className: '',
   },

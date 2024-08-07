@@ -1,18 +1,33 @@
-@import './theme/_function';
 @import './theme/_variable';
-@import './theme/_title';
-@import './theme/_button';
-@import './theme/_input';
-@import './theme/_textarea';
-@import './theme/_switch';
+@import './theme/_function';
+@import './theme/_map';
+@import './theme/_base';
+@import './component/_title';
+@import './component/element/_button';
+@import './component/element/input';
+@import './component/_textarea';
+@import './component/_toggle';
+@import './component/_radio';
+@import './component/_checkbox';
+@import './component/_tabs';
+@import './component/_accordion';
+@import './component/_breadcrumb';
+@import './component/_progress';
+@import './component/module/search';
 @import './custom';
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   outline: none;
   border: none;
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Noto Sans', Arial, sans-serif;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }

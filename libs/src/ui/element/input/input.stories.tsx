@@ -1,9 +1,10 @@
+import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import Account from '@assets/account_circle.svg?react';
+import Search from '@assets/search.svg?react';
 import { Input } from './input';
 
 export default {
-  title: 'Design System/Atoms/Input',
+  title: 'Design System/Element/Input',
   component: Input,
   // decorators: [
   //   (Story) => (
@@ -45,11 +46,33 @@ export default {
         type: 'text',
       },
     },
+    label: {
+      description: '標題',
+      control: {
+        type: 'text',
+      },
+    },
     placeholder: {
       description: '輸入提示',
       control: {
         type: 'text',
       },
+    },
+    hint: {
+      description: '提示訊息',
+      control: {
+        type: 'object',
+      },
+    },
+    value: {
+      description: '輸入值',
+      control: {
+        type: 'text',
+      },
+    },
+    onChange: {
+      description: '輸入事件',
+      action: 'changed',
     },
   },
   parameters: {
@@ -68,6 +91,8 @@ export const Primary: Story = {
   args: {
     className: '',
     placeholder: '請輸入帳號 ...',
+    hint: { error: '', description: '' },
+    onChange: (e) => action('onChange')(e),
   },
   render(args) {
     return <Input {...args} />;
@@ -75,11 +100,12 @@ export const Primary: Story = {
 };
 
 export const InputWithIcon: Story = {
-  name: '帳號',
+  name: '搜尋',
   args: {
     className: '',
-    prefix: <Account width={24} height={24} />,
+    prefix: <Search />,
     placeholder: '請輸入帳號 ...',
+    hint: { error: '', description: '' },
   },
   render(args) {
     return <Input {...args} />;

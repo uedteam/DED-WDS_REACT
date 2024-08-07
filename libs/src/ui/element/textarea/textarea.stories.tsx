@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from './textarea';
 
 export default {
-  title: 'Design System/Atoms/Textarea',
+  title: 'Design System/Element/Textarea',
   component: Textarea,
   // decorators: [
   //   (Story) => (
@@ -59,7 +59,6 @@ export const Primary: Story = {
   name: '文字輸入框',
   args: {
     label: '留下你的想法',
-    className: '',
     placeholder: '請輸入 ...',
     total: 10,
     hint: { error: '', description: '' },

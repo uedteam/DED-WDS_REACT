@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 import { getDisableClass, getThemeClass } from './styled';
+import { getSizeClass } from '../../../utils/style';
 
 interface ButtonProps {
   variant: 'contained' | 'outlined' | 'text';
@@ -13,18 +14,20 @@ interface ButtonProps {
     | 'info';
   isDisabled?: boolean;
   children: ReactNode;
+  size?: 'small' | 'medium' | 'large';
   prefix?: ReactNode;
   suffix?: ReactNode;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
 }
 
-export function Button(props: ButtonProps) {
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const {
     variant,
-    themeColor = '',
+    themeColor = 'primary',
     isDisabled = false,
     children,
+    size = 'medium',
     prefix,
     suffix,
     className,
@@ -35,18 +38,20 @@ export function Button(props: ButtonProps) {
   return (
     <button
       {...rest}
-      className={`button ${
-        isDisabled
-          ? getDisableClass(variant)
-          : className || getThemeClass(variant, themeColor)
-      }`}
+      className={`button 
+        ${getSizeClass('component', size)}
+        ${
+          isDisabled
+            ? getDisableClass(variant)
+            : className || getThemeClass(variant, themeColor)
+        }`}
       onClick={onClick}
     >
-      {prefix}
-      {children}
-      {suffix}
+      {prefix && <div className={getSizeClass('icon', size)}>{prefix}</div>}
+      {children && <div className={getSizeClass('text', size)}>{children}</div>}
+      {suffix && <div className={getSizeClass('icon', size)}>{suffix}</div>}
     </button>
   );
-}
+};
 
 export default Button;

@@ -1,5 +1,5 @@
-export const getStyle = (themeColor: string) => {
-  return `input-${themeColor}`;
+export const getThemeClass = (key: string, themeColor: string) => {
+  return `radio-${key}-${themeColor} `;
 };
 
 export const getSizeClass = (size: string) => {
