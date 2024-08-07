@@ -1,0 +1,60 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, StoryObj } from '@storybook/react';
+import Component from './component';
+
+export default {
+  // 定義組件路徑及匯入名稱: Element/Component,
+  title: 'Design System/Element/Component',
+  // 設定對應的組件名稱: Component,
+  component: Component,
+  tags: ['autodocs'],
+  argTypes: {
+    // 設定參數
+    // size: {
+    //   description: '輸入框尺寸',
+    //   control: {
+    //     type: 'select',
+    //     options: ['small', 'medium', 'large'],
+    //   },
+    // },
+    // isDisabled: {
+    //   description: '是否禁用',
+    //   control: {
+    //     type: 'boolean',
+    //   },
+    // },
+    className: {
+      description: '標題樣式',
+      control: {
+        type: 'text',
+      },
+    },
+    onClick: {
+      description: '點擊事件',
+    },
+  },
+  parameters: {
+    docs: {
+      title: '搜尋',
+      description: {
+        // 組件描述
+        component: '組件的呈現及說明。',
+      },
+    },
+  },
+} as Meta;
+type Story = StoryObj<typeof Component>;
+
+export const Primary: Story = {
+  name: '搜尋輸入框',
+  args: {
+    // 設定參數預設值
+    // size: 'medium',
+    // isDisabled: false,
+    className: '',
+    onClick: action('onClick'),
+  },
+  render(args) {
+    return <Component {...args} />;
+  },
+};

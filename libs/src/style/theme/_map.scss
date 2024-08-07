@@ -21,6 +21,7 @@ $icon-size: (
   'large': $icon-size-large,
 );
 
+// 定義色彩
 // 定義一個顏色 Map，包含 light 和 dark 版本的顏色
 $theme-colors: (
   // 主要主題色
@@ -88,6 +89,7 @@ $theme-colors: (
       'active': blend-rgba($dark-color-info, $lightness20))) // 可以添加更多顏色主題
 );
 
+// 主題文字
 $text-colors: (
   // 主要文字顏色
   'primary': ('light': $color-gray90, 'dark': $color-white),
@@ -104,6 +106,7 @@ $text-colors: (
   // 可以添加更多顏色主題
 );
 
+// 主題邊框
 $border-colors: (
   // 主要主題色
   'primary': ('light': ('default': $light-color-primary,
@@ -168,4 +171,12 @@ $border-colors: (
       'hover': blend-rgba($dark-color-info, $lightness80),
       'focus': blend-rgba($dark-color-info, $lightness50),
       'selected': blend-rgba($dark-color-info, $lightness20))) // 可以添加更多顏色主題
+);
+
+// 固定邊框樣式
+$border-styles: (
+  'line': ('light': ('width': 1px, 'style': solid, 'color': $color-gray30),
+    'dark': ('width': 1px, 'style': solid, 'color': $color-gray30)),
+  'shadow': ('light': ('fill': $shadow-dark2),
+    'dark': ('fill': $shadow-light2)),
 );
