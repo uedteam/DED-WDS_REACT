@@ -21,7 +21,12 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
-      include: ['src/ui/**/*.ts', 'src/ui/**/*.js'],
+      include: [
+        'src/ui/**/*.ts',
+        'src/ui/**/*.js',
+        'src/assets/*.ts',
+        'src/assets/*.js',
+      ],
     }),
     svgr(),
   ],
@@ -40,6 +45,7 @@ export default defineConfig({
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    sourcemap: true,
     lib: {
       entry: 'src/index.ts',
       name: 'libs',
