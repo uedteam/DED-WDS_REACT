@@ -3,13 +3,13 @@ import { Meta, StoryObj } from '@storybook/react';
 import Component from './component';
 
 export default {
-  // 定義組件路徑及匯入名稱: Element/Component,
+  /* 定義組件路徑及匯入名稱: Element/Component */
   title: 'Design System/Element/Component',
-  // 設定對應的組件名稱: Component,
+  /* 設定對應的組件名稱: Component */
   component: Component,
   tags: ['autodocs'],
   argTypes: {
-    // 設定參數
+    /* 設定參數 */
     // size: {
     //   description: '輸入框尺寸',
     //   control: {
@@ -24,7 +24,7 @@ export default {
     //   },
     // },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -37,18 +37,19 @@ export default {
     docs: {
       title: '搜尋',
       description: {
-        // 組件描述
+        /* 組件描述 */
         component: '組件的呈現及說明。',
       },
     },
   },
 } as Meta;
+/* 設定組件類型 */
 type Story = StoryObj<typeof Component>;
 
 export const Primary: Story = {
   name: '搜尋輸入框',
   args: {
-    // 設定參數預設值
+    /* 設定參數預設值 */
     // size: 'medium',
     // isDisabled: false,
     className: '',

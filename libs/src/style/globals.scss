@@ -1,10 +1,11 @@
+@import './theme/_reset';
 @import './theme/_variable';
 @import './theme/_function';
 @import './theme/_map';
 @import './theme/_base';
 @import './component/_title';
 @import './component/element/_button';
-@import './component/element/input';
+@import './component/element/_input';
 @import './component/_textarea';
 @import './component/_toggle';
 @import './component/_radio';
@@ -16,18 +17,8 @@
 @import './component/module/_search';
 @import './component/module/_slider';
 @import './component/section/_card';
+@import './component/element/avatar';
 @import './custom';
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: 'Noto Sans', Arial, sans-serif;
-}
 
 .icon {
   width: 24px;

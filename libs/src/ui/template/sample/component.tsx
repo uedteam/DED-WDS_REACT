@@ -1,6 +1,6 @@
 import React from 'react';
 
-// 組件介面參數 props
+/* 組件介面參數 props */
 interface ButtonProps {
   // size?: 'small' | 'medium' | 'large';
   // isDisabled?: boolean;
@@ -8,10 +8,10 @@ interface ButtonProps {
   className?: string;
 }
 
-// 定義組件
-// 修改組件定義名稱 Component
+/* 定義組件 */
+/* 修改組件定義名稱 Component */
 export const Component: React.FC<ButtonProps> = (props: ButtonProps) => {
-  // 解構組件參數
+  /* 解構組件參數 */
   const {
     onClick,
     // size,
@@ -20,7 +20,7 @@ export const Component: React.FC<ButtonProps> = (props: ButtonProps) => {
     ...rest
   } = props;
 
-  // 事件控制
+  /* 事件控制 */
   const handleClick = () => {
     console.log('click');
   };
@@ -31,5 +31,5 @@ export const Component: React.FC<ButtonProps> = (props: ButtonProps) => {
     </button>
   );
 };
-// 修改匯出組件定義名稱 Component
+/* 修改匯出組件定義名稱 Component */
 export default Component;

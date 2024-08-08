@@ -4,6 +4,8 @@ $variants: ['contained', 'outlined', 'text'];
 $themes: ['primary', 'secondary', 'tertiary', 'success', 'warning', 'error', 'info'];
 $sizes: ['small', 'medium', 'large'];
 $borderStyles: ['line', 'shadow'];
+$avatarStatus: ['online', 'idle', 'busy', 'offline'];
+$avatarShape: ['circle', 'square'];
 
 $lightness10: #ffffff1a;
 $lightness20: #ffffff33;
@@ -31,6 +33,13 @@ $btn-border-width: 2px;
 $image-size-rounded: 8px;
 $button-size-rounded: 8px;
 $textarea-size-rounded: 4px;
+$avatar-size-rounded: 4px;
+$size-circle: 50%;
+
+// avatar 尺寸
+$avatar-size-small: 40px;
+$avatar-size-medium: 56px;
+$avatar-size-large: 72px;
 
 // icon 尺寸
 $icon-size-small: 16px;
