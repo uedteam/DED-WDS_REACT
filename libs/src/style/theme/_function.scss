@@ -33,6 +33,16 @@
   @return map-get(map-get(map-get($border-styles, $style), $mode), $type);
 }
 
+// 動態獲取 avatar 狀態顏色
+@function getAvatarStatusColor($mode, $status) {
+  @return map-get(map-get($avatar-status-colors, $mode), $status);
+}
+
+// 動態獲取 avatar 形狀
+@function getAvatarShape($mode, $shape) {
+  @return map-get($avatar-shape, $shape);
+}
+
 // 函式：判斷色彩是否為 RGBA，否則轉換為 RGBA
 @function to-rgba($color) {
   @if type-of($color)=='color' {
