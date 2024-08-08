@@ -15,11 +15,45 @@ $component-size: (
 );
 
 // 定義 icon 大小
+$avatar-size: (
+  'small': $avatar-size-small,
+  'medium': $avatar-size-medium,
+  'large': $avatar-size-large,
+);
+
+// 定義 avatar 狀態
+$avatar-status-colors: (
+  'light': ('online': $light-color-success,
+    'idle': $light-color-warning,
+    'busy': $light-color-error,
+    'offline': $color-gray20, ),
+  'dark': ('online': $light-color-success,
+    'idle': $light-color-warning,
+    'busy': $light-color-error,
+    'offline': $color-gray20,
+  )
+);
+
+// 定義 avatar 形狀
+$avatar-shape: (
+  'circle': $size-circle,
+  'square': $avatar-size-rounded,
+);
+
+// 定義 icon 大小
 $icon-size: (
   'small': $icon-size-small,
   'medium': $icon-size-medium,
   'large': $icon-size-large,
 );
+
+// 定義 icon 大小
+// $icon-position: (
+//   'top-left': $icon-size-small,
+//   'top-right': $icon-size-medium,
+//   'bottom-left': $icon-size-large,
+//   'bottom-right': $icon-size-large,
+// );
 
 // 定義色彩
 // 定義一個顏色 Map，包含 light 和 dark 版本的顏色
