@@ -6,6 +6,7 @@ import {
   // getPositionClass,
   getShapeClass,
 } from './styled';
+import { getAbbrFullName } from '../../../utils';
 
 const getStatusIcon = (size: string, status: string) => {
   const sizeClass = getSizeClass('avatar-icon', size);
@@ -56,8 +57,7 @@ export const Avatar: React.FC<AvatarProps> = (props: AvatarProps) => {
           <img className="avatar-pic" src={imageSrc} alt={alt} />
         ) : (
           <span className={`avatar-text ${getSizeClass('text', size)}`}>
-            {userName.slice(0, 1)}
-            {userName.slice(5, 6)}
+            {getAbbrFullName(userName, 2)}
           </span>
         )}
       </div>
