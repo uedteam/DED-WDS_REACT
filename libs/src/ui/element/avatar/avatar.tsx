@@ -31,13 +31,13 @@ const getStatusIcon = (size: string, status: string) => {
 };
 
 // 組件介面參數 props
-interface AvatarProps {
-  size: 'small' | 'medium' | 'large';
+export interface AvatarProps {
+  size: 'xsmall' | 'small' | 'medium' | 'large';
   shape: 'circle' | 'square';
   // iconPos: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   userName: string;
-  status: 'online' | 'busy' | 'idle' | 'offline' | 'default';
-  imageSrc: string;
+  status?: 'online' | 'busy' | 'idle' | 'offline';
+  imageSrc?: string;
   alt?: string;
   className?: string;
 }

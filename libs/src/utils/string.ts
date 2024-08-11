@@ -16,5 +16,5 @@ export const getAbbrFullName = (string: string, count: number) => {
       }
     }
   });
-  return matchCount < 2 ? string.slice(0, count) : matchString;
+  return matchCount < 2 ? string.slice(0, count).toUpperCase() : matchString;
 };

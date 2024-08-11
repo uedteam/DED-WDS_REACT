@@ -1,12 +1,12 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import Component from './component';
+import Menu from './menu';
+import { Avatar } from '../../element/avatar';
+import ArrowDownIcon from '../../../assets/arrow_down.svg?react';
 
 export default {
-  /* 定義組件路徑及匯入名稱: Element/Component */
-  title: 'Design System/Sample/Component',
-  /* 設定對應的組件名稱: Component */
-  component: Component,
+  title: 'Design System/Module/Menu',
+  component: Menu,
   tags: ['autodocs'],
   argTypes: {
     /* 設定參數 */
@@ -44,7 +44,7 @@ export default {
   },
 } as Meta;
 /* 設定組件類型 */
-type Story = StoryObj<typeof Component>;
+type Story = StoryObj<typeof Menu>;
 
 export const Primary: Story = {
   name: '搜尋輸入框',
@@ -52,10 +52,27 @@ export const Primary: Story = {
     /* 設定參數預設值 */
     // size: 'medium',
     // isDisabled: false,
+    options: [
+      {
+        prefix: <Avatar size="xsmall" shape="circle" userName="test" />,
+        content: '選項一',
+        suffix: <ArrowDownIcon width={'24px'} height={'24px'} />,
+      },
+      {
+        prefix: <Avatar size="xsmall" shape="circle" userName="test" />,
+        content: '選項二',
+        suffix: <ArrowDownIcon width={'24px'} height={'24px'} />,
+      },
+      {
+        prefix: <Avatar size="xsmall" shape="circle" userName="test" />,
+        content: '選項三',
+        suffix: <ArrowDownIcon width={'24px'} height={'24px'} />,
+      },
+    ],
     className: '',
     onClick: action('onClick'),
   },
   render(args) {
-    return <Component {...args} />;
+    return <Menu {...args} />;
   },
 };

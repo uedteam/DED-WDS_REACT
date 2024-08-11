@@ -11,8 +11,8 @@ export default {
     size: {
       description: '輸入框尺寸',
       control: {
-        type: 'radio',
-        options: ['small', 'medium', 'large'],
+        type: 'select',
+        options: ['xsmall', 'small', 'medium', 'large'],
       },
     },
     shape: {
@@ -26,7 +26,7 @@ export default {
       description: '狀態',
       control: {
         type: 'select',
-        options: ['default', 'online', 'idle', 'busy', 'offline'],
+        options: ['online', 'idle', 'busy', 'offline'],
       },
     },
     imageSrc: {
@@ -60,7 +60,7 @@ export const Primary: Story = {
     shape: 'circle',
     size: 'medium',
     userName: 'Kevin',
-    status: 'online',
+    // status: 'online',
     imageSrc: 'https://picsum.photos/320/240',
     className: '',
   },

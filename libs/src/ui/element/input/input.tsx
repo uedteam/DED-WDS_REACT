@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 interface InputProps {
   label?: ReactNode;
   className?: string;
+  type?: string;
   placeholder?: string;
   prefix?: ReactNode;
   suffix?: ReactNode;
@@ -17,8 +18,9 @@ interface InputProps {
 
 export const Input: React.FC<InputProps> = (props: InputProps) => {
   const {
-    label = '',
+    label,
     className,
+    type = 'text',
     placeholder = '請輸入...',
     size = 'medium',
     prefix,
@@ -46,11 +48,12 @@ export const Input: React.FC<InputProps> = (props: InputProps) => {
           input-group
           ${className ? className : ''} 
           ${getSizeClass('component', size)} 
-          ${isDisabled ? 'input-disable' : getBorderClass(hint.error)}`}
+          ${isDisabled ? 'input-disable' : getBorderClass(hint)}`}
       >
         {prefix && <div className={getSizeClass('icon', size)}>{prefix}</div>}
         <input
           value={value}
+          type={type}
           className={`${
             isDisabled ? 'input-disable' : `input ${getSizeClass('text', size)}`
           }`}
