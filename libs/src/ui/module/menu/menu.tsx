@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* 組件介面參數 props */
-interface MenuProps {
+export interface MenuProps {
   // size?: 'small' | 'medium' | 'large';
   // isDisabled?: boolean;
   options: Array<{

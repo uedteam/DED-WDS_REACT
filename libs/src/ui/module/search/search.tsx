@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../../element/button';
 import { Input } from '../../element/input';
-import SearchIcon from '@assets/search.svg?react';
+import { SearchIcon, CloseIcon } from '../../../assets';
 
 interface SearchProps {
   onSearch: (query: string) => void;
@@ -20,17 +20,30 @@ export const Search: React.FC<SearchProps> = (props: SearchProps) => {
     setQuery(value);
   };
 
-  const handleButtonClick = () => {
+  const handleSearchClick = () => {
     onSearch(query);
   };
+
+  const handleCloseClick = () => {
+    setQuery('');
+  };
+
   return (
     <div className="search">
       <Input
+        value={query}
         onChange={handleInputChange}
         prefix={<SearchIcon></SearchIcon>}
+        suffix={
+          query && (
+            <Button variant="text" onClick={handleCloseClick}>
+              <CloseIcon className="search-icon"></CloseIcon>
+            </Button>
+          )
+        }
         {...rest}
       />
-      <Button variant="contained" onClick={handleButtonClick} {...rest}>
+      <Button variant="contained" onClick={handleSearchClick} {...rest}>
         {buttonLabel}
       </Button>
     </div>

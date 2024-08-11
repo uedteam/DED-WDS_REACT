@@ -20,7 +20,13 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
   const result = splitArray(users, limit);
 
   const [isOpen, setIsOpen] = React.useState(false);
-  const [menu, setMenu] = React.useState<{ content: string }[]>([]);
+  const [menu, setMenu] = React.useState<
+    {
+      prefix?: React.ReactNode;
+      content: string;
+      suffix?: React.ReactNode;
+    }[]
+  >([]);
 
   if (limit < 1) {
     throw new Error('Limit must be at least 1');
@@ -42,7 +48,7 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
         };
       })
     );
-  }, [result.restList]);
+  }, []);
 
   return (
     <div className="avatar-group">

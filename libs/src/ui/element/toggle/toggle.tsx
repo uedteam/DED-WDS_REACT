@@ -48,18 +48,13 @@ export const Toggle: React.FC<ToggleProps> = (props: ToggleProps) => {
         onChange && onChange(!checked);
       }}
     >
-      <div
-        className={`toggle-thumb 
-          ${
-            isDisabled ? 'toggle-label-disable' : getThumbPositionClass(checked)
-          }`}
-      />
+      <div className={`toggle-thumb ${getThumbPositionClass(checked)}`} />
       <label
         className={`toggle-label ${getLabelPositionClass(checked)} ${
           isDisabled ? 'toggle-label-disable' : ''
         }`}
       >
-        {isDisabled ? '' : checked ? checkChildren : unCheckChildren}
+        {checked ? checkChildren : unCheckChildren}
       </label>
     </div>
   );

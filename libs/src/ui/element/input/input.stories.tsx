@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import Search from '@assets/search.svg?react';
+import { SearchIcon, CloseIcon } from '../../../assets';
 import { Input } from './input';
 
 export default {
@@ -22,32 +22,26 @@ export default {
         options: ['small', 'medium', 'large'],
       },
     },
-    children: {
-      description: '標題內容',
-      control: {
-        type: 'text',
-      },
-    },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
     },
     prefix: {
       description: '前置元素',
-      control: {
-        type: 'text',
-      },
     },
     suffix: {
       description: '後置元素',
+    },
+    label: {
+      description: '標題',
       control: {
         type: 'text',
       },
     },
-    label: {
-      description: '標題',
+    type: {
+      description: '輸入類型',
       control: {
         type: 'text',
       },
@@ -83,6 +77,10 @@ export default {
       },
     },
   },
+  args: {
+    size: 'medium',
+    isDisabled: false,
+  },
 } as Meta;
 type Story = StoryObj<typeof Input>;
 
@@ -100,12 +98,13 @@ export const Primary: Story = {
 };
 
 export const InputWithIcon: Story = {
-  name: '搜尋',
+  name: '輸入框包含圖示',
   args: {
     className: '',
-    prefix: <Search />,
+    prefix: <SearchIcon />,
     placeholder: '請輸入帳號 ...',
     hint: { error: '', description: '' },
+    suffix: <CloseIcon />,
   },
   render(args) {
     return <Input {...args} />;

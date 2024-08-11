@@ -1,6 +1,14 @@
-export const getBorderClass = (error: string) => {
-  if (error.length <= 0) return;
-  return 'textarea-border-error';
+import { isEmpty } from 'lodash';
+
+export const getBorderClass = ({
+  error,
+  description,
+}: {
+  error: string;
+  description: string;
+}) => {
+  if (isEmpty(error) || isEmpty(description)) return;
+  return error.length > 0 ? 'textarea-border-error' : 'textarea-border-desc';
 };
 
 export const getHintClass = ({
