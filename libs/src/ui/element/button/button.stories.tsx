@@ -1,19 +1,16 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { Title } from '../title';
-import { Button } from './button';
-import Account from '@assets/account_circle.svg?react';
+import { Title, Button } from '@src/ui';
+import {
+  AccountIcon,
+  SearchIcon,
+  VisibilityIcon,
+  VisibilityOffIcon,
+} from '@src/assets';
 
 export default {
   title: 'Design System/Element/Button',
   component: Button,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -24,7 +21,7 @@ export default {
       },
     },
     themeColor: {
-      description: '按鈕顏色',
+      description: '主題顏色',
       control: {
         type: 'select',
         options: [
@@ -46,9 +43,7 @@ export default {
     },
     children: {
       description: '按鈕內容',
-      control: {
-        type: 'text',
-      },
+      options: ['標題按鈕', '客製化按鈕'],
     },
     size: {
       description: '按鈕尺寸',
@@ -59,14 +54,24 @@ export default {
     },
     prefix: {
       description: '前置元素',
-      control: {
-        type: 'text',
+      options: ['None', 'Account', 'Search', 'Visibility', 'VisibilityOff'],
+      mapping: {
+        None: null,
+        Account: <AccountIcon />,
+        Search: <SearchIcon />,
+        Visibility: <VisibilityIcon />,
+        VisibilityOff: <VisibilityOffIcon />,
       },
     },
     suffix: {
       description: '後置元素',
-      control: {
-        type: 'text',
+      options: ['None', 'Account', 'Search', 'Visibility', 'VisibilityOff'],
+      mapping: {
+        None: null,
+        Account: <AccountIcon />,
+        Search: <SearchIcon />,
+        Visibility: <VisibilityIcon />,
+        VisibilityOff: <VisibilityOffIcon />,
       },
     },
     onClick: {
@@ -74,7 +79,7 @@ export default {
       action: 'clicked',
     },
     className: {
-      description: '按鈕客製化樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -104,7 +109,7 @@ export const Primary: Story = {
     themeColor: 'primary',
     children: <Title>標題按鈕</Title>,
     size: 'large',
-    prefix: <Account />,
+    prefix: <AccountIcon />,
     onClick: (e) => action('onClick')(e),
     className: '',
   },
@@ -119,7 +124,7 @@ export const Multiple: Story = {
     variant: 'outlined',
     themeColor: 'primary',
     children: <Title>標題按鈕</Title>,
-    prefix: <Account />,
+    prefix: <AccountIcon />,
     onClick: () => action('onClick')('點擊事件'),
     className: '',
   },
@@ -142,35 +147,3 @@ export const Multiple: Story = {
     );
   },
 };
-
-// export const Disabled: Story = {
-//   name: '禁用按鈕',
-//   args: {
-//     prefix: <Account />,
-//   },
-//   render(args) {
-//     return <Button {...args}>{args.children}</Button>;
-//   },
-// };
-
-// export const Text: Story = {
-//   name: '文字按鈕',
-//   args: {
-//     variant: 'text',
-//     children: '文字按鈕',
-//   },
-//   render(args) {
-//     return <Button {...args}>{args.children}</Button>;
-//   },
-// };
-
-// export const Icon: Story = {
-//   name: 'Icon 按鈕',
-//   args: {
-//     variant: 'text',
-//     suffix: <Account />,
-//   },
-//   render(args) {
-//     return <Button {...args}>{args.children}</Button>;
-//   },
-// };

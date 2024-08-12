@@ -1,3 +1,4 @@
+import AccountIcon from '@assets/account_circle.svg?react';
 import IdleIcon from '@assets/idle.svg?react';
 import OnlineIcon from '@assets/online.svg?react';
 import BusyIcon from '@assets/busy.svg?react';
@@ -13,6 +14,7 @@ import CheckIcon from '@assets/check.svg?react';
 import MoreIcon from '@assets/more_vert.svg?react';
 
 export {
+  AccountIcon,
   IdleIcon,
   OnlineIcon,
   BusyIcon,

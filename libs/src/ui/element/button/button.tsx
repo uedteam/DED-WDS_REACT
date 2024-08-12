@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode } from 'react';
 import { getDisableClass, getThemeClass } from './styled';
-import { getSizeClass } from '../../../utils/style';
+import { getSizeClass } from '@src/utils/style';
 
 interface ButtonProps {
   variant: 'contained' | 'outlined' | 'text';
@@ -21,6 +21,21 @@ interface ButtonProps {
   className?: string;
 }
 
+/**
+ * 按鈕元件
+ *
+ * @component
+ * @param {Object} props - 按鈕的屬性
+ * @param {string} props.variant - 按鈕的樣式變體
+ * @param {string} props.themeColor - 按鈕的主題顏色
+ * @param {function} props.onClick - 按鈕的點擊事件處理函數
+ * @example
+ * ```tsx
+ * <Button variant="outlined" themeColor="secondary" onClick={handleClick}>
+ *   Click me
+ * </Button>
+ * ```
+ */
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const {
     variant,
