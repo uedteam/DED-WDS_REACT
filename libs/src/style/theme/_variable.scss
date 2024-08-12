@@ -6,6 +6,12 @@ $sizes: ['xsmall', 'small', 'medium', 'large'];
 $borderStyles: ['line', 'shadow'];
 $avatarStatus: ['online', 'idle', 'busy', 'offline'];
 $avatarShape: ['circle', 'square'];
+$aspectRatio: ['11', '43', '54', '169'];
+
+$aspect-ratio-11: 1/1;
+$aspect-ratio-43: 4/3;
+$aspect-ratio-54: 5/4;
+$aspect-ratio-169: 16/9;
 
 $lightness10: #ffffff1a;
 $lightness20: #ffffff33;

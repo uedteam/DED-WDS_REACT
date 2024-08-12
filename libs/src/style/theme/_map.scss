@@ -49,6 +49,14 @@ $icon-size: (
   'large': $icon-size-large,
 );
 
+// 圖片比例
+$aspect-ratio: (
+  '11': $aspect-ratio-11,
+  '43': $aspect-ratio-43,
+  '54': $aspect-ratio-54,
+  '169': $aspect-ratio-169,
+);
+
 // 定義 icon 大小
 // $icon-position: (
 //   'top-left': $icon-size-small,
