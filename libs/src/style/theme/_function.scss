@@ -43,6 +43,11 @@
   @return map-get($avatar-shape, $shape);
 }
 
+// 動態獲取圖片比例
+@function getAspectRatio($ratio) {
+  @return map-get($aspect-ratio, $ratio);
+}
+
 // 函式：判斷色彩是否為 RGBA，否則轉換為 RGBA
 @function to-rgba($color) {
   @if type-of($color)=='color' {
