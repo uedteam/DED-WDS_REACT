@@ -12,6 +12,7 @@ export default defineConfig({
   cacheDir: './node_modules/.vite/AUO-DED-WDS',
   resolve: {
     alias: {
+      '@src': '/libs/src',
       '@ui': '/libs/src/ui',
       '@style': '/libs/src/style',
       '@assets': '/libs/src/assets',

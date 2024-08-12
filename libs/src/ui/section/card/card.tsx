@@ -1,43 +1,57 @@
 import React, { MouseEventHandler } from 'react';
-import { Title } from '../../element/title';
-import { Button } from '../../element/button';
 import { getBorderClass, getRadioClass } from './styled';
-import MoreIcon from '@assets/more_vert.svg?react';
+import { Title, Button } from '@src/ui';
+import { MoreIcon } from '@src/assets';
 
-// 組件介面參數 props
-interface CardProps {
-  onMoreClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+export interface CardProps {
+  hasMoreBtn?: boolean;
+  onMoreClick?: MouseEventHandler<HTMLButtonElement>;
+  hasFuncBtn?: boolean;
+  onFuncClick?: MouseEventHandler<HTMLButtonElement>;
   cardTitle?: string;
   subTitle?: string;
   imageSrc?: string;
-  hasMore?: boolean;
   isFullImage?: boolean;
   aspectRatio: '1:1' | '4:3' | '5:4' | '16:9';
   borderStyle?: 'line' | 'shadow';
   className?: string;
 }
 
-// 定義組件
-// 修改組件定義名稱 Component
+/**
+ * 卡片組件
+ *
+ * @component
+ * @param {Object} props - 組件屬性
+ * @param {boolean} props.hasMoreBtn - 是否顯示更多按鈕
+ * @param {function} props.onMoreClick - 更多按鈕的點擊事件處理函數
+ * @param {boolean} props.hasFuncBtn - 是否顯示功能按鈕
+ * @param {function} props.onFuncClick - 功能按鈕的點擊事件處理函數
+ * @param {string} props.cardTitle - 卡片標題
+ * @param {string} props.subTitle - 卡片副標題
+ * @param {string} props.imageSrc - 圖片來源
+ * @param {boolean} props.isFullImage - 是否顯示完整圖片
+ * @param {string} props.aspectRatio - 圖片的長寬比
+ * @param {string} [props.borderStyle='line'] - 邊框樣式
+ * @param {string} props.className - 自定義樣式類名
+ * @param {Object} rest - 其他屬性
+ *
+ * @returns {JSX.Element} 卡片組件
+ */
 export const Card: React.FC<CardProps> = (props: CardProps) => {
-  // 解構組件參數
   const {
+    hasMoreBtn,
     onMoreClick,
+    hasFuncBtn,
+    onFuncClick,
     cardTitle,
     subTitle,
     imageSrc,
-    hasMore,
     isFullImage,
     aspectRatio,
     borderStyle = 'line',
     className,
     ...rest
   } = props;
-
-  // 事件控制
-  // const handleClick = () => {
-  //   console.log('click');
-  // };
 
   return (
     <div
@@ -64,9 +78,11 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
           <div className="card-header">
             <div className="card-header-title">
               <Title level={2}>{cardTitle}</Title>
-              <Button variant="text">
-                <MoreIcon className="card-icon"></MoreIcon>
-              </Button>
+              {hasFuncBtn && (
+                <Button variant="text" onClick={onFuncClick}>
+                  <MoreIcon className="card-icon"></MoreIcon>
+                </Button>
+              )}
             </div>
             {subTitle && <div className="subtitle">{subTitle}</div>}
           </div>
@@ -80,7 +96,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
           </p>
         </div>
 
-        {hasMore && (
+        {hasMoreBtn && (
           <div className="card-footer">
             <Button
               {...rest}

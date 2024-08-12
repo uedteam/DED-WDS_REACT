@@ -1,7 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 import Card from './card';
-import { has } from 'lodash';
 
 export default {
   title: 'Design System/Section/Card',
@@ -43,17 +42,17 @@ export default {
     aspectRatio: {
       description: '圖片比例',
       control: {
-        type: 'radio',
+        type: 'select',
         options: ['11', '43', '54', '169'],
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
     },
-    hasMore: {
+    hasMoreBtn: {
       description: '是否有更多內容按鈕',
       control: {
         type: 'boolean',
@@ -63,13 +62,22 @@ export default {
       description: '更多按鈕事件',
       action: 'clicked',
     },
+    hasFuncBtn: {
+      description: '是否有功能按鈕',
+      control: {
+        type: 'boolean',
+      },
+    },
+    onFuncClick: {
+      description: '功能按鈕事件',
+      action: 'clicked',
+    },
   },
   parameters: {
     docs: {
-      title: '搜尋',
+      title: '卡片組件',
       description: {
-        // 組件描述
-        component: '組件的呈現及說明。',
+        component: '卡片的呈現及說明。',
       },
     },
   },
@@ -79,8 +87,6 @@ type Story = StoryObj<typeof Card>;
 export const Primary: Story = {
   name: '標準卡片',
   args: {
-    // 設定參數預設值
-    // size: 'medium',
     borderStyle: 'line',
     cardTitle: 'Card Title',
     subTitle: 'Card SubTitle',
@@ -88,7 +94,7 @@ export const Primary: Story = {
     isFullImage: false,
     aspectRatio: '1:1',
     className: '',
-    hasMore: true,
+    hasMoreBtn: true,
     onMoreClick: (e) => {
       action('onClick')(e);
     },
@@ -105,14 +111,14 @@ export const Primary: Story = {
 export const PrimaryWithRow: Story = {
   name: '滿版圖示橫排卡片',
   args: {
-    // 設定參數預設值
     borderStyle: 'shadow',
     cardTitle: 'Card Title',
     imageSrc: 'https://picsum.photos/320/240',
     isFullImage: true,
     aspectRatio: '4:3',
     className: '',
-    hasMore: true,
+    hasFuncBtn: true,
+    hasMoreBtn: true,
     onMoreClick: action('onClick'),
   },
   render(args) {
@@ -129,14 +135,14 @@ export const PrimaryWithRow: Story = {
 export const PrimaryWithColumn: Story = {
   name: '滿版圖示直排卡片',
   args: {
-    // 設定參數預設值
     borderStyle: 'shadow',
     cardTitle: 'Card Title',
     imageSrc: 'https://picsum.photos/320/240',
     isFullImage: true,
     aspectRatio: '4:3',
     className: '',
-    hasMore: true,
+    hasFuncBtn: true,
+    hasMoreBtn: true,
     onMoreClick: action('onClick'),
   },
   render(args) {

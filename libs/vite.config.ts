@@ -10,6 +10,7 @@ export default defineConfig({
   cacheDir: '../node_modules/.vite/libs',
   resolve: {
     alias: {
+      '@src': '/src',
       '@ui': '/src/ui',
       '@style': '/src/style',
       '@assets': '/src/assets',
