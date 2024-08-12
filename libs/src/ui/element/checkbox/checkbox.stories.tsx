@@ -1,16 +1,10 @@
+import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from './checkbox';
 
 export default {
   title: 'Design System/Element/Checkbox',
   component: Checkbox,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -38,7 +32,7 @@ export default {
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -64,7 +58,7 @@ export default {
       },
     },
     onChange: {
-      description: '選擇選項後的事件',
+      description: '選中選項改變時的回調函數',
       action: 'onChange',
     },
   },
@@ -94,8 +88,9 @@ export const Primary: Story = {
       { label: '選項三', value: 'option3' },
     ],
     value: ['option2'],
+    onChange: (e) => action('onChange')(e),
   },
   render(args) {
-    return <Checkbox {...args} onChange={(value) => console.log(value)} />;
+    return <Checkbox {...args} />;
   },
 };
