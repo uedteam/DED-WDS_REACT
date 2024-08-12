@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $mode: 'light';
 $separate: '/';
 $variants: ['contained', 'outlined', 'text'];
@@ -8,10 +10,10 @@ $avatarStatus: ['online', 'idle', 'busy', 'offline'];
 $avatarShape: ['circle', 'square'];
 $aspectRatio: ['11', '43', '54', '169'];
 
-$aspect-ratio-11: 1/1;
-$aspect-ratio-43: 4/3;
-$aspect-ratio-54: 5/4;
-$aspect-ratio-169: 16/9;
+$aspect-ratio-11: math.div(1, 1);
+$aspect-ratio-43: math.div(4, 3);
+$aspect-ratio-54: math.div(5, 4);
+$aspect-ratio-169: math.div(16, 9);
 
 $lightness10: #ffffff1a;
 $lightness20: #ffffff33;
