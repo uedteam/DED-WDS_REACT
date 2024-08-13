@@ -3,7 +3,7 @@
 @import './theme/_function';
 @import './theme/_map';
 @import './theme/_base';
-@import './component/_title';
+@import './component/element/_title';
 @import './component/element/_button';
 @import './component/element/_input';
 @import './component/element/_textarea';
@@ -12,7 +12,7 @@
 @import './component/element/_checkbox';
 @import './component/module/_tabs';
 @import './component/_accordion';
-@import './component/_breadcrumb';
+@import './component/element/_breadcrumb';
 @import './component/_progress';
 @import './component/module/_search';
 @import './component/module/_slider';

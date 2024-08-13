@@ -10,7 +10,7 @@ interface TitleProps {
     | 'warning'
     | 'error'
     | 'info';
-  level: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+  level?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
   children: ReactNode;
   className?: string;
 }

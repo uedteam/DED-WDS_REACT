@@ -1,17 +1,9 @@
+/**
+ * 取得主題類別。
+ * @param themeColor - 主題顏色。
+ * @param type - 類型。
+ * @returns {string} - 主題類別。
+ */
 export const getThemeClass = (themeColor: string, type: string) => {
-  if (type === 'card') {
-    return `accordion-${type}-${themeColor}`;
-  }
-  return `accordion-${themeColor}`;
-};
-
-export const getActiveClass = (themeColor: string, type: string) => {
-  if (type === 'card') {
-    return `accordion-${type}-${themeColor}-active`;
-  }
-  return `accordion-${themeColor}-active`;
-};
-
-export const getDisableClass = () => {
-  return 'accordion-disable';
+  return `breadcrumb-${themeColor}`;
 };
