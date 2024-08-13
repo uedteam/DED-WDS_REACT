@@ -4,13 +4,6 @@ import { CircleProgress } from './circle-progress';
 export default {
   title: 'Design System/Element/Circle-Progress',
   component: CircleProgress,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -38,7 +31,7 @@ export default {
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
