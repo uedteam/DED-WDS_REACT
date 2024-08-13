@@ -1,18 +1,17 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { SearchIcon, CloseIcon } from '../../../assets';
 import { Input } from './input';
+import {
+  AccountIcon,
+  SearchIcon,
+  VisibilityIcon,
+  VisibilityOffIcon,
+  CloseIcon,
+} from '@src/assets';
 
 export default {
   title: 'Design System/Element/Input',
   component: Input,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     size: {
@@ -30,9 +29,41 @@ export default {
     },
     prefix: {
       description: '前置元素',
+      options: [
+        'None',
+        'Account',
+        'Search',
+        'Visibility',
+        'VisibilityOff',
+        'Close',
+      ],
+      mapping: {
+        None: null,
+        Account: <AccountIcon />,
+        Search: <SearchIcon />,
+        Visibility: <VisibilityIcon />,
+        VisibilityOff: <VisibilityOffIcon />,
+        Close: <CloseIcon />,
+      },
     },
     suffix: {
       description: '後置元素',
+      options: [
+        'None',
+        'Account',
+        'Search',
+        'Visibility',
+        'VisibilityOff',
+        'Close',
+      ],
+      mapping: {
+        None: null,
+        Account: <AccountIcon />,
+        Search: <SearchIcon />,
+        Visibility: <VisibilityIcon />,
+        VisibilityOff: <VisibilityOffIcon />,
+        Close: <CloseIcon />,
+      },
     },
     label: {
       description: '標題',
@@ -43,7 +74,8 @@ export default {
     type: {
       description: '輸入類型',
       control: {
-        type: 'text',
+        type: 'select',
+        options: ['text', 'password', 'number', 'email'],
       },
     },
     placeholder: {
@@ -90,6 +122,7 @@ export const Primary: Story = {
     className: '',
     placeholder: '請輸入帳號 ...',
     hint: { error: '', description: '' },
+    type: 'text',
     onChange: (e) => action('onChange')(e),
   },
   render(args) {
@@ -97,16 +130,26 @@ export const Primary: Story = {
   },
 };
 
-export const InputWithIcon: Story = {
+export const InputWithStatus: Story = {
   name: '輸入框包含圖示',
   args: {
     className: '',
-    prefix: <SearchIcon />,
+    prefix: <AccountIcon />,
+    label: '帳號',
+    type: 'text',
     placeholder: '請輸入帳號 ...',
-    hint: { error: '', description: '' },
     suffix: <CloseIcon />,
   },
   render(args) {
-    return <Input {...args} />;
+    return (
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <Input {...args} />
+        <Input {...args} hint={{ error: 'Error Message', description: '' }} />
+        <Input
+          {...args}
+          hint={{ error: '', description: 'Something Description' }}
+        />
+      </div>
+    );
   },
 };
