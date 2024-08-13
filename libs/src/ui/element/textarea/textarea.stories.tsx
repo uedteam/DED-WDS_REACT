@@ -4,13 +4,6 @@ import { Textarea } from './textarea';
 export default {
   title: 'Design System/Element/Textarea',
   component: Textarea,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     label: {
@@ -43,12 +36,18 @@ export default {
         type: 'object',
       },
     },
+    value: {
+      description: '輸入值',
+      control: {
+        type: 'text',
+      },
+    },
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: '文字輸入框',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: '文字輸入框組件的呈現及說明。',
       },
     },
   },
@@ -65,5 +64,30 @@ export const Primary: Story = {
   },
   render(args) {
     return <Textarea {...args} />;
+  },
+};
+
+export const TextareaWithStatus: Story = {
+  name: '文字輸入框狀態',
+  args: {
+    className: '',
+    label: '內文描述',
+    total: 10,
+    placeholder: '請輸入描述 ...',
+  },
+  render(args) {
+    return (
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <Textarea {...args} />
+        <Textarea
+          {...args}
+          hint={{ error: 'Error Message', description: '' }}
+        />
+        <Textarea
+          {...args}
+          hint={{ error: '', description: 'Something Description' }}
+        />
+      </div>
+    );
   },
 };

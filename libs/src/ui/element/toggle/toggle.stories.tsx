@@ -4,13 +4,6 @@ import { Toggle } from './toggle';
 export default {
   title: 'Design System/Element/Toggle',
   component: Toggle,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -57,7 +50,7 @@ export default {
       action: 'onChange',
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -65,9 +58,9 @@ export default {
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: '開關按鈕',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: '開關按鈕組件的呈現及說明。',
       },
     },
   },

@@ -8,12 +8,26 @@ interface TextareaProps {
   isDisabled?: boolean;
   total?: number;
   hint?: { error: string; description: string };
+  value?: string;
 }
-
+/**
+ * Textarea 組件。
+ * @component
+ * @param {Object} props - 組件的屬性。
+ * @param {string} props.label - Textarea 的標籤。
+ * @param {string} props.className - 自定義的 CSS 類名。
+ * @param {string} [props.placeholder='請輸入...'] - Textarea 的佔位符。
+ * @param {boolean} [props.isDisabled=false] - 是否禁用 Textarea。
+ * @param {number} [props.total=10] - Textarea 的最大字符數。
+ * @param {Object} [props.hint={ error: '', description: '' }] - 提示信息。
+ * @param {string} props.hint.error - 錯誤提示信息。
+ * @param {string} props.hint.description - 描述提示信息。
+ * @param {Function} props.onChange - 當 Textarea 的值改變時的回調函數。
+ */
 export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {
   const {
-    label = '',
-    className = '',
+    label,
+    className,
     placeholder = '請輸入...',
     isDisabled = false,
     total = 10,

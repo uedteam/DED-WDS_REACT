@@ -16,6 +16,17 @@ interface LineProgressProps {
   height?: number; // default size is 100
 }
 
+/**
+ * LineProgress 組件
+ *
+ * @component
+ * @param {Object} props - 組件的屬性
+ * @param {string} [props.themeColor='primary'] - 主題顏色
+ * @param {string} [props.label=''] - 標籤
+ * @param {number} props.percent - 進度百分比
+ * @param {number} [props.height=10] - 線條寬度
+ * @returns {JSX.Element} - LineProgress 組件
+ */
 export const LineProgress: React.FC<LineProgressProps> = ({
   themeColor = 'primary',
   label = '',
@@ -37,10 +48,7 @@ export const LineProgress: React.FC<LineProgressProps> = ({
             style={{ width: `${normalizedProgress}%` }}
           />
         </div>
-        <div
-          className="progress-line-percent"
-          // style={{ textAlign: 'right', marginTop: '5px' }}
-        >{`${normalizedProgress}%`}</div>
+        <div className="progress-line-percent">{`${normalizedProgress}%`}</div>
       </div>
     </div>
   );

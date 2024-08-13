@@ -4,13 +4,6 @@ import { LineProgress } from './line-progress';
 export default {
   title: 'Design System/Element/Line-Progress',
   component: LineProgress,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -38,7 +31,7 @@ export default {
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },

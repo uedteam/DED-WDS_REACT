@@ -58,6 +58,28 @@
   padding-block: 4px;
 }
 
+.input-border-error {
+  border-color: getBorderColor($mode, 'error', 'default') !important;
+}
+
+.input-label {
+  font-size: $text-size-caption1;
+  color: $text-color-secondary;
+}
+
+.input-hint {
+  display: block;
+  font-size: $text-size-caption2;
+}
+
+.input-hint-desc {
+  color: $color-gray60;
+}
+
+.input-hint-error {
+  color: getTextColor($mode, 'error') !important;
+}
+
 .input-disable {
   pointer-events: none !important;
   color: $color-gray20 !important;

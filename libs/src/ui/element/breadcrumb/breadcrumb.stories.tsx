@@ -5,13 +5,6 @@ import { Breadcrumb } from './breadcrumb';
 export default {
   title: 'Design System/Element/Breadcrumb',
   component: Breadcrumb,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     onClick: {
@@ -19,14 +12,16 @@ export default {
       action: 'clicked',
     },
     className: {
-      description: '麵包屑客製化樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
     },
   },
   args: {
-    onClick: action('onClick'),
+    onClick: () => {
+      action('onClick')();
+    },
   },
   parameters: {
     docs: {

@@ -3,15 +3,8 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Tabs } from './tabs';
 
 export default {
-  title: 'Design System/Element/Tabs',
+  title: 'Design System/Module/Tabs',
   component: Tabs,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -42,12 +35,20 @@ export default {
         type: 'boolean',
       },
     },
+    activeIndex: {
+      description: '活動頁籤索引',
+      control: {
+        type: 'number',
+        min: 0,
+        max: 2,
+      },
+    },
     onClick: {
       description: '點擊事件',
       action: 'clicked',
     },
     className: {
-      description: '頁籤客製化樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -73,6 +74,21 @@ type Story = StoryObj<typeof Tabs>;
 export const Primary: Story = {
   name: '標準頁籤',
   args: {
+    tabs: [
+      { title: '頁籤 1', content: '內容一' },
+      { title: '頁籤 2', content: '內容二' },
+      { title: '頁籤 3', content: '內容三' },
+    ],
+  },
+  render(args) {
+    return <Tabs {...args} />;
+  },
+};
+
+export const PrimaryWithCard: Story = {
+  name: '卡片式頁籤',
+  args: {
+    type: 'card',
     tabs: [
       { title: '頁籤 1', content: '內容一' },
       { title: '頁籤 2', content: '內容二' },

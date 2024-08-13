@@ -17,6 +17,17 @@ interface CircleProgressProps {
   strokeWidth?: number; // default stroke width is 10
 }
 
+/**
+ * CircleProgress 組件顯示一個圓形進度條。
+ *
+ * @component
+ * @param {string} themeColor - 進度條的顏色主題。默認為 'primary'。
+ * @param {string} label - 顯示在進度條內的標籤。默認為空字符串。
+ * @param {number} percent - 進度百分比。必須在 0 到 100 之間。
+ * @param {number} size - 進度條的直徑。默認為 100。
+ * @param {number} strokeWidth - 進度條的線條寬度。默認為 10。
+ * @returns {JSX.Element} 渲染的 CircleProgress 組件。
+ */
 export const CircleProgress: React.FC<CircleProgressProps> = ({
   themeColor = 'primary',
   label = '',
