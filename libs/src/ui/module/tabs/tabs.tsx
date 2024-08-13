@@ -1,7 +1,6 @@
 import React, { useState, MouseEvent, useEffect } from 'react';
 import { Button } from '@src/ui';
 import { getActiveClass, getThemeClass } from './styled';
-import { set } from 'lodash';
 
 interface Tab {
   title: string;
