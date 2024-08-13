@@ -22,7 +22,20 @@ interface ToggleProps {
   onChange?: (checked: boolean) => void;
   className?: string;
 }
-
+/**
+ * Toggle 組件。
+ *
+ * @component
+ * @param {Object} props - 組件的屬性。
+ * @param {string} [props.themeColor=''] - 主題顏色。
+ * @param {boolean} [props.isChecked=false] - 是否被選中。
+ * @param {boolean} [props.isDisabled=false] - 是否禁用。
+ * @param {string} [props.checkChildren='on'] - 選中時顯示的內容。
+ * @param {string} [props.unCheckChildren='off'] - 未選中時顯示的內容。
+ * @param {function} props.onChange - 當狀態改變時的回調函數。
+ * @param {string} props.className - 自定義的 class 名稱。
+ * @param {Object} rest - 其他屬性。
+ */
 export const Toggle: React.FC<ToggleProps> = (props: ToggleProps) => {
   const {
     themeColor = '',
