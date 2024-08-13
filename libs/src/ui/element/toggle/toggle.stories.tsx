@@ -50,7 +50,7 @@ export default {
       action: 'onChange',
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },

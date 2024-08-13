@@ -4,13 +4,6 @@ import { Title } from './title';
 export default {
   title: 'Design System/Element/Title',
   component: Title,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -42,7 +35,7 @@ export default {
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -50,9 +43,9 @@ export default {
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: '標題',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: '標題組件的呈現及說明。',
       },
     },
   },
@@ -63,6 +56,7 @@ export const Primary: Story = {
   name: '標題',
   args: {
     themeColor: 'primary',
+    level: 0,
     children: '標題',
   },
   render(args) {
