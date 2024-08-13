@@ -8,6 +8,7 @@ interface TextareaProps {
   isDisabled?: boolean;
   total?: number;
   hint?: { error: string; description: string };
+  value?: string;
 }
 
 export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {

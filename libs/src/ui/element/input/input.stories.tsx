@@ -103,9 +103,9 @@ export default {
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: '輸入框',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: '輸入框組件的呈現及說明。',
       },
     },
   },
@@ -131,7 +131,7 @@ export const Primary: Story = {
 };
 
 export const InputWithStatus: Story = {
-  name: '輸入框包含圖示',
+  name: '輸入框狀態',
   args: {
     className: '',
     prefix: <AccountIcon />,
