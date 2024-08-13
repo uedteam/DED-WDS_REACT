@@ -1,16 +1,10 @@
+import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 import { Radio } from './radio';
 
 export default {
   title: 'Design System/Element/Radio',
   component: Radio,
-  // decorators: [
-  //   (Story) => (
-  //     <div style={{ margin: '3em' }}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
   tags: ['autodocs'],
   argTypes: {
     themeColor: {
@@ -38,7 +32,7 @@ export default {
       },
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
       control: {
         type: 'text',
       },
@@ -92,8 +86,11 @@ export const Primary: Story = {
       { label: '選項三', value: 'option3' },
     ],
     value: 'option3',
+    onChange: (e) => {
+      action('onChange')(e);
+    },
   },
   render(args) {
-    return <Radio {...args} onChange={(value) => console.log(value)} />;
+    return <Radio {...args} />;
   },
 };
