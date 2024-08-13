@@ -8,6 +8,7 @@ import { Breadcrumb } from './element/breadcrumb';
 import { Avatar } from './element/avatar';
 import { AvatarGroup } from './module/avatar-group';
 import { Menu } from './module/menu';
+import { Password } from './module/password';
 
 export {
   Title,
@@ -20,4 +21,5 @@ export {
   Avatar,
   AvatarGroup,
   Menu,
+  Password,
 };
