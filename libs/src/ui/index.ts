@@ -9,6 +9,7 @@ import { Avatar } from './element/avatar';
 import { AvatarGroup } from './module/avatar-group';
 import { Menu } from './module/menu';
 import { Password } from './module/password';
+import { Tooltip } from './module/tooltip';
 
 export {
   Title,
@@ -22,4 +23,5 @@ export {
   AvatarGroup,
   Menu,
   Password,
+  Tooltip,
 };

@@ -1,13 +1,5 @@
 @use 'sass:map';
 
-// @function getDarkLightColor($mode, $light-color, $dark-color) {
-//   @return if($mode =='light', $light-color, $dark-color);
-// }
-
-// @function getStatusColor($themeColor, $status) {
-//   @return color.scale($themeColor, $lightness: $status);
-// }
-
 // 動態獲取主題顏色
 @function getThemeColor($mode, $theme, $state) {
   @return map-get(map-get(map-get($theme-colors, $theme), $mode), $state);
@@ -46,6 +38,11 @@
 // 動態獲取圖片比例
 @function getAspectRatio($ratio) {
   @return map-get($aspect-ratio, $ratio);
+}
+
+// 動態獲取 Tooltip Arrow 位置
+@function getArrowPosition($position, $attribute) {
+  @return map-get(map-get($arrow-position, $position), $attribute);
 }
 
 // 函式：判斷色彩是否為 RGBA，否則轉換為 RGBA

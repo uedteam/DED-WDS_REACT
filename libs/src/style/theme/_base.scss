@@ -1,3 +1,4 @@
+// 尺寸樣式
 @each $size in $sizes {
   .icon-#{$size} {
     display: flex;
@@ -17,6 +18,7 @@
   }
 }
 
+// 邊框樣式
 @each $style in $borderStyles {
   .#{$style}-border {
     @if($style =='line') {
