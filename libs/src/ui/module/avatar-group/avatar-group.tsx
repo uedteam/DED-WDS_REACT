@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Avatar, AvatarProps } from '../../element/avatar';
-import { Button, Menu } from '../../../ui';
+import { Button, List } from '../../../ui';
 import { splitArray } from '../../../utils';
+import { ItemProps } from '../list/item';
 
 // 組件介面參數 props
 interface AvatarGroupProps {
@@ -20,13 +21,7 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
   const result = splitArray(users, limit);
 
   const [isOpen, setIsOpen] = React.useState(false);
-  const [menu, setMenu] = React.useState<
-    {
-      prefix?: React.ReactNode;
-      content: string;
-      suffix?: React.ReactNode;
-    }[]
-  >([]);
+  const [menu, setMenu] = React.useState<ItemProps[]>([]);
 
   if (limit < 1) {
     throw new Error('Limit must be at least 1');
@@ -44,7 +39,11 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
               imageSrc={user.imageSrc || ''}
             />
           ),
-          content: user.userName,
+          content: {
+            label: user.userName,
+            value: user.userName,
+            href: '',
+          },
         };
       })
     );
@@ -87,7 +86,7 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
             </Button>
             {isOpen && (
               <div className="rest-container-menu">
-                <Menu key={index} options={menu} />
+                <List key={index} options={menu} isMenu />
               </div>
             )}
           </div>

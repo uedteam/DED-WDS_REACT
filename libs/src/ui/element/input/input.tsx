@@ -40,7 +40,7 @@ export const Input: React.FC<InputProps> = (props: InputProps) => {
     label,
     className,
     type = 'text',
-    placeholder = '請輸入...',
+    placeholder,
     size = 'medium',
     prefix,
     suffix,
