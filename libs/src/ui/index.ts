@@ -8,7 +8,7 @@ import { Breadcrumb } from './element/breadcrumb';
 import { Avatar } from './element/avatar';
 import { AvatarGroup } from './module/avatar-group';
 import { List, Item } from './module/list';
-import { Password } from './module/password';
+import { Password } from '../../backup/password';
 import { Tooltip } from './module/tooltip';
 import { Dropdown } from './module/dropdown';
 
