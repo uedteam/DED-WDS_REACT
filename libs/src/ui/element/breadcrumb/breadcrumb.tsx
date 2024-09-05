@@ -80,71 +80,49 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = (
       : breadcrumbItems;
 
   return (
-    <nav className={`breadcrumb-container ${className}`}>
-      <ol className="breadcrumb">
-        {itemsToShow.map((item, index) => (
-          <li className="breadcrumb-item" key={index}>
-            {item.label === '...' ? (
-              <div ref={breadcrumbRef} className="rest">
-                <span onClick={handleClick} className="rest-label">
-                  {item.label}
-                </span>
-                {/* {showDropdown && (
-                  <ul ref={breadcrumbRef} className="rest-dropdown-menu">
-                    {breadcrumbItems
-                      .slice(1, -2)
-                      .map((dropdownItem, dropdownIndex) => (
-                        <li className="drop-item" key={dropdownIndex}>
-                          <a
-                            className="drop-item-link"
-                            href={dropdownItem.href}
-                          >
-                            {dropdownItem.label}
-                          </a>
-                        </li>
-                      ))}
-                  </ul>
-                )} */}
-              </div>
-            ) : (
-              <BreadcrumbItem
-                label={item.label}
-                href={item.href === '#' ? undefined : item.href}
-                isCurrentPage={index === itemsToShow.length - 1}
-              />
-            )}
-            <Portal>
-              {isVisible && (
-                <div
-                  style={getTargetPosition(
-                    position,
-                    childrenSize,
-                    placement,
-                    '6px'
-                  )}
-                  className={`tooltip ${className}`}
-                >
-                  <ul className="rest-dropdown-menu">
-                    {breadcrumbItems
-                      .slice(1, -2)
-                      .map((dropdownItem, dropdownIndex) => (
-                        <li className="drop-item" key={dropdownIndex}>
-                          <a
-                            className="drop-item-link"
-                            href={dropdownItem.href}
-                          >
-                            {dropdownItem.label}
-                          </a>
-                        </li>
-                      ))}
-                  </ul>
+    <>
+      <nav className={`breadcrumb-container ${className}`}>
+        <ol className="breadcrumb">
+          {itemsToShow.map((item, index) => (
+            <li className="breadcrumb-item" key={index}>
+              {item.label === '...' ? (
+                <div ref={breadcrumbRef} className="rest">
+                  <span onClick={handleClick} className="rest-label">
+                    {item.label}
+                  </span>
                 </div>
+              ) : (
+                <BreadcrumbItem
+                  label={item.label}
+                  href={item.href === '#' ? undefined : item.href}
+                  isCurrentPage={index === itemsToShow.length - 1}
+                />
               )}
-            </Portal>
-          </li>
-        ))}
-      </ol>
-    </nav>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <Portal>
+        {isVisible && (
+          <div
+            style={getTargetPosition(position, childrenSize, placement, '6px')}
+            className={`tooltip ${className}`}
+          >
+            <ul className="rest-dropdown-menu">
+              {breadcrumbItems
+                .slice(1, -2)
+                .map((dropdownItem, dropdownIndex) => (
+                  <li className="drop-item" key={dropdownIndex}>
+                    <a className="drop-item-link" href={dropdownItem.href}>
+                      {dropdownItem.label}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        )}
+      </Portal>
+    </>
   );
 };
 
