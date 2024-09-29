@@ -13,7 +13,8 @@ import { Password } from '../../backup/password';
 import { Tooltip } from './module/tooltip';
 import { Dropdown } from './module/dropdown';
 import { Slider } from './element/slider';
-import { ButtonSlider } from './element/button-slider';
+import { ButtonSlider } from './module/button-slider';
+import { Card } from './section/card';
 
 export {
   Title,
@@ -34,4 +35,5 @@ export {
   Dropdown,
   Slider,
   ButtonSlider,
+  Card,
 };

@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { ButtonSlider } from './button-slider';
+import { ButtonSlider } from '@src/ui';
 import { PlusIcon, MinusIcon } from '@src/assets';
 
 export default {
@@ -8,14 +8,6 @@ export default {
   component: ButtonSlider,
   tags: ['autodocs'],
   argTypes: {
-    /* 設定參數 */
-    // size: {
-    //   description: '輸入框尺寸',
-    //   control: {
-    //     type: 'select',
-    //     options: ['small', 'medium', 'large'],
-    //   },
-    // },
     themeColor: {
       description: '主題顏色',
       control: {
@@ -90,12 +82,14 @@ type Story = StoryObj<typeof ButtonSlider>;
 export const Primary: Story = {
   name: '搜尋輸入框',
   args: {
-    /* 設定參數預設值 */
-    // size: 'medium',
-    // isDisabled: false,
-    prefix: <MinusIcon width={32} height={32} />,
-    suffix: <PlusIcon width={32} height={32} />,
+    prefix: 'Decrease',
+    suffix: 'Increase',
+    min: 0,
+    max: 100,
+    step: 1,
     unit: '℃',
+    themeColor: 'primary',
+    isDisabled: false,
     className: '',
     onClick: action('onClick'),
   },

@@ -1,7 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import Slider from './slider';
-import { PlusIcon, MinusIcon } from '@src/assets';
+import { Slider } from '@src/ui';
 
 export default {
   title: 'Design System/Element/Slider',
@@ -67,6 +66,8 @@ export const Primary: Story = {
     max: 100,
     step: 1,
     initialValue: 0,
+    themeColor: 'primary',
+    isDisabled: false,
     unit: '℃',
     onChange: action('onChange'),
   },
