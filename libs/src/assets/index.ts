@@ -12,6 +12,11 @@ import AddIcon from '@assets/add.svg?react';
 import ArrowDownIcon from '@assets/arrow_down.svg?react';
 import CheckIcon from '@assets/check.svg?react';
 import MoreIcon from '@assets/more_vert.svg?react';
+import MinusIcon from '@assets/minus.svg?react';
+import PlusIcon from '@assets/plus.svg?react';
+import PowerIcon from '@assets/power.svg?react';
+import AirIcon from '@assets/air-condition.svg?react';
+import FanIcon from '@assets/fan.svg?react';
 
 export {
   AccountIcon,
@@ -28,4 +33,9 @@ export {
   ArrowDownIcon,
   CheckIcon,
   MoreIcon,
+  MinusIcon,
+  PlusIcon,
+  PowerIcon,
+  AirIcon,
+  FanIcon,
 };
