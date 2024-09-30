@@ -1,0 +1,1 @@
+const o={docs:{inlineStories:!1,iframeHeight:600}},s={initialGlobals:{styles:{body:{margin:0,padding:0,fontFamily:"Arial, sans-serif"}}},parameters:{options:{storySort:{method:"",order:["Components","Intro"],locales:""}}},tags:["autodocs"]};export{s as default,o as parameters};
