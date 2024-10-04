@@ -59,7 +59,7 @@
 }
 
 .card-button {
-  width: 58px;
+  width: 60px;
   height: 76px;
   padding: 8px;
   background-color: #ccc;
@@ -69,4 +69,8 @@
 .card-button-active {
   background-color: #ff9f43;
   color: #000000;
+}
+
+.card-button-empty {
+  background-color: transparent;
 }
