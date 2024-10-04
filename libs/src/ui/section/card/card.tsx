@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 /* 組件介面參數 props */
 interface CardProps {
   width?: string;
+  height?: string;
   hasHeaderDivider?: boolean;
   cardHeader?: ReactNode;
   children?: ReactNode;
@@ -16,6 +17,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
   /* 解構組件參數 */
   const {
     width,
+    height,
     cardHeader,
     hasHeaderDivider,
     children,
@@ -32,7 +34,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
 
   return (
     <div
-      style={{ width: width }}
+      style={{ width: width, height: height }}
       className={`card card-container ${className}`}
       onClick={handleClick}
     >

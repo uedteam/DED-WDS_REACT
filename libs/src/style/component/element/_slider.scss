@@ -5,10 +5,12 @@
 .slider-container {
   position: relative;
   width: 100%;
-  margin-block: 24px;
+  padding-block: 16px;
+  margin-block: 16px;
 }
 
 .slider {
+  position: relative;
   width: 100%;
 }
 

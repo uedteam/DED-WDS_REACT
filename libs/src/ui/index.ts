@@ -15,6 +15,7 @@ import { Dropdown } from './module/dropdown';
 import { Slider } from './element/slider';
 import { ButtonSlider } from './module/button-slider';
 import { Card } from './section/card';
+import { Menu } from './module/menu';
 
 export {
   Title,
@@ -36,4 +37,5 @@ export {
   Slider,
   ButtonSlider,
   Card,
+  Menu,
 };

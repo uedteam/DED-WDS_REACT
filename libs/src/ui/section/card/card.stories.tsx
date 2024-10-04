@@ -9,6 +9,11 @@ import {
   PowerIcon,
   AirIcon,
   FanIcon,
+  LightIcon,
+  CurtainIcon,
+  HumidityIcon,
+  TemperatureIcon,
+  DoorIcon,
 } from '@src/assets';
 
 export default {
@@ -56,55 +61,13 @@ export const Primary: Story = {
       <div
         style={{
           display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'flex-end',
           gap: '16px',
           backgroundColor: '#E9E9E9',
-          padding: '32px',
+          padding: '16px',
         }}
       >
-        {/* 門鎖卡片 */}
-        <Card
-          {...args}
-          width="240px"
-          cardHeader={
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-              }}
-            >
-              <Title className="card-title" themeColor="primary">
-                門鎖
-              </Title>
-              <Button variant="text" themeColor="primary">
-                <div
-                  style={{
-                    display: 'flex',
-                    padding: '8px',
-                    borderRadius: '18px',
-                    backgroundColor: '#ffffff',
-                  }}
-                >
-                  {<PowerIcon fill="#4d4d4d" width={18} height={18} />}
-                </div>
-              </Button>
-            </div>
-          }
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              color: '#533bd4',
-              gap: '8px',
-            }}
-          >
-            <LockIcon fill="#ffffff" width={64} height={64} />
-            <Title className="card-feature">已上鎖</Title>
-          </div>
-        </Card>
-
-        {/* 空調卡片 */}
         <Card
           {...args}
           cardHeader={
@@ -124,9 +87,12 @@ export const Primary: Story = {
                     padding: '8px',
                     borderRadius: '18px',
                     backgroundColor: '#4D4D4D',
+                    color: '#ffffff',
+                    width: '32px',
+                    height: '32px',
                   }}
                 >
-                  {<PowerIcon fill="#ffffff" width={18} height={18} />}
+                  {<PowerIcon />}
                 </div>
               </Button>
             </div>
@@ -153,6 +119,8 @@ export const Primary: Story = {
                   <div>送風</div>
                 </div>
               </Button>
+
+              <div className="card-button card-button-empty"></div>
 
               <Button
                 className="card-button card-button-active"
@@ -211,9 +179,87 @@ export const Primary: Story = {
           </div>
         </Card>
 
+        <Card {...args} width="242px" height="auto">
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '24px' }}>
+            <TemperatureIcon fill="#ffffff" width={80} height={80} />
+
+            <Title className="card-title">溫度 25 ℃</Title>
+          </div>
+        </Card>
+
+        <Card {...args} width="242px" height="auto">
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '24px' }}>
+            <HumidityIcon fill="#ffffff" width={66} height={66} />
+            <Title className="card-title">濕度 75 ℃</Title>
+          </div>
+        </Card>
+
+        {[
+          {
+            label: '電控玻璃',
+            status: '霧面',
+            icon: <DoorIcon fill="#ffffff" width={80} height={80} />,
+          },
+          {
+            label: '門鎖',
+            status: '已上鎖',
+            icon: <LockIcon fill="#ffffff" width={80} height={80} />,
+          },
+          {
+            label: '照明群組',
+            status: '0個開, 3個關',
+            icon: <LightIcon fill="#ffffff" width={80} height={80} />,
+          },
+        ].map((device) => (
+          <Card
+            {...args}
+            width="242px"
+            height="244px"
+            cardHeader={
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Title className="card-title" themeColor="primary">
+                  {device.label}
+                </Title>
+                <Button variant="text" themeColor="primary">
+                  <div
+                    style={{
+                      display: 'flex',
+                      padding: '8px',
+                      borderRadius: '18px',
+                      backgroundColor: '#ffffff',
+                      color: '#4d4d4d',
+                      width: '32px',
+                      height: '32px',
+                    }}
+                  >
+                    {<PowerIcon />}
+                  </div>
+                </Button>
+              </div>
+            }
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                color: '#533bd4',
+                gap: '8px',
+              }}
+            >
+              {device.icon}
+              <Title className="card-feature">{device.status}</Title>
+            </div>
+          </Card>
+        ))}
         <Card
           {...args}
-          width="240px"
+          width="242px"
           hasHeaderDivider
           cardHeader={
             <div
