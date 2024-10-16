@@ -28,7 +28,7 @@ export const Slider: React.FC<SliderProps> = ({
   step = 1,
   initValue = 0,
   onChange,
-  unit = '',
+  unit = '%',
   className,
 }) => {
   const [value, setValue] = useState<number>(initValue || min);

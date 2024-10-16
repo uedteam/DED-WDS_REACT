@@ -22,6 +22,9 @@ export default {
         ],
       },
     },
+    isDisabled: {
+      description: '是否禁用',
+    },
     max: {
       description: '最大值',
     },
@@ -44,10 +47,6 @@ export default {
       description: '值改變事件',
       action: 'onChange',
     },
-    onClick: {
-      description: '點擊事件',
-      action: 'onClick',
-    },
   },
   parameters: {
     docs: {
@@ -57,20 +56,23 @@ export default {
       },
     },
   },
+  args: {
+    themeColor: 'primary',
+    isDisabled: false,
+    onChange: action('onChange'),
+    className: '',
+  },
 } as Meta;
 type Story = StoryObj<typeof Slider>;
 
 export const Primary: Story = {
   name: '主要項目',
   args: {
-    min: 0,
+    min: -100,
     max: 100,
     step: 1,
     initValue: 50,
-    themeColor: 'primary',
-    isDisabled: false,
     unit: '℃',
-    onChange: action('onChange'),
   },
   render(args) {
     return <Slider {...args} />;
@@ -84,21 +86,18 @@ export const ThemeColor: Story = {
     max: 100,
     step: 1,
     initValue: 10,
-    themeColor: 'primary',
-    isDisabled: false,
-    unit: '℃',
-    onChange: action('onChange'),
+    unit: '%',
   },
   render(args) {
     return (
       <div>
-        <Slider {...args} initValue={40} unit="%" themeColor="primary" />
-        <Slider {...args} initValue={50} unit="%" themeColor="secondary" />
-        <Slider {...args} initValue={60} unit="%" themeColor="tertiary" />
-        <Slider {...args} initValue={70} unit="%" themeColor="info" />
-        <Slider {...args} initValue={80} unit="%" themeColor="success" />
-        <Slider {...args} initValue={90} unit="%" themeColor="warning" />
-        <Slider {...args} initValue={100} unit="%" themeColor="error" />
+        <Slider {...args} initValue={40} themeColor="primary" />
+        <Slider {...args} initValue={50} themeColor="secondary" />
+        <Slider {...args} initValue={60} themeColor="tertiary" />
+        <Slider {...args} initValue={70} themeColor="info" />
+        <Slider {...args} initValue={80} themeColor="success" />
+        <Slider {...args} initValue={90} themeColor="warning" />
+        <Slider {...args} initValue={100} themeColor="error" />
       </div>
     );
   },
