@@ -3,24 +3,25 @@ import Avatar from './avatar';
 
 export default {
   title: 'Design System/Avatar',
-  // 設定對應的組件名稱: Component,
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {
-    // 設定參數
     size: {
-      description: '輸入框尺寸',
+      description: 'Avatar 尺寸',
       control: {
         type: 'select',
-        options: ['xsmall', 'small', 'medium', 'large'],
+        options: ['small', 'medium', 'large'],
       },
     },
     shape: {
       description: '形狀',
       control: {
-        type: 'radio',
+        type: 'select',
         options: ['circle', 'square'],
       },
+    },
+    userName: {
+      description: '使用者名稱',
     },
     status: {
       description: '狀態',
@@ -29,25 +30,21 @@ export default {
         options: ['online', 'idle', 'busy', 'offline'],
       },
     },
-    imageSrc: {
+    imgSrc: {
       description: '圖片連結',
-      control: {
-        type: 'text',
-      },
+    },
+    alt: {
+      description: '圖片描述',
     },
     className: {
       description: '標題樣式',
-      control: {
-        type: 'text',
-      },
     },
   },
   parameters: {
     docs: {
-      title: '搜尋',
+      title: 'Avatar',
       description: {
-        // 組件描述
-        component: '組件的呈現及說明。',
+        component: 'Avatar 的呈現及說明。',
       },
     },
   },
@@ -58,10 +55,11 @@ export const Primary: Story = {
   name: '線上頭像',
   args: {
     shape: 'circle',
-    size: 'medium',
+    size: 'large',
     userName: 'Kevin',
     status: 'online',
-    imageSrc: 'https://picsum.photos/320/240',
+    imgSrc: 'https://picsum.photos/320/240',
+    alt: `Kevin's avatar`,
     className: '',
   },
   render(args) {
@@ -69,22 +67,38 @@ export const Primary: Story = {
   },
 };
 
-// export const Multiple: Story = {
-//   name: '忙碌頭像',
-//   args: {
-//     // 設定參數預設值
-//     userName: 'Kevin',
-//     imageSrc: 'https://picsum.photos/320/240',
-//     className: '',
-//   },
-//   render(args) {
-//     return (
-//       <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-end' }}>
-//         <Avatar {...args} size="large" shape="circle" status="online" />
-//         <Avatar {...args} size="large" shape="square" status="idle" />
-//         <Avatar {...args} size="medium" shape="circle" status="busy" />
-//         <Avatar {...args} size="medium" shape="square" status="offline" />
-//       </div>
-//     );
-//   },
-// };
+export const AvatarShape: Story = {
+  name: '頭像形狀',
+  args: {
+    userName: 'Kevin',
+    imgSrc: 'https://picsum.photos/320/240',
+    className: '',
+  },
+  render(args) {
+    return (
+      <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-end' }}>
+        <Avatar {...args} size="large" shape="circle" status="online" />
+        <Avatar {...args} size="large" shape="square" status="idle" />
+      </div>
+    );
+  },
+};
+
+export const AvatarStatus: Story = {
+  name: '頭像狀態',
+  args: {
+    userName: 'Kevin',
+    imgSrc: 'https://picsum.photos/320/240',
+    className: '',
+  },
+  render(args) {
+    return (
+      <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-end' }}>
+        <Avatar {...args} size="large" shape="circle" status="online" />
+        <Avatar {...args} size="large" shape="circle" status="idle" />
+        <Avatar {...args} size="large" shape="circle" status="busy" />
+        <Avatar {...args} size="large" shape="circle" status="offline" />
+      </div>
+    );
+  },
+};

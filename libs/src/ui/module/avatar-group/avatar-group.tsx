@@ -52,10 +52,10 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
         return {
           prefix: (
             <Avatar
-              size="xsmall"
+              size="small"
               shape="circle"
               userName={user.userName}
-              imageSrc={user.imageSrc || ''}
+              imgSrc={user.imgSrc || ''}
             />
           ),
           content: {
@@ -66,13 +66,13 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
         };
       })
     );
-  }, []);
+  }, [result.restList]);
 
   return (
     <>
       <div className="avatar-group">
         {result.currList.map((user, index) => {
-          const { shape, size, userName, status, imageSrc } = user;
+          const { shape, size, userName, status, imgSrc } = user;
           return (
             <Avatar
               key={index}
@@ -80,7 +80,7 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = (
               size={size}
               userName={userName}
               status={status}
-              imageSrc={imageSrc || ''}
+              imgSrc={imgSrc || ''}
               {...rest}
             />
           );
