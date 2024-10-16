@@ -44,7 +44,7 @@ export default {
     docs: {
       title: 'Avatar',
       description: {
-        component: 'Avatar 的呈現及說明。',
+        component: '個人頭像的呈現及說明。',
       },
     },
   },
@@ -52,7 +52,7 @@ export default {
 type Story = StoryObj<typeof Avatar>;
 
 export const Primary: Story = {
-  name: '線上頭像',
+  name: '主要項目',
   args: {
     shape: 'circle',
     size: 'large',
