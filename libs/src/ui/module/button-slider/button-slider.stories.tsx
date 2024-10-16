@@ -67,6 +67,7 @@ export default {
     },
     onClick: {
       description: '點擊事件',
+      action: 'onClick',
     },
   },
   parameters: {

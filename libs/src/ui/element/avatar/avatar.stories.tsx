@@ -37,7 +37,7 @@ export default {
       description: '圖片描述',
     },
     className: {
-      description: '標題樣式',
+      description: '客製化樣式',
     },
   },
   parameters: {
