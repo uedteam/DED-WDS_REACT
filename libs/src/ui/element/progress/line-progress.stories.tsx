@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { LineProgress } from './line-progress';
 
 export default {
-  title: 'Design System/Element/Line-Progress',
+  title: 'Design System/Line-Progress',
   component: LineProgress,
   tags: ['autodocs'],
   argTypes: {

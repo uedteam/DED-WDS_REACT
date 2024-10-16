@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Tabs } from './tabs';
 
 export default {
-  title: 'Design System/Module/Tabs',
+  title: 'Design System/Tabs',
   component: Tabs,
   tags: ['autodocs'],
   argTypes: {

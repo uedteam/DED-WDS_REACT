@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AvatarGroup from './avatar-group';
 
 export default {
-  title: 'Design System/Module/AvatarGroup',
+  title: 'Design System/AvatarGroup',
   component: AvatarGroup,
   tags: ['autodocs'],
   argTypes: {

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from './checkbox';
 
 export default {
-  title: 'Design System/Element/Checkbox',
+  title: 'Design System/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {

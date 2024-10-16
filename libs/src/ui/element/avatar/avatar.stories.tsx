@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Avatar from './avatar';
 
 export default {
-  title: 'Design System/Element/Avatar',
+  title: 'Design System/Avatar',
   // 設定對應的組件名稱: Component,
   component: Avatar,
   tags: ['autodocs'],

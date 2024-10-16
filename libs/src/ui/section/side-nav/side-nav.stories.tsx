@@ -11,7 +11,7 @@ import { ItemProps } from '@src/hooks/useMenu';
 import SideNav from './side-nav';
 
 export default {
-  title: 'Design System/Section/SideNav',
+  title: 'Design System/SideNav',
   component: SideNav,
   tags: ['autodocs'],
   argTypes: {
@@ -81,18 +81,18 @@ const menuData: ItemProps[] = [
         title: 'Account',
         icon: <FanIcon width={24} height={24} />,
         path: '/settings/account',
-        children: [
-          {
-            title: 'Profile',
-            icon: <AccountIcon width={24} height={24} />,
-            path: '/settings/profile',
-          },
-          {
-            title: 'Account',
-            icon: <AccountIcon width={24} height={24} />,
-            path: '/settings/account',
-          },
-        ],
+        // children: [
+        //   {
+        //     title: 'Profile',
+        //     icon: <AccountIcon width={24} height={24} />,
+        //     path: '/settings/profile',
+        //   },
+        //   {
+        //     title: 'Account',
+        //     icon: <AccountIcon width={24} height={24} />,
+        //     path: '/settings/account',
+        //   },
+        // ],
       },
     ],
   },

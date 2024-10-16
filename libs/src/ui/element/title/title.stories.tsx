@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Title } from './title';
 
 export default {
-  title: 'Design System/Element/Title',
+  title: 'Design System/Title',
   component: Title,
   tags: ['autodocs'],
   argTypes: {

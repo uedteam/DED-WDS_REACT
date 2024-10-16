@@ -17,7 +17,7 @@ import {
 } from '@src/assets';
 
 export default {
-  title: 'Design System/Section/Card',
+  title: 'Design System/Card',
   component: Card,
   tags: ['autodocs'],
   argTypes: {
