@@ -11,7 +11,7 @@ import {
 } from '@src/assets';
 
 export default {
-  title: 'Design System/Element/Input',
+  title: 'Design System/Input',
   component: Input,
   tags: ['autodocs'],
   argTypes: {

@@ -4,7 +4,7 @@ import { ItemProps } from '@src/hooks/useMenu';
 import Menu from './menu';
 
 export default {
-  title: 'Design System/Module/Menu',
+  title: 'Design System/Menu',
   component: Menu,
   tags: ['autodocs'],
   argTypes: {
@@ -54,18 +54,18 @@ const menuData: ItemProps[] = [
         title: 'Account',
         icon: <AccountIcon width={24} height={24} />,
         path: '/settings/account',
-        children: [
-          {
-            title: 'Profile',
-            icon: <AccountIcon width={24} height={24} />,
-            path: '/settings/profile',
-          },
-          {
-            title: 'Account',
-            icon: <AccountIcon width={24} height={24} />,
-            path: '/settings/account',
-          },
-        ],
+        // children: [
+        //   {
+        //     title: 'Profile',
+        //     icon: <AccountIcon width={24} height={24} />,
+        //     path: '/settings/profile',
+        //   },
+        //   {
+        //     title: 'Account',
+        //     icon: <AccountIcon width={24} height={24} />,
+        //     path: '/settings/account',
+        //   },
+        // ],
       },
     ],
   },

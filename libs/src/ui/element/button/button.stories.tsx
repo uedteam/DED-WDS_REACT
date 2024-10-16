@@ -9,7 +9,7 @@ import {
 } from '@src/assets';
 
 export default {
-  title: 'Design System/Element/Button',
+  title: 'Design System/Button',
   component: Button,
   tags: ['autodocs'],
   decorators: [
