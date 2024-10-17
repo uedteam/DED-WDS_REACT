@@ -12,31 +12,6 @@ export default {
   title: 'Design System/Button',
   component: Button,
   tags: ['autodocs'],
-  decorators: [
-    // 👇 Defining the decorator in the preview file applies it to all stories
-    (Story, { parameters }) => {
-      // 👇 Make it configurable by reading from parameters
-      const { pageLayout } = parameters;
-      switch (pageLayout) {
-        case 'page':
-          return (
-            // Your page layout is probably a little more complex than this ;)
-            <div className="page-layout">
-              <Story />
-            </div>
-          );
-        case 'page-mobile':
-          return (
-            <div className="page-mobile-layout">
-              <Story />
-            </div>
-          );
-        default:
-          // In the default case, don't apply a layout
-          return <Story />;
-      }
-    },
-  ],
   argTypes: {
     variant: {
       description: '按鈕樣式',
@@ -129,7 +104,7 @@ export default {
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  name: '標準按鈕',
+  name: '主要項目',
   args: {
     themeColor: 'primary',
     children: <Title>標題按鈕</Title>,
