@@ -33,29 +33,19 @@ export default {
     },
     className: {
       description: '客製化樣式',
-      control: {
-        type: 'text',
-      },
     },
     options: {
       description: '選項',
-      control: {
-        type: 'object',
-      },
     },
     direction: {
       description: '方向',
-      options: ['row', 'column'],
       control: {
-        type: 'radio',
+        type: 'select',
         options: ['row', 'column'],
       },
     },
     value: {
       description: '選中的選項',
-      control: {
-        type: 'object',
-      },
     },
     onChange: {
       description: '選中選項改變時的回調函數',
@@ -69,9 +59,9 @@ export default {
   },
   parameters: {
     docs: {
-      title: '按鈕',
+      title: 'Checkbox',
       description: {
-        component: '按鈕組件的呈現及說明。',
+        component: 'Checkbox 組件的呈現及說明。',
       },
     },
   },
@@ -79,7 +69,7 @@ export default {
 type Story = StoryObj<typeof Checkbox>;
 
 export const Primary: Story = {
-  name: '標準 checkbox',
+  name: '主要項目',
   args: {
     className: '',
     options: [
