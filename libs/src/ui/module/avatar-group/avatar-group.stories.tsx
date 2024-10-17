@@ -19,9 +19,6 @@ export default {
     className: {
       description: '標題樣式',
     },
-    onClick: {
-      description: '點擊事件',
-    },
   },
   parameters: {
     docs: {
