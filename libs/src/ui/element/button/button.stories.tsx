@@ -37,9 +37,6 @@ export default {
     },
     isDisabled: {
       description: '是否禁用',
-      control: {
-        type: 'boolean',
-      },
     },
     children: {
       description: '按鈕內容',
@@ -80,9 +77,6 @@ export default {
     },
     className: {
       description: '客製化樣式',
-      control: {
-        type: 'text',
-      },
     },
   },
   args: {
