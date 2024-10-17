@@ -44,7 +44,7 @@ export default {
         options: ['row', 'column'],
       },
     },
-    value: {
+    initValue: {
       description: '選中的選項',
     },
     onChange: {
@@ -77,7 +77,7 @@ export const Primary: Story = {
       { label: '選項二', value: 'option2' },
       { label: '選項三', value: 'option3' },
     ],
-    value: ['option2'],
+    initValue: ['option2'],
     onChange: (e) => action('onChange')(e),
   },
   render(args) {
