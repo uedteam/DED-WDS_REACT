@@ -8,6 +8,9 @@ export default {
   component: List,
   tags: ['autodocs'],
   argTypes: {
+    options: {
+      description: '選項清單',
+    },
     isMenu: {
       description: '是否為選單',
       control: {
