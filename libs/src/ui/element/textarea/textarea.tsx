@@ -1,15 +1,29 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { getHintClass, getCountClass, getBorderClass } from './styled';
 
-interface TextareaProps {
+/**
+ * TextareaProps 介面定義了 Textarea 元件的屬性。
+ *
+ * @property {ReactNode} [label] - Textarea 的標籤。
+ * @property {string} [className] - 自訂的 CSS 類名。
+ * @property {string} [placeholder] - Textarea 的佔位符。
+ * @property {boolean} [isDisabled] - 是否禁用 Textarea。
+ * @property {number} [total] - 總數。
+ * @property {Object} [hint] - 提示訊息，包括錯誤訊息和描述。
+ * @property {string} hint.error - 錯誤訊息。
+ * @property {string} hint.description - 描述訊息。
+ * @property {string} [initValue] - 初始值。
+ * @property {(e: React.ChangeEvent<HTMLTextAreaElement>) => void} [onChange] - 當 Textarea 值改變時的回調函數。
+ */
+export interface TextareaProps {
   label?: ReactNode;
-  className?: string;
   placeholder?: string;
   isDisabled?: boolean;
   total?: number;
   hint?: { error: string; description: string };
   initValue?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  className?: string;
 }
 /**
  * Textarea 組件。
@@ -28,13 +42,13 @@ interface TextareaProps {
 export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {
   const {
     label,
-    className = '',
     placeholder = '請輸入...',
     isDisabled = false,
-    total = 10,
+    total = 0,
     initValue = '',
     hint = { error: '', description: '' },
     onChange,
+    className = '',
     ...rest
   } = props;
 
