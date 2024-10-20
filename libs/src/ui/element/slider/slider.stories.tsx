@@ -32,7 +32,7 @@ export default {
       description: '最小值',
     },
     unit: {
-      description: '單位',
+      description: '顯示單位',
     },
     step: {
       description: '步進值',
