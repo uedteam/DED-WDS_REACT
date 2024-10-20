@@ -1,0 +1,1 @@
+const a={initialGlobals:{styles:{body:{margin:0,padding:0,fontFamily:"Arial, sans-serif"}}},parameters:{options:{storySort:{method:"alphabetical",order:["Components","Intro"],locales:"en-US"}}},tags:["autodocs"]};export{a as default};
