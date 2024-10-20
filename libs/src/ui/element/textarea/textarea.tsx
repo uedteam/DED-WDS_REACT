@@ -8,7 +8,7 @@ import { getHintClass, getCountClass, getBorderClass } from './styled';
  * @property {string} [className] - 自訂的 CSS 類名。
  * @property {string} [placeholder] - Textarea 的佔位符。
  * @property {boolean} [isDisabled] - 是否禁用 Textarea。
- * @property {number} [total] - 總數。
+ * @property {number} [limit] - 字數限制。
  * @property {Object} [hint] - 提示訊息，包括錯誤訊息和描述。
  * @property {string} hint.error - 錯誤訊息。
  * @property {string} hint.description - 描述訊息。
@@ -19,7 +19,7 @@ export interface TextareaProps {
   label?: ReactNode;
   placeholder?: string;
   isDisabled?: boolean;
-  total?: number;
+  limit?: number;
   hint?: { error: string; description: string };
   initValue?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
@@ -33,7 +33,7 @@ export interface TextareaProps {
  * @param {string} props.className - 自定義的 CSS 類名。
  * @param {string} [props.placeholder='請輸入...'] - Textarea 的佔位符。
  * @param {boolean} [props.isDisabled=false] - 是否禁用 Textarea。
- * @param {number} [props.total=10] - Textarea 的最大字符數。
+ * @param {number} [props.limit=0] - Textarea 的最大字符數。
  * @param {Object} [props.hint={ error: '', description: '' }] - 提示信息。
  * @param {string} props.hint.error - 錯誤提示信息。
  * @param {string} props.hint.description - 描述提示信息。
@@ -44,7 +44,7 @@ export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {
     label,
     placeholder = '請輸入...',
     isDisabled = false,
-    total = 0,
+    limit = 0,
     initValue = '',
     hint = { error: '', description: '' },
     onChange,
@@ -81,17 +81,17 @@ export const Textarea: React.FC<TextareaProps> = (props: TextareaProps) => {
             console.log(e.target.value);
           }}
           value={value}
-          maxLength={total || undefined}
+          maxLength={limit || undefined}
           className={`${isDisabled ? 'textarea-disable' : 'textarea'}`}
           placeholder={placeholder}
         />
-        {total > 0 && (
+        {limit > 0 && (
           <small
             className={`${
               isDisabled ? 'textarea-disable' : getCountClass(value)
             }`}
           >
-            {value.length > 0 && `${value.length}/${total}`}
+            {value.length > 0 && `${value.length}/${limit}`}
           </small>
         )}
       </div>
