@@ -18,14 +18,16 @@
 .tooltip {
   position: absolute;
   top: -20px;
-  width: 40px;
   height: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 4px;
   font-size: 14px;
   white-space: nowrap;
+
+  &-center {
+    justify-content: center;
+  }
 }
 
 /* remove default style */
