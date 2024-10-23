@@ -22,7 +22,7 @@ export default {
       },
     },
     logo: {
-      description: 'Logo',
+      description: 'Logo 圖示',
       mapping: {
         AUOIcon: <AUOIcon width={90} height={30} />,
       },
