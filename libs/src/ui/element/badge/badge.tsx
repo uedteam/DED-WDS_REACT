@@ -3,6 +3,7 @@ import { getCombinedClassName } from '@src/utils/string';
 
 interface BadgeProps {
   themeColor?:
+    | 'none'
     | 'primary'
     | 'secondary'
     | 'neutral'
