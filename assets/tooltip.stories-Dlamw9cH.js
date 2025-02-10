@@ -1,0 +1,12 @@
+import{j as o}from"./jsx-runtime-DEdD30eg.js";import{c as p}from"./tooltip-B_DZq3RC.js";import"./badge-CWp9P8za.js";import"./breadcrumb-C_ScorbY.js";import{B as s}from"./toast-CQAvvoEV.js";import"./checkbox-BnGhXkr7.js";import"./progress-circle-CiUtLNSM.js";import"./progress-line-ERJUwswR.js";import"./divider-DxMrCkxg.js";import"./grid-D9dEAlnk.js";import"./image-B9gne3T0.js";import"./input-BZz4m9yz.js";import"./layout-DgebEeDV.js";import"./menu-Cukdm8XK.js";import"./radio-CMOPLxLt.js";import"./status-indicator-BREqtsMD.js";import"./tag-DMgBs9DA.js";import"./textarea-CO8Z8fZG.js";import"./title-CZRmBG9s.js";import"./toggle-Co0kfaDY.js";import{b as m}from"./warning-tri-BY3sPlw-.js";import"./index-RYns6xqu.js";import"./string-BqrfsRv8.js";import"./online-EmbACc0H.js";import"./index-sbqOYYIm.js";import"./check-BnJBHFpS.js";import"./useCounter-DpfJ3ATo.js";const H={title:"Component/Tooltip",component:p,tags:["autodocs"],argTypes:{content:{description:"提示內容",table:{category:"PROPS"}},showArrow:{description:"是否顯示箭頭",table:{category:"PROPS"}},placement:{description:"提示框位置",control:{type:"select",options:["top-left","top","top-right","right-top","right","right-bottom","bottom-right","bottom","bottom-left","left-bottom","left","left-top"]},table:{category:"PROPS"}},className:{description:"客製化樣式",table:{category:"PROPS"}},children:{description:"顯示內容",table:{category:"SLOTS"}}},args:{content:"good day",placement:"top",showArrow:!0,className:"",children:o.jsx(s,{prefix:o.jsx(m,{}),themeColor:"primary",variant:"filled",onClick:()=>({}),children:"Hover Me"})},parameters:{docs:{title:"Tooltip",description:{component:"提示工具組件的呈現及說明。"}}}},t={name:"預設項目",args:{},render(n){return o.jsx("div",{style:{display:"flex",justifyContent:"center"},children:o.jsx(p,{...n})})}};var r,e,i;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  name: '預設項目',
+  args: {},
+  render(args) {
+    return <div style={{
+      display: 'flex',
+      justifyContent: 'center'
+    }}>
+        <Tooltip {...args}></Tooltip>
+      </div>;
+  }
+}`,...(i=(e=t.parameters)==null?void 0:e.docs)==null?void 0:i.source}}};const L=["Default"];export{t as Default,L as __namedExportsOrder,H as default};
