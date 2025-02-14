@@ -3,14 +3,13 @@ name: Deploy Storybook to GitHub Pages
 on:
   push:
     branches:
-      - '**'
-    tags:
-      - 'v1.0.0'
+      - 'dev'
+
   workflow_dispatch: # 允許手動觸發部署
   pull_request:
 
 jobs:
-  deploy:
+  deploy-storybook:
     runs-on: ubuntu-latest
 
     permissions:
