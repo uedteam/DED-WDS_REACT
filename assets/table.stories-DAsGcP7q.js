@@ -1,0 +1,27 @@
+import{j as r}from"./jsx-runtime-DEdD30eg.js";import{a as i}from"./chunk-454WOBUV-CM0pFb8Z.js";import{T as t,c as o}from"./tooltip-BbOuau61.js";import"./badge-BPltvF_h.js";import"./breadcrumb-BdVqNg6a.js";import{B as S}from"./toast-CGCUuF-E.js";import"./checkbox-BCNOGswC.js";import"./progress-circle-E3pfpkaU.js";import"./progress-line-DvRcyvhi.js";import"./divider-ZgHGgl_F.js";import"./grid-CDNssy7o.js";import"./image-CtGKW3RO.js";import"./input-ByamwSew.js";import"./layout-DgebEeDV.js";import"./menu-Be5adDqx.js";import"./radio-CMOPLxLt.js";import"./status-indicator-Cbvkr_-o.js";import"./tag-9Lgypm5y.js";import"./textarea-DPnzmyNM.js";import"./title-BdHUK5iL.js";import"./toggle-Ck5Sa1oo.js";import"./index-RYns6xqu.js";import"./v4-CQkTLCs1.js";import"./warning-tri-D1aSkfBJ.js";import"./string-BqrfsRv8.js";import"./online-EmbACc0H.js";import"./close-o-4V2u0k.js";import"./index-sbqOYYIm.js";import"./check-BnJBHFpS.js";import"./useCounter-DpfJ3ATo.js";const C=[{key:"head",title:"TH",width:"50px"},{key:"column1",title:"TH",width:"100px"},{key:"column2",title:"TH",width:"100px"},{key:"column3",title:"TH",width:"100px"},{key:"column4",title:"TH",width:"50px"},{key:"column5",title:"TH",width:"50px",align:"center"}],H=[{key:"head",title:"TH",width:"50px"},{key:"column1",title:"TH",width:"100px",render:e=>r.jsx(o,{content:e.column1,placement:"top",children:e.column1})},{key:"column2",title:"TH",width:"100px",render:e=>r.jsx(o,{content:e.column2,placement:"top",children:e.column2})},{key:"column3",title:"TH",width:"100px",render:e=>r.jsx(o,{content:e.column3,placement:"top",children:e.column3})},{key:"column4",title:"TH",width:"50px",render:e=>r.jsx(o,{content:e.column4,placement:"top",children:e.column4})},{key:"column5",title:"TH",width:"50px",align:"center",render:e=>r.jsx(S,{themeColor:"primary",variant:"filled",size:"small",onClick:()=>alert(e.column5),children:"View"})}],P=Array(4).fill(null).map((e,y)=>({head:`Head-${y+1}`,column1:"td1",column2:"td2",column3:"td3",column4:"td4",column5:"td5"})),te={title:"Component/Table",component:t,tags:["autodocs"],argTypes:{dataSource:{description:"資料來源",table:{category:"PROPS"}},columns:{description:"欄位",table:{category:"PROPS"}},showCheckbox:{description:"是否顯示 checkbox",table:{category:"PROPS"}},showVerticalBorders:{description:"是否顯示垂直邊框",table:{category:"PROPS"}},isSprite:{description:"是否顯示條紋背景",table:{category:"PROPS"}},className:{description:"客製化樣式",control:{type:"text"},table:{category:"PROPS"}},onRowClick:{description:"點擊事件",table:{category:"EVENTS"}},onSelect:{description:"選取事件",table:{category:"EVENTS"}}},args:{dataSource:P,columns:C,showCheckbox:!1,showVerticalBorders:!1,isSprite:!0,className:"",onRowClick:i("onRowClick"),onSelect:i("onSelect")},parameters:{docs:{title:"Table",description:{component:"Table 組件的呈現及說明。"}}}},n={name:"預設項目",args:{},render(e){return r.jsx(t,{...e})}},a={name:"框線表格",args:{},render(e){return r.jsx(t,{...e,showVerticalBorders:!0,showCheckbox:!0})}},s={name:"客製化欄位",args:{columns:H},render(e){return r.jsx(t,{...e})}},c={name:"可勾選資料列",args:{},render(e){return r.jsx(t,{...e,showCheckbox:!0})}};var l,m,p;n.parameters={...n.parameters,docs:{...(l=n.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  name: '預設項目',
+  args: {},
+  render(args) {
+    return <Table {...args} />;
+  }
+}`,...(p=(m=n.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};var d,u,h;a.parameters={...a.parameters,docs:{...(d=a.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  name: '框線表格',
+  args: {},
+  render(args) {
+    return <Table {...args} showVerticalBorders showCheckbox />;
+  }
+}`,...(h=(u=a.parameters)==null?void 0:u.docs)==null?void 0:h.source}}};var x,g,b;s.parameters={...s.parameters,docs:{...(x=s.parameters)==null?void 0:x.docs,source:{originalSource:`{
+  name: '客製化欄位',
+  args: {
+    columns: customColumns
+  },
+  render(args) {
+    return <Table {...args} />;
+  }
+}`,...(b=(g=s.parameters)==null?void 0:g.docs)==null?void 0:b.source}}};var w,k,T;c.parameters={...c.parameters,docs:{...(w=c.parameters)==null?void 0:w.docs,source:{originalSource:`{
+  name: '可勾選資料列',
+  args: {},
+  render(args) {
+    return <Table {...args} showCheckbox />;
+  }
+}`,...(T=(k=c.parameters)==null?void 0:k.docs)==null?void 0:T.source}}};const oe=["Default","Border","Custom","Checkbox"];export{a as Border,c as Checkbox,s as Custom,n as Default,oe as __namedExportsOrder,te as default};
