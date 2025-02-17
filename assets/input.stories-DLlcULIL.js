@@ -2,7 +2,7 @@ import{j as e}from"./jsx-runtime-DEdD30eg.js";import{a as x}from"./chunk-454WOBU
 <Input {...args} label="Account"  prefix={<SvgAccount />} />
 <Input {...args} label="Password" type={'password'} prefix={<Lock />} />
 <Input {...args} label="Number" type="number" />
-`}}},render(r){return e.jsxs(e.Fragment,{children:[e.jsx(t,{...r,currValue:"Account",label:"Account",type:"text",prefix:e.jsx(c,{})}),e.jsx(t,{...r,currValue:"Password",label:"Password",type:"password",prefix:e.jsx(y,{})}),e.jsx(t,{...r,currValue:"12345",label:"Number",type:"number"})]})}},o={name:"提示訊息",argTypes:{isDisabled:{table:{disable:!0}}},args:{},parameters:{docs:{source:{code:`
+`}}},render(r){return e.jsxs(e.Fragment,{children:[e.jsx(t,{...r,currValue:"Account",label:"Account",type:"text",prefix:e.jsx(c,{})}),e.jsx(t,{...r,currValue:"Password",label:"Password",type:"password",prefix:e.jsx(y,{})}),e.jsx(t,{...r,currValue:"12345",label:"Amount",type:"number"})]})}},o={name:"提示訊息",argTypes:{isDisabled:{table:{disable:!0}}},args:{},parameters:{docs:{source:{code:`
 <Input {...args} label="Account" hint={{ error: 'Error message', description: '' }} />
 <Input {...args} label="Account" hint={{ error: '', description: 'Prompt message' }} />
 `}}},render(r){return e.jsxs(e.Fragment,{children:[e.jsx(t,{...r,label:"Account",hint:{error:"Error message",description:""}}),e.jsx(t,{...r,label:"Account",hint:{error:"",description:"Prompt message"}})]})}};var n,p,l;s.parameters={...s.parameters,docs:{...(n=s.parameters)==null?void 0:n.docs,source:{originalSource:`{
@@ -38,7 +38,7 @@ import{j as e}from"./jsx-runtime-DEdD30eg.js";import{a as x}from"./chunk-454WOBU
     return <>
         <Input {...args} currValue="Account" label="Account" type="text" prefix={<SvgAccount />} />
         <Input {...args} currValue="Password" label="Password" type="password" prefix={<SvgLock />} />
-        <Input {...args} currValue="12345" label="Number" type="number" />
+        <Input {...args} currValue="12345" label="Amount" type="number" />
       </>;
   }
 }`,...(m=(g=a.parameters)==null?void 0:g.docs)==null?void 0:m.source}}};var d,b,S;o.parameters={...o.parameters,docs:{...(d=o.parameters)==null?void 0:d.docs,source:{originalSource:`{
