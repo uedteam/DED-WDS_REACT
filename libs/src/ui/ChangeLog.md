@@ -1,14 +1,12 @@
-## V1.0.7-beta (2025/2/17)
+## V1.0.9-beta (2025/2/19)
 
 ✨ New Feature
 
 🆙 Update
 
-- Update the README file with detailed installation instructions and a troubleshooting section
-- Fix the typo in the Navbar component title
-- Add a new API endpoint for fetching user data
-- Update the color scheme across all components
-- Improve the performance of the search feature
-- Remove unused dependencies from the package.json file
+- Add multiple new hooks to index.ts
+- Revise the useDialog component in dialog.stories.tsx and handle openDialog and closeDialog functions differently
+- Update the useToast hook in toast.stories.tsx to include addToast and handle showing toast messages
+- Modify the file patterns in the vite.config.ts to include hooks directory and exclude assets directory
 
 🪲 Bug Fix
