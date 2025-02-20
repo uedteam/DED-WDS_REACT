@@ -1,12 +1,13 @@
-## V1.0.9-beta (2025/2/19)
+## V1.0.10-beta (2025/2/20)
 
 ✨ New Feature
 
 🆙 Update
 
-- Add multiple new hooks to index.ts
-- Revise the useDialog component in dialog.stories.tsx and handle openDialog and closeDialog functions differently
-- Update the useToast hook in toast.stories.tsx to include addToast and handle showing toast messages
-- Modify the file patterns in the vite.config.ts to include hooks directory and exclude assets directory
+- Update the name and version fields in package.json
+- Modify the main field in package.json
+- Add a type property to the ButtonProps interface in button.tsx
+- Add a type property to the Button component in button.tsx
+- Update the name and fileName in vite.config.ts
 
 🪲 Bug Fix
