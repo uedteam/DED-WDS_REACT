@@ -1,6 +1,11 @@
 import { getBorderClass, getHintClass } from './styled';
 import { getSizeClass } from '@src/utils/style';
-import { ChangeEventHandler, ReactNode, forwardRef } from 'react';
+import {
+  ChangeEventHandler,
+  FocusEventHandler,
+  ReactNode,
+  forwardRef,
+} from 'react';
 import { useInput } from '@src/hooks';
 import {
   SvgVisibility,
@@ -29,6 +34,7 @@ import { getCombinedClassName } from '@src/utils/string';
  */
 export interface InputProps {
   label?: string;
+  name?: string;
   type: 'text' | 'password' | 'email' | 'number';
   hasClear?: boolean;
   placeholder?: string;
@@ -41,6 +47,8 @@ export interface InputProps {
   isOpen?: boolean | undefined;
   className?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
 }
 
 /**
@@ -48,6 +56,8 @@ export interface InputProps {
  * @component
  * @param {Object} props - 組件的屬性。
  * @param {string} props.label - 輸入框的標籤。
+ * @param {string} [props.name] - 輸入框的名稱。
+ * @param {boolean} [props.hasClear=true] - 是否顯示清除按鈕。
  * @param {string} [props.type='text'] - 輸入框的類型。
  * @param {string} [props.placeholder='請輸入...'] - 輸入框的佔位符。
  * @param {React.ReactNode} [props.prefix] - 輸入框前綴圖標。
@@ -59,11 +69,14 @@ export interface InputProps {
  * @param {boolean} [props.isDisabled=false] - 是否禁用輸入框。
  * @param {string} [props.className] - 自定義的 CSS 類名。
  * @param {function} props.onChange - 當輸入框值改變時的回調函數。
+ * @param {function} [props.onFocus] - 當輸入框獲得焦點時的回調函數。
+ * @param {function} [props.onBlur] - 當輸入框失去焦點時的回調函數。
  */
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       label = '',
+      name = '',
       type = 'text',
       hasClear = true,
       placeholder = 'Placeholder',
@@ -76,6 +89,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       isOpen = undefined,
       className = '',
       onChange = () => ({}),
+      onFocus = () => ({}),
+      onBlur = () => ({}),
     }: InputProps,
     ref
   ) => {
@@ -115,8 +130,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             ref={ref}
             id="ded-input"
+            name={name}
             value={value}
             onChange={handleInputChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
             type={inputType}
             className={`ded-input 
             ${getSizeClass('ded-text', size)} 

@@ -30,6 +30,12 @@ export default {
         category: 'PROPS',
       },
     },
+    name: {
+      description: '名稱',
+      table: {
+        category: 'PROPS',
+      },
+    },
     type: {
       description: '輸入類型',
       control: {
@@ -127,6 +133,18 @@ export default {
         category: 'EVENTS',
       },
     },
+    onFocus: {
+      description: '焦點事件',
+      table: {
+        category: 'EVENTS',
+      },
+    },
+    onBlur: {
+      description: '失焦事件',
+      table: {
+        category: 'EVENTS',
+      },
+    },
   },
   parameters: {
     docs: {
@@ -139,6 +157,7 @@ export default {
   args: {
     label: 'Label',
     type: 'text',
+    name: 'input',
     hasClear: true,
     placeholder: 'Placeholder',
     size: 'medium',
@@ -148,6 +167,8 @@ export default {
     isDisabled: false,
     className: '',
     onChange: (e: string) => action('changed')(e),
+    onFocus: (e: string) => action('focused')(e),
+    onBlur: (e: string) => action('blured')(e),
   },
 } as Meta;
 type Story = StoryObj<typeof Input>;
