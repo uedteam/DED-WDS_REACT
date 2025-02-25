@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as p}from"./index-ltCIYsK1.js";import"./index-RYns6xqu.js";import"./iframe-C4ulRSKx.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const r=`# 關於 Web Design system Storybook
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as p}from"./index-TD6qrtaY.js";import"./index-RYns6xqu.js";import"./iframe-Du5JtY-Q.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const r=`# 關於 Web Design system Storybook
 
 ## 關於 AUO Design system
 
@@ -71,6 +71,8 @@ npm install
 @ded-wds-react:registry=https://asia-east1-npm.pkg.dev/auo-ded/npm-hub-dev/
 //asia-east1-npm.pkg.dev/auo-ded/npm-hub-dev/:always-auth=true
 \`\`\`
+
+- terminal 執行以下指令取得授權碼
 
 \`\`\`shell
 npx google-artifactregistry-auth ./.npmrc
