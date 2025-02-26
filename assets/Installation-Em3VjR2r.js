@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as p}from"./index-TD6qrtaY.js";import"./index-RYns6xqu.js";import"./iframe-Du5JtY-Q.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const r=`# 關於 Web Design system Storybook
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as p}from"./index-D70rKTIe.js";import"./index-RYns6xqu.js";import"./iframe-6fIzdbcr.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const r=`# 關於 Web Design system Storybook
 
 ## 關於 AUO Design system
 
@@ -72,12 +72,6 @@ npm install
 //asia-east1-npm.pkg.dev/auo-ded/npm-hub-dev/:always-auth=true
 \`\`\`
 
-- terminal 執行以下指令取得授權碼
-
-\`\`\`shell
-npx google-artifactregistry-auth ./.npmrc
-\`\`\`
-
 - 執行 npm install 安裝 WDS 套件
 
 \`\`\`shell
@@ -104,11 +98,11 @@ export default defineConfig({
 
 ### 步驟三：放入相關資源並引用 SCSS 檔
 
-- 下載 [source.zip](https://storage.googleapis.com/ded-wds-bucket/source.zip)
+- 下載 [source.zip](https://storage.googleapis.com/ded-wds-bucket/uat/wds/source.zip)
 
 - 移除專案預設樣式 (App.css、index.css)、移除預設匯入 css 檔 (App.css、index.css)
 
-- 複製 source 內相關資料夾至 src 資料夾並且取代
+- 複製 source/react 內相關資料夾至 src 資料夾並且取代
 
 - 在進入點的檔案（App.tsx）引用「globals.scss」
 
