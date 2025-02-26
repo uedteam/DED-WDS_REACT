@@ -68,8 +68,8 @@ npm install
 - 開啟 .npmrc 檔貼上 registry 路徑，並儲存
 
 ```shell
-@ded-wds-react:registry=https://asia-east1-npm.pkg.dev/auo-ded/npm-hub-dev/
-//asia-east1-npm.pkg.dev/auo-ded/npm-hub-dev/:always-auth=true
+@ded-wds-react:registry=https://asia-east1-npm.pkg.dev/auo-ded/npm-hub-uat/
+//asia-east1-npm.pkg.dev/auo-ded/npm-hub-uat/:always-auth=true
 ```
 
 - 執行 npm install 安裝 WDS 套件
