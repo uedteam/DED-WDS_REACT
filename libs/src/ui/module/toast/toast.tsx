@@ -13,6 +13,13 @@ export interface ToastProps {
     | 'success'
     | 'warning'
     | 'error';
+  position:
+    | 'top-right'
+    | 'top-left'
+    | 'top-center'
+    | 'bottom-right'
+    | 'bottom-left'
+    | 'bottom-center';
   onClose?: () => void;
   title: string;
   content: string;
@@ -24,6 +31,7 @@ export interface ToastProps {
 
 export const Toast: React.FC<ToastProps> = ({
   themeColor = 'primary',
+  position = 'top-right',
   onClose = () => ({}),
   title,
   content = 'Content',

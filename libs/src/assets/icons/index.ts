@@ -1,8 +1,10 @@
-import SvgAccount from './account_circle.svg?react';
+// @index('./*.{png,jpg,svg}', (f, _) => `import Svg${_.pascalCase(f.name)} from '${f.path}${f.ext}?react'`)
+import SvgAccount from './account.svg?react';
 import SvgAdd from './add.svg?react';
-import SvgAir from './air-condition.svg?react';
+import SvgAirCondition from './air-condition.svg?react';
 import SvgArrowDown from './arrow-down.svg?react';
 import SvgArrowDropDown from './arrow-drop-down.svg?react';
+import SvgAuo from './auo.svg?react';
 import SvgBarChart from './bar-chart.svg?react';
 import SvgBusy from './busy.svg?react';
 import SvgCalendar from './calendar.svg?react';
@@ -22,8 +24,8 @@ import SvgGoogle from './google.svg?react';
 import SvgHome from './home.svg?react';
 import SvgHumidity from './humidity.svg?react';
 import SvgIdle from './idle.svg?react';
-import SvgInfo from './info.svg?react';
 import SvgInfoCircle from './info-circle.svg?react';
+import SvgInfo from './info.svg?react';
 import SvgLanguage from './language.svg?react';
 import SvgLight from './light.svg?react';
 import SvgLine from './line.svg?react';
@@ -32,7 +34,6 @@ import SvgLock from './lock.svg?react';
 import SvgLogout from './logout.svg?react';
 import SvgMail from './mail.svg?react';
 import SvgMinus from './minus.svg?react';
-import SvgMore from './more_vert.svg?react';
 import SvgMoreVert from './more-vert.svg?react';
 import SvgNavigateArrow from './navigate-arrow.svg?react';
 import SvgNotification from './notification.svg?react';
@@ -46,18 +47,21 @@ import SvgSettings from './settings.svg?react';
 import SvgSuccessCircle from './success-circle.svg?react';
 import SvgTemperature from './temperature.svg?react';
 import SvgUser from './user.svg?react';
-import SvgVisibility from './visibility.svg?react';
 import SvgVisibilityOff from './visibility_off.svg?react';
-import SvgWarning from './warning.svg?react';
+import SvgVisibility from './visibility.svg?react';
 import SvgWarningTri from './warning-tri.svg?react';
+import SvgWarning from './warning.svg?react';
 import SvgWindow from './window.svg?react';
+// @endindex
 
 export {
+  // @index(['./*.{png,jpg,svg}'], (f, _, e) => `Svg${_.pascalCase(f.name)}${e.isLast ? '' : ', '}`)
   SvgAccount,
   SvgAdd,
-  SvgAir,
+  SvgAirCondition,
   SvgArrowDown,
   SvgArrowDropDown,
+  SvgAuo,
   SvgBarChart,
   SvgBusy,
   SvgCalendar,
@@ -77,8 +81,8 @@ export {
   SvgHome,
   SvgHumidity,
   SvgIdle,
-  SvgInfo,
   SvgInfoCircle,
+  SvgInfo,
   SvgLanguage,
   SvgLight,
   SvgLine,
@@ -87,7 +91,6 @@ export {
   SvgLogout,
   SvgMail,
   SvgMinus,
-  SvgMore,
   SvgMoreVert,
   SvgNavigateArrow,
   SvgNotification,
@@ -101,9 +104,10 @@ export {
   SvgSuccessCircle,
   SvgTemperature,
   SvgUser,
-  SvgVisibility,
   SvgVisibilityOff,
-  SvgWarning,
+  SvgVisibility,
   SvgWarningTri,
+  SvgWarning,
   SvgWindow,
+  // @endindex
 };

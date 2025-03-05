@@ -36,6 +36,23 @@ export default {
         category: 'PROPS',
       },
     },
+    position: {
+      description: '位置',
+      control: {
+        type: 'select',
+        options: [
+          'top-right',
+          'top-left',
+          'top-center',
+          'bottom-right',
+          'bottom-left',
+          'bottom-center',
+        ],
+      },
+      table: {
+        category: 'PROPS',
+      },
+    },
     title: {
       description: '標題',
       table: {
@@ -99,6 +116,7 @@ export default {
   },
   args: {
     themeColor: 'success',
+    position: 'top-right',
     onClose: () => window.alert('close'),
     title: 'Notification Title ',
     content: 'Content',
@@ -128,6 +146,7 @@ const handleShowToast = () => {
     action: <div onClick={() => window.alert('action')}>Action</div>,
     prefix: <SvgSuccessCircle width={18} height={18} />,
     duration: ${args.duration},
+    position: '${args.position}',
   });
 };
 
@@ -376,6 +395,7 @@ export const Demo: Story = {
         action: args?.action || <div>Action</div>,
         prefix: args?.prefix || <SvgErrorCircle width={18} height={18} />,
         duration: args?.duration,
+        position: args?.position,
       });
     };
 
