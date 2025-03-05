@@ -1,79 +1,44 @@
-import { Accordion } from './element/accordion';
-import { Avatar } from './element/avatar';
-import { AvatarGroup } from './module/avatar-group';
-import { Badge } from './element/badge';
-import { Breadcrumb } from './element/breadcrumb';
-import { Button } from './element/button';
-import { Card } from './section/card';
-import { CardSimple } from './section/card-simple';
-import { Checkbox } from './element/checkbox';
-import { CircleProgress, LineProgress } from './element/progress';
-import { Dropdown } from './module/dropdown';
-import { Dialog } from './module/dialog';
-import { Divider } from './element/divider';
-import { Grid, Row, Column } from './section/grid';
-import { Image } from './element/image';
-import { Input } from './element/input';
-import { Item, List } from './module/list';
-import { Layout } from './section/layout';
-import { Menu } from './module/menu';
-import { Navbar } from './section/navbar';
-import { Pagination } from './element/pagination';
-import { Radio } from './element/radio';
-import { Search } from './module/search';
-import { Select } from './element/select';
-import { SideNav } from './section/side-nav';
-import { Slider } from './element/slider';
-import { SliderControl } from './module/slider-control';
-import { StatusIndicator } from './module/status-indicator';
-import { Stepper } from './module/stepper/stepper';
-import { Table } from './element/table';
-import { Tag } from './element/tag';
-import { Textarea } from './element/textarea';
-import { Title } from './element/title';
-import { Toast } from './module/toast';
-import { Toggle } from './element/toggle';
-import { Tooltip } from './module/tooltip';
-
-export {
-  Accordion,
-  Avatar,
-  AvatarGroup,
-  Badge,
-  Breadcrumb,
-  Button,
-  Card,
-  CardSimple,
-  Checkbox,
-  CircleProgress,
-  Column,
-  Dropdown,
-  Dialog,
-  Divider,
-  Grid,
-  Image,
-  Input,
-  Item,
-  Layout,
-  LineProgress,
-  List,
-  Menu,
-  Navbar,
-  Pagination,
-  Radio,
-  Row,
-  Search,
-  Select,
-  SideNav,
-  Slider,
-  SliderControl,
-  StatusIndicator,
-  Stepper,
-  Table,
-  Tag,
-  Textarea,
-  Title,
-  Toast,
-  Toggle,
-  Tooltip,
-};
+// @index('./**/*.tsx', (f, _) => `export { ${_.pascalCase(f.name)} } from '${f.path}'`)
+export { Accordion } from './element/accordion';
+export { Avatar } from './element/avatar';
+export { Badge } from './element/badge';
+export { Breadcrumb } from './element/breadcrumb';
+export { Button } from './element/button';
+export { Checkbox } from './element/checkbox';
+export { DatePicker } from './element/date-picker';
+export { Divider } from './element/divider';
+export { Image } from './element/image';
+export { Input } from './element/input';
+export { Pagination } from './element/pagination';
+export { LineProgress, CircleProgress } from './element/progress';
+export { Radio } from './element/radio';
+export { Select } from './element/select';
+export { Slider } from './element/slider';
+export { Table } from './element/table';
+export { Tag } from './element/tag';
+export { Textarea } from './element/textarea';
+export { Title } from './element/title';
+export { Toggle } from './element/toggle';
+export { Mask } from './mask';
+export { AvatarGroup } from './module/avatar-group/';
+export { Dialog } from './module/dialog';
+export { Dropdown } from './module/dropdown';
+export { List } from './module/list';
+export { Menu } from './module/menu';
+export { Search } from './module/search';
+export { SliderControl } from './module/slider-control';
+export { StatusIndicator } from './module/status-indicator';
+export { Stepper } from './module/stepper';
+export { Tabs } from './module/tabs';
+export { Toast } from './module/toast';
+export { Tooltip } from './module/tooltip';
+export { Portal } from './portal';
+export { CardSimple } from './section/card-simple';
+export { Card } from './section/card';
+export { Grid, Row, Column } from './section/grid';
+export { Layout, Header, Side, Content, Footer } from './section/layout';
+export { Navbar } from './section/navbar';
+export { SideNav } from './section/side-nav';
+export { AuthFlow } from './template/auth-flow';
+export { Dashboard } from './template/dashboard';
+// @endindex
