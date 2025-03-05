@@ -51,7 +51,7 @@ export const Item: React.FC<ItemProps> = ({
     if (href) {
       window.open(href, '_blank');
     }
-    onClick && onClick(value);
+    onClick && onClick(label);
   };
 
   return (

@@ -12,6 +12,7 @@ import {
 import { ChangeEvent } from 'react';
 
 const IconComponents = {
+  None: null,
   SvgAccount: <SvgAccount />,
   SvgSearch: <SvgSearch />,
   SvgVisibility: <SvgVisibility />,
@@ -144,6 +145,7 @@ export default {
     placeholder: 'Placeholder',
     size: 'medium',
     currValue: '',
+    prefix: <SvgAccount />,
     maxLimit: 0,
     hint: { error: '', description: 'Prompt message' },
     isDisabled: false,
@@ -155,9 +157,7 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   name: '預設項目',
-  args: {
-    prefix: <SvgAccount />,
-  },
+  args: {},
   render(args) {
     const args2 = { test: '123', name: 'Kevin' };
     return <Input {...args} {...args2} />;

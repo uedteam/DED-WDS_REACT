@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 import { SvgCheck } from '@src/assets/icons';
 import { getCombinedClassName } from '@src/utils/string';
 
@@ -41,8 +41,11 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   size = 'medium',
   className = '',
   onChange,
+  ...props
 }: CheckboxProps) => {
   const [currOptions, setCurrOptions] = useState<string[]>(currValue);
+
+  const baseId = useId();
 
   const handleChange = (value: string, checked: boolean) => {
     const updatedOptions = checked
@@ -65,43 +68,47 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         }
       `}
     >
-      {dataSource.map((option) => (
-        <label
-          key={option.value}
-          htmlFor={option.value}
-          className={`ded-checkbox     
-            ${getCombinedClassName('ded-text', size)}        
-            ${option.isDisabled ? 'ded-checkbox-input-disabled' : ''} 
-            ${className}`}
-        >
-          <input
-            className="ded-checkbox-input"
-            id={option.value}
-            value={option.value}
-            checked={currOptions.includes(option.value)}
-            onChange={(e) => handleChange(option.value, e.target.checked)}
-            name="option"
-            type="checkbox"
-          />
-          <div
-            className={`ded-checkbox-icon 
-              ${getCombinedClassName(
-                'ded-checkbox',
-                currOptions.includes(option.value) ? 'checked' : 'unchecked'
-              )}
-              ${getCombinedClassName('ded-icon', size)}
-              ${option.isDisabled ? 'ded-checkbox-icon-disabled' : ''}`}
+      {dataSource.map((option, index) => {
+        const uniqueId = `${baseId}-checkbox-${index}`;
+        return (
+          <label
+            key={option.value}
+            htmlFor={uniqueId}
+            className={`ded-checkbox     
+              ${getCombinedClassName('ded-text', size)}        
+              ${option.isDisabled ? 'ded-checkbox-input-disabled' : ''} 
+              ${className}`}
           >
-            {currOptions.includes(option.value) && <SvgCheck />}
-          </div>
-          <span
-            className={`ded-checkbox-text 
-              ${option.isDisabled ? 'ded-checkbox-text-disabled' : ''}`}
-          >
-            {option.label}
-          </span>
-        </label>
-      ))}
+            <input
+              className="ded-checkbox-input"
+              id={uniqueId}
+              value={option.value}
+              checked={currOptions.includes(option.value)}
+              onChange={(e) => handleChange(option.value, e.target.checked)}
+              name="option"
+              type="checkbox"
+              {...props}
+            />
+            <div
+              className={`ded-checkbox-icon 
+                ${getCombinedClassName(
+                  'ded-checkbox',
+                  currOptions.includes(option.value) ? 'checked' : 'unchecked'
+                )}
+                ${getCombinedClassName('ded-icon', size)}
+                ${option.isDisabled ? 'ded-checkbox-icon-disabled' : ''}`}
+            >
+              {currOptions.includes(option.value) && <SvgCheck />}
+            </div>
+            <span
+              className={`ded-checkbox-text 
+                ${option.isDisabled ? 'ded-checkbox-text-disabled' : ''}`}
+            >
+              {option.label}
+            </span>
+          </label>
+        );
+      })}
     </div>
   );
 };

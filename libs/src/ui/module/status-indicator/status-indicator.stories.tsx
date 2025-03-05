@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryContext, StoryObj } from '@storybook/react';
 import { StatusIndicator } from './status-indicator';
+import { Grid, Row, Column } from '@src/ui';
 import {
   SvgInfoCircle,
   SvgSuccessCircle,
@@ -36,8 +37,14 @@ export default {
       description: '樣式變體',
       control: {
         type: 'select',
-        options: ['filled', 'text'],
+        options: ['filled', 'soft', 'text'],
       },
+      table: {
+        category: 'PROPS',
+      },
+    },
+    isShowDot: {
+      description: '是否顯示圓點',
       table: {
         category: 'PROPS',
       },
@@ -95,6 +102,7 @@ export default {
   args: {
     themeColor: 'success',
     variant: 'filled',
+    isShowDot: false,
     children: 'Success',
     prefix: 'None',
     size: 'medium',
@@ -144,127 +152,268 @@ export const Theme: Story = {
     },
   },
   args: {},
+  parameters: {
+    docs: {
+      source: {
+        transform(code: string, storyContext: StoryContext) {
+          const { args } = storyContext;
+          return `
+<StatusIndicator {...args} variant="filled" themeColor="info">
+  Information
+</StatusIndicator>
+<StatusIndicator {...args} variant="filled" themeColor="success">
+  Success
+</StatusIndicator>
+<StatusIndicator {...args} variant="filled" themeColor="warning">
+  Warning
+</StatusIndicator>
+<StatusIndicator {...args} variant="filled" themeColor="error">
+  Error
+</StatusIndicator>
+<StatusIndicator {...args} variant="filled" themeColor="neutral">
+  Disable
+</StatusIndicator>
+<StatusIndicator {...args} variant="text" themeColor="info">
+  Information
+</StatusIndicator>
+<StatusIndicator {...args} variant="text" themeColor="success">
+  Success
+</StatusIndicator>
+<StatusIndicator {...args} variant="text" themeColor="warning">
+  Warning
+</StatusIndicator>
+<StatusIndicator {...args} variant="text" themeColor="error">
+  Error
+</StatusIndicator>
+<StatusIndicator {...args} variant="text" themeColor="neutral">
+  Disable
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="filled"
+  themeColor="info"
+  prefix={<SvgInfoCircle width={20} height={20} />}
+>
+  Information
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="filled"
+  themeColor="success"
+  prefix={<SvgSuccessCircle width={20} height={20} />}
+>
+  Success
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="filled"
+  themeColor="warning"
+  prefix={<SvgWarningTri width={20} height={20} />}
+>
+  Warning
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="filled"
+  themeColor="error"
+  prefix={<SvgErrorCircle width={20} height={20} />}
+>
+  Error
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="filled"
+  themeColor="neutral"
+  prefix={<SvgDisableCircle width={20} height={20} />}
+>
+  Disable
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="text"
+  themeColor="info"
+  prefix={<SvgInfoCircle width={20} height={20} />}
+>
+  Information
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="text"
+  themeColor="success"
+  prefix={<SvgSuccessCircle width={20} height={20} />}
+>
+  Success
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="text"
+  themeColor="warning"
+  prefix={<SvgWarningTri width={20} height={20} />}
+>
+  Warning
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="text"
+  themeColor="error"
+  prefix={<SvgErrorCircle width={20} height={20} />}
+>
+  Error
+</StatusIndicator>
+<StatusIndicator
+  {...args}
+  variant="text"
+  themeColor="neutral"
+  prefix={<SvgDisableCircle width={20} height={20} />}
+>
+  Disable
+</StatusIndicator>
+`;
+        },
+      },
+    },
+  },
   render(args) {
     return (
-      <div
-        style={{
-          width: '600px',
-          display: 'flex',
-          gap: '10px',
-          flexWrap: 'wrap',
-        }}
-      >
-        <StatusIndicator {...args} variant="filled" themeColor="info">
-          Information
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="filled" themeColor="success">
-          Success
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="filled" themeColor="warning">
-          Warning
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="filled" themeColor="error">
-          Error
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="filled" themeColor="neutral">
-          Disable
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="text" themeColor="info">
-          Information{' '}
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="text" themeColor="success">
-          Success
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="text" themeColor="warning">
-          Warning
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="text" themeColor="error">
-          Error
-        </StatusIndicator>
-        <StatusIndicator {...args} variant="text" themeColor="neutral">
-          Disable
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="filled"
-          themeColor="info"
-          prefix={<SvgInfoCircle width={20} height={20} />}
-        >
-          Information
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="filled"
-          themeColor="success"
-          prefix={<SvgSuccessCircle width={20} height={20} />}
-        >
-          Success
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="filled"
-          themeColor="warning"
-          prefix={<SvgWarningTri width={20} height={20} />}
-        >
-          Warning
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="filled"
-          themeColor="error"
-          prefix={<SvgErrorCircle width={20} height={20} />}
-        >
-          Error
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="filled"
-          themeColor="neutral"
-          prefix={<SvgDisableCircle width={20} height={20} />}
-        >
-          Disable
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="text"
-          themeColor="info"
-          prefix={<SvgInfoCircle width={20} height={20} />}
-        >
-          Information
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="text"
-          themeColor="success"
-          prefix={<SvgSuccessCircle width={20} height={20} />}
-        >
-          Success
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="text"
-          themeColor="warning"
-          prefix={<SvgWarningTri width={20} height={20} />}
-        >
-          Warning
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="text"
-          themeColor="error"
-          prefix={<SvgErrorCircle width={20} height={20} />}
-        >
-          Error
-        </StatusIndicator>
-        <StatusIndicator
-          {...args}
-          variant="text"
-          themeColor="neutral"
-          prefix={<SvgDisableCircle width={20} height={20} />}
-        >
-          Disable
-        </StatusIndicator>
-      </div>
+      <Grid>
+        <Row>
+          <Column>
+            <div className="flex gap-2">
+              <StatusIndicator {...args} variant="filled" themeColor="info">
+                Information
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="filled" themeColor="success">
+                Success
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="filled" themeColor="warning">
+                Warning
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="filled" themeColor="error">
+                Error
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="filled" themeColor="neutral">
+                Disable
+              </StatusIndicator>
+            </div>
+          </Column>
+        </Row>
+
+        <Row>
+          <Column>
+            <div className="flex gap-2">
+              <StatusIndicator {...args} variant="text" themeColor="info">
+                Information
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="text" themeColor="success">
+                Success
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="text" themeColor="warning">
+                Warning
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="text" themeColor="error">
+                Error
+              </StatusIndicator>
+              <StatusIndicator {...args} variant="text" themeColor="neutral">
+                Disable
+              </StatusIndicator>
+            </div>
+          </Column>
+        </Row>
+
+        <Row>
+          <Column>
+            <div className="flex gap-2">
+              <StatusIndicator
+                {...args}
+                variant="filled"
+                themeColor="info"
+                prefix={<SvgInfoCircle width={20} height={20} />}
+              >
+                Information
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="filled"
+                themeColor="success"
+                prefix={<SvgSuccessCircle width={20} height={20} />}
+              >
+                Success
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="filled"
+                themeColor="warning"
+                prefix={<SvgWarningTri width={20} height={20} />}
+              >
+                Warning
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="filled"
+                themeColor="error"
+                prefix={<SvgErrorCircle width={20} height={20} />}
+              >
+                Error
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="filled"
+                themeColor="neutral"
+                prefix={<SvgDisableCircle width={20} height={20} />}
+              >
+                Disable
+              </StatusIndicator>
+            </div>
+          </Column>
+        </Row>
+
+        <Row>
+          <Column>
+            <div className="flex gap-2">
+              <StatusIndicator
+                {...args}
+                variant="text"
+                themeColor="info"
+                prefix={<SvgInfoCircle width={20} height={20} />}
+              >
+                Information
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="text"
+                themeColor="success"
+                prefix={<SvgSuccessCircle width={20} height={20} />}
+              >
+                Success
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="text"
+                themeColor="warning"
+                prefix={<SvgWarningTri width={20} height={20} />}
+              >
+                Warning
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="text"
+                themeColor="error"
+                prefix={<SvgErrorCircle width={20} height={20} />}
+              >
+                Error
+              </StatusIndicator>
+              <StatusIndicator
+                {...args}
+                variant="text"
+                themeColor="neutral"
+                prefix={<SvgDisableCircle width={20} height={20} />}
+              >
+                Disable
+              </StatusIndicator>
+            </div>
+          </Column>
+        </Row>
+      </Grid>
     );
   },
 };

@@ -1,6 +1,6 @@
 import { getBorderClass, getHintClass } from './styled';
 import { getSizeClass } from '@src/utils/style';
-import { ChangeEventHandler, ReactNode, forwardRef } from 'react';
+import { ChangeEventHandler, ReactNode, forwardRef, useId } from 'react';
 import { useInput } from '@src/hooks';
 import {
   SvgVisibility,
@@ -87,11 +87,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const { inputType, value, onClear, onVisibility, handleInputChange } =
       useInput(currValue, type, onChange);
 
+    const baseId = useId();
+    const uniqueId = `${baseId}-input`;
+
     return (
       <div className={`ded-input-container ${className}`}>
         {label && (
           <label
-            htmlFor="ded-input"
+            htmlFor={uniqueId}
             className={`${
               isDisabled ? 'ded-input-disable' : 'ded-input-label'
             }`}
@@ -108,7 +111,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         >
           {prefix && (
             <label
-              htmlFor="ded-input"
+              htmlFor={uniqueId}
               className={`ded-input-icon 
               ${getCombinedClassName('ded-icon', size)}
               ${isDisabled ? 'ded-input-icon-disable' : ''}
@@ -119,7 +122,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           <input
             ref={ref}
-            id="ded-input"
+            id={uniqueId}
             value={value}
             onChange={handleInputChange}
             type={inputType}

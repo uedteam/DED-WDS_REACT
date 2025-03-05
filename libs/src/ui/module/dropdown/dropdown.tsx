@@ -70,6 +70,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           currValue={value}
           isOpen={isVisible}
           type="text"
+          prefix=""
           className="ded-dropdown-input"
         />
       </div>

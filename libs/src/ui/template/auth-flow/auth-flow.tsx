@@ -28,7 +28,7 @@ interface LoginProps {
   className?: string;
 }
 
-export const AuthFLow: React.FC<LoginProps> = ({
+export const AuthFlow: React.FC<LoginProps> = ({
   bgColorSrc = '',
   bgImgSrc = '',
   title = '',
@@ -94,4 +94,4 @@ export const AuthFLow: React.FC<LoginProps> = ({
     </Layout>
   );
 };
-export default AuthFLow;
+export default AuthFlow;
