@@ -1,94 +1,52 @@
-import { Accordion } from './ui/element/accordion';
-import { Avatar } from './ui/element/avatar';
-import { AvatarGroup } from './ui/module/avatar-group';
-import { Badge } from './ui/element/badge';
-import { Breadcrumb } from './ui/element/breadcrumb';
-import { Button } from './ui/element/button';
-import { Card } from './ui/section/card';
-import { CardSimple } from './ui/section/card-simple';
-import { Checkbox } from './ui/element/checkbox';
-import { CircleProgress, LineProgress } from './ui/element/progress';
-import { Dropdown } from './ui/module/dropdown';
-import { Dialog } from './ui/module/dialog';
-import { Divider } from './ui/element/divider';
-import { Grid, Row, Column } from './ui/section/grid';
-import { Image } from './ui/element/image';
-import { Input } from './ui/element/input';
-import { Item, List } from './ui/module/list';
-import { Layout } from './ui/section/layout';
-import { Menu } from './ui/module/menu';
-import { Navbar } from './ui/section/navbar';
-import { Pagination } from './ui/element/pagination';
-import { Radio } from './ui/element/radio';
-import { Search } from './ui/module/search';
-import { Select } from './ui/element/select';
-import { SideNav } from './ui/section/side-nav';
-import { Slider } from './ui/element/slider';
-import { SliderControl } from './ui/module/slider-control';
-import { StatusIndicator } from './ui/module/status-indicator';
-import { Stepper } from './ui/module/stepper/stepper';
-import { Table } from './ui/element/table';
-import { Tag } from './ui/element/tag';
-import { Textarea } from './ui/element/textarea';
-import { Title } from './ui/element/title';
-import { Toast } from './ui/module/toast';
-import { Toggle } from './ui/element/toggle';
-import { Tooltip } from './ui/module/tooltip';
+// @index('./**/*.tsx', (f, _) => `export { ${_.pascalCase(f.name)} } from '${f.path}'`)
+export { Accordion } from './ui/element/accordion';
+export { Avatar } from './ui/element/avatar';
+export { Badge } from './ui/element/badge';
+export { Breadcrumb } from './ui/element/breadcrumb';
+export { Button } from './ui/element/button';
+export { Checkbox } from './ui/element/checkbox';
+export { DatePicker } from './ui/element/date-picker';
+export { Divider } from './ui/element/divider';
+export { Image } from './ui/element/image';
+export { Input } from './ui/element/input';
+export { Pagination } from './ui/element/pagination';
+export { LineProgress, CircleProgress } from './ui/element/progress';
+export { Radio } from './ui/element/radio';
+export { Select } from './ui/element/select';
+export { Slider } from './ui/element/slider';
+export { Table } from './ui/element/table';
+export { Tag } from './ui/element/tag';
+export { Textarea } from './ui/element/textarea';
+export { Title } from './ui/element/title';
+export { Toggle } from './ui/element/toggle';
+export { Mask } from './ui/mask';
+export { AvatarGroup } from './ui/module/avatar-group/';
+export { Dialog } from './ui/module/dialog';
+export { Dropdown } from './ui/module/dropdown';
+export { List } from './ui/module/list';
+export { Menu } from './ui/module/menu';
+export { Search } from './ui/module/search';
+export { SliderControl } from './ui/module/slider-control';
+export { StatusIndicator } from './ui/module/status-indicator';
+export { Stepper } from './ui/module/stepper';
+export { Tabs } from './ui/module/tabs';
+export { Toast } from './ui/module/toast';
+export { Tooltip } from './ui/module/tooltip';
+export { Portal } from './ui/portal';
+export { CardSimple } from './ui/section/card-simple';
+export { Card } from './ui/section/card';
+export { Grid, Row, Column } from './ui/section/grid';
+export { Layout, Header, Side, Content, Footer } from './ui/section/layout';
+export { Navbar } from './ui/section/navbar';
+export { SideNav } from './ui/section/side-nav';
+export { AuthFlow } from './ui/template/auth-flow';
+export { Dashboard } from './ui/template/dashboard';
+// @endindex
 
-import { useClickOutside } from './hooks/useClickOutside';
-import { useCounter } from './hooks/useCounter';
-import { useDialog } from './hooks/useDialog';
-import { useInput } from './hooks/useInput';
-import { useMenu } from './hooks/useMenu';
-import { usePosition } from './hooks/usePosition';
-import { useToast } from './hooks/useToast';
-
-export {
-  Accordion,
-  Avatar,
-  AvatarGroup,
-  Badge,
-  Breadcrumb,
-  Button,
-  Card,
-  CardSimple,
-  Checkbox,
-  CircleProgress,
-  Column,
-  Dropdown,
-  Dialog,
-  Divider,
-  Grid,
-  Image,
-  Input,
-  Item,
-  Layout,
-  LineProgress,
-  List,
-  Menu,
-  Navbar,
-  Pagination,
-  Radio,
-  Row,
-  Search,
-  Select,
-  SideNav,
-  Slider,
-  SliderControl,
-  StatusIndicator,
-  Stepper,
-  Table,
-  Tag,
-  Textarea,
-  Title,
-  Toast,
-  Toggle,
-  Tooltip,
-  useClickOutside,
-  useCounter,
-  useDialog,
-  useInput,
-  useMenu,
-  usePosition,
-  useToast,
-};
+export { useClickOutside } from './hooks/useClickOutside';
+export { useCounter } from './hooks/useCounter';
+export { useDialog } from './hooks/useDialog';
+export { useInput } from './hooks/useInput';
+export { useMenu } from './hooks/useMenu';
+export { usePosition } from './hooks/usePosition';
+export { useToast } from './hooks/useToast';

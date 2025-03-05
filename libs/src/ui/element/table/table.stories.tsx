@@ -4,41 +4,41 @@ import { Table, Button, Tooltip } from '@src/ui';
 import { RowData } from '@src/ui/element/table';
 
 const columns = [
-  { key: 'head', title: 'TH', width: '50px' },
+  { key: 'head', title: 'TH', width: '100px' },
   {
     key: 'column1',
     title: 'TH',
-    width: '100px',
+    width: '180px',
   },
   {
     key: 'column2',
     title: 'TH',
-    width: '100px',
+    width: '180px',
   },
   {
     key: 'column3',
     title: 'TH',
-    width: '100px',
+    width: '180px',
   },
   {
     key: 'column4',
     title: 'TH',
-    width: '50px',
+    width: '120px',
   },
   {
     key: 'column5',
     title: 'TH',
-    width: '50px',
+    width: '120px',
     align: 'center' as const,
   },
 ];
 
 const customColumns = [
-  { key: 'head', title: 'TH', width: '50px' },
+  { key: 'head', title: 'TH', width: '10vw' },
   {
     key: 'column1',
     title: 'TH',
-    width: '100px',
+    width: '20vw',
     render: (item: { head: string; column1: string }) => (
       <Tooltip content={item.column1} placement="top">
         {item.column1}
@@ -48,7 +48,7 @@ const customColumns = [
   {
     key: 'column2',
     title: 'TH',
-    width: '100px',
+    width: '20vw',
     render: (item: { head: string; column2: string }) => (
       <Tooltip content={item.column2} placement="top">
         {item.column2}
@@ -58,7 +58,7 @@ const customColumns = [
   {
     key: 'column3',
     title: 'TH',
-    width: '100px',
+    width: '20vw',
     render: (item: { head: string; column3: string }) => (
       <Tooltip content={item.column3} placement="top">
         {item.column3}
@@ -68,7 +68,7 @@ const customColumns = [
   {
     key: 'column4',
     title: 'TH',
-    width: '50px',
+    width: '15vw',
     render: (item: { head: string; column4: string }) => (
       <Tooltip content={item.column4} placement="top">
         {item.column4}
@@ -78,7 +78,7 @@ const customColumns = [
   {
     key: 'column5',
     title: 'TH',
-    width: '50px',
+    width: '15vw',
     align: 'center' as const,
     render: (item: { head: string; column5: string }) => (
       <Button

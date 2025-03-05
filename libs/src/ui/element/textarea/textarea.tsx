@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useId } from 'react';
 import { getHintClass, getCountClass, getBorderClass } from './styled';
 
 /**
@@ -51,9 +51,13 @@ export const Textarea: React.FC<TextareaProps> = ({
 }: TextareaProps) => {
   const [value, setValue] = useState('');
 
+  const baseId = useId();
+
   useEffect(() => {
     setValue(currValue);
   }, [currValue]);
+
+  const uniqueId = `${baseId}-textarea`;
 
   return (
     <div className={`ded-textarea-container ${className}`}>
@@ -61,7 +65,7 @@ export const Textarea: React.FC<TextareaProps> = ({
         <label
           className={`ded-textarea-label 
             ${isDisabled ? 'ded-textarea-disable' : ''}`}
-          htmlFor="id"
+          htmlFor={uniqueId}
         >
           {label}
         </label>
@@ -72,7 +76,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           ${isDisabled ? 'ded-textarea-disable' : ''}`}
       >
         <textarea
-          id="id"
+          id={uniqueId}
           onChange={(e) => {
             onChange && onChange(e);
             setValue(e.target.value);

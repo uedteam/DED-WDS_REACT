@@ -10,8 +10,9 @@ interface StatusIndicatorProps {
     | 'success'
     | 'warning'
     | 'error';
-  variant: 'filled' | 'text';
+  variant: 'filled' | 'soft' | 'text';
   prefix: ReactNode;
+  isShowDot?: boolean;
   children?: ReactNode;
   size?: 'small' | 'medium' | 'large';
   className?: string;
@@ -21,6 +22,7 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
   themeColor = 'primary',
   variant = 'text',
   prefix,
+  isShowDot = true,
   children,
   size = 'medium',
   className = '',
@@ -45,17 +47,16 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
             {prefix}
           </div>
         ) : (
-          <div
-            className={`${!prefix ? 'status-indicator-dot' : ''}
-          ${
-            !prefix && variant === 'text'
-              ? getCombinedClassName('status-indicator-dot', themeColor)
-              : ''
-          }
-          ${
-            !prefix && variant === 'filled' ? 'status-indicator-dot-white' : ''
-          }`}
-          ></div>
+          isShowDot && (
+            <div
+              className={`${!prefix ? 'status-indicator-dot' : ''}
+            ${
+              !prefix && variant === 'filled'
+                ? 'status-indicator-dot-white'
+                : getCombinedClassName('status-indicator-dot', themeColor)
+            }`}
+            ></div>
+          )
         )}
         {children && (
           <div className={`${getCombinedClassName('ded-text', size)}`}>

@@ -143,7 +143,7 @@ export const SideNav: React.FC<SideNavProps> = ({
     if (hasRWD) {
       return (
         <Navbar
-          className="fixed top-0 h-[60px] w-full"
+          className="ded-side-nav-rwd"
           dataSource={dataSource}
           logoSrc={mobileLogoSrc}
         />

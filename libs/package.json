@@ -1,6 +1,6 @@
 {
   "name": "@ded-wds-react/ui",
-  "version": "1.0.11-beta",
+  "version": "1.0.12-beta",
   "description": "Web Design System",
   "license": "MIT",
   "author": "Kevin Yang <kevin.kk.yang@auo.com>",
@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "start": "nx storybook",
-    "build": "rm -rf dist/lib && nx build",
+    "build": "nx build",
     "test": "nx test",
     "reset": "nx reset",
     "report": "nx report",

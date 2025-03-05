@@ -63,7 +63,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         datepickerRef.current = new DateRangePicker(divRangeElement, {
           format: currFormat,
           todayHighlight: true,
-          allowOneSidedRange: true,
+          // allowOneSidedRange: true,
           container: document.body,
         });
 
