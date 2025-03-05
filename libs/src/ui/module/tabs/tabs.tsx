@@ -23,7 +23,7 @@ export interface TabsProps {
     | 'error';
   dataSource: {
     title: string;
-    content: string;
+    content: ReactNode;
   }[];
   activeIndex: number;
   type?: 'basic' | 'outline' | 'button';
