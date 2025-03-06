@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AuthFLow } from './auth-flow';
+import { AuthFlow } from './auth-flow';
 import { Grid } from '@src/ui/section/grid/grid';
 import { Row } from '@src/ui/section/grid/row';
 import { Column } from '@src/ui/section/grid/column';
@@ -21,7 +21,7 @@ import {
 
 export default {
   title: 'Template/AuthFlow',
-  component: AuthFLow,
+  component: AuthFlow,
   tags: ['autodocs'],
   argTypes: {
     form: {
@@ -88,7 +88,7 @@ export default {
     },
   },
 } as Meta;
-type Story = StoryObj<typeof AuthFLow>;
+type Story = StoryObj<typeof AuthFlow>;
 
 export const Default: Story = {
   name: '登入',
@@ -198,7 +198,7 @@ export const Default: Story = {
     ),
   },
   render(args) {
-    return <AuthFLow {...args} />;
+    return <AuthFlow {...args} />;
   },
 };
 
@@ -323,7 +323,7 @@ export const SignUp: Story = {
     ),
   },
   render(args) {
-    return <AuthFLow {...args} />;
+    return <AuthFlow {...args} />;
   },
 };
 
@@ -365,7 +365,7 @@ export const Forgot: Story = {
     ),
   },
   render(args) {
-    return <AuthFLow {...args} />;
+    return <AuthFlow {...args} />;
   },
 };
 
@@ -461,7 +461,7 @@ export const Verify: Story = {
     ),
   },
   render(args) {
-    return <AuthFLow {...args} />;
+    return <AuthFlow {...args} />;
   },
 };
 
@@ -515,6 +515,6 @@ export const Password: Story = {
     ),
   },
   render(args) {
-    return <AuthFLow {...args} />;
+    return <AuthFlow {...args} />;
   },
 };
