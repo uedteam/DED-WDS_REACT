@@ -12,11 +12,10 @@ export const useInput = (
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (maxLimit) {
       setValue(e.target.value.slice(0, maxLimit));
-      onChange && onChange(e.target.value.slice(0, maxLimit));
     } else {
       setValue(e.target.value);
-      onChange && onChange(e.target.value);
     }
+    onChange && onChange(e);
   };
 
   const reset = () => {
