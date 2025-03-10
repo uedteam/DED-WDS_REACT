@@ -7,7 +7,6 @@ import {
   SvgVisibilityOff,
   SvgClose,
   SvgArrowDown,
-  SvgAccount,
 } from '@src/assets/icons';
 import { isEmpty } from 'lodash';
 import { getCombinedClassName } from '@src/utils/string';
@@ -34,7 +33,7 @@ export interface InputProps {
   placeholder?: string;
   prefix?: ReactNode;
   size?: 'small' | 'medium' | 'large';
-  currValue: string;
+  currValue: string | number;
   maxLimit?: number | undefined;
   hint?: { error: string; description: string };
   isDisabled?: boolean;
@@ -71,7 +70,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       type = 'text',
       hasClear = true,
       placeholder = 'Placeholder',
-      prefix = <SvgAccount />,
+      prefix = '',
       size = 'medium',
       currValue,
       maxLimit = 0,
@@ -85,7 +84,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     const { inputType, value, onClear, onVisibility, handleInputChange } =
-      useInput(currValue, type, onChange);
+      useInput(currValue, type, maxLimit, onChange);
 
     const baseId = useId();
     const uniqueId = `${baseId}-input`;

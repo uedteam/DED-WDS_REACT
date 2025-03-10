@@ -19,7 +19,7 @@ export interface ItemProps {
   href?: string;
   isDisabled?: boolean;
   hasDivider?: boolean;
-  onClick?: (value: string) => void;
+  onClick?: (value: ItemProps) => void;
   className?: string;
 }
 
@@ -51,7 +51,7 @@ export const Item: React.FC<ItemProps> = ({
     if (href) {
       window.open(href, '_blank');
     }
-    onClick && onClick(label);
+    onClick && onClick({ label, prefix, value, href });
   };
 
   return (

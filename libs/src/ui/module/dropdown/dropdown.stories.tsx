@@ -54,6 +54,12 @@ export default {
         category: 'PROPS',
       },
     },
+    currItem: {
+      description: '當前選擇項目',
+      table: {
+        category: 'PROPS',
+      },
+    },
     className: {
       description: '客製化樣式',
       table: {
@@ -72,6 +78,7 @@ export default {
     placeholder: 'Placeholder',
     label: 'Label',
     size: 'medium',
+    currItem: { label: 'Option1', value: 'option1' },
     className: '',
     onSelect: action('onClick'),
   },

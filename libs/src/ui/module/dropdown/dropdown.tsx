@@ -10,7 +10,8 @@ interface DropdownProps {
   placeholder?: string;
   label?: string;
   size?: 'small' | 'medium' | 'large';
-  onSelect?: (value: string) => void;
+  currItem?: ItemProps;
+  onSelect?: (item: ItemProps) => void;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   placeholder = 'Placeholder',
   label = '',
   size = 'medium',
+  currItem,
   className = '',
   onSelect,
   ...rest
@@ -25,15 +27,15 @@ export const Dropdown: React.FC<DropdownProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { childrenSize, position } = usePosition(dropdownRef);
-  const [value, setValue] = useState('');
+  const [item, setItem] = useState({ label: '', value: '' });
 
   const handleClick = () => {
     setIsVisible((prev) => !prev);
   };
 
-  const handleSelected = (value: string) => {
-    setValue(value);
-    onSelect && onSelect(value);
+  const handleSelected = (item: ItemProps) => {
+    setItem(item);
+    onSelect && onSelect(item);
     setIsVisible(false);
   };
 
@@ -55,6 +57,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
     };
   }, []);
 
+  useEffect(() => {
+    if (currItem) {
+      setItem(currItem);
+    }
+  }, [currItem]);
+
   return (
     <>
       {label && <label className="ded-input-label">{label}</label>}
@@ -67,7 +75,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
         <Input
           placeholder={placeholder}
           size={size}
-          currValue={value}
+          currValue={item.label}
+          hasClear={false}
           isOpen={isVisible}
           type="text"
           prefix=""

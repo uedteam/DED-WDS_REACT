@@ -18,6 +18,7 @@ const menuData: ItemProps[] = [
     label: 'Home',
     prefix: <SvgHome width={24} height={24} />,
     path: '/Home',
+    isDisabled: true,
     order: 1,
   },
   {
@@ -149,6 +150,28 @@ export default {
         category: 'PROPS',
       },
     },
+    userName: {
+      description: '使用者名稱',
+      table: {
+        category: 'PROPS',
+      },
+    },
+    caption: {
+      description: '使用者描述',
+      table: {
+        category: 'PROPS',
+      },
+    },
+    userStatus: {
+      options: ['none', 'online', 'busy', 'idle', 'offline'],
+      control: {
+        type: 'select',
+      },
+      description: '使用者狀態',
+      table: {
+        category: 'PROPS',
+      },
+    },
     hasSearch: {
       description: '是否有搜尋欄',
       table: {
@@ -176,6 +199,9 @@ export default {
     logoLink: 'https://www.auo.com',
     hasLogo: false,
     hasRWD: true,
+    userName: 'User Name',
+    caption: 'User Caption',
+    userStatus: 'online',
     hasSearch: true,
     dataSource: menuData,
     className: '',
@@ -282,6 +308,8 @@ dataSource={[
     },
   },
   render(args) {
+    console.log(args);
+
     return (
       <Grid fluid>
         <Row>

@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Navbar } from './navbar';
-import { has } from 'lodash';
 
 const links = [
   { label: 'Solutions', href: '#solutions', order: 2 },
@@ -32,6 +31,12 @@ export default {
         category: 'PROPS',
       },
     },
+    logoLink: {
+      description: 'Logo 連結',
+      table: {
+        category: 'PROPS',
+      },
+    },
     className: {
       description: '客製化樣式',
       control: {
@@ -53,6 +58,7 @@ export default {
     dataSource: links,
     hasLogo: true,
     logoSrc: 'https://storage.googleapis.com/ded-wds-bucket/AUO_LOGO.svg',
+    logoLink: 'https://www.auo.com',
     className: '',
     onSearch: (query: string) => {
       console.log(query);

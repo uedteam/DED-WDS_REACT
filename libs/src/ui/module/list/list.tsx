@@ -15,7 +15,7 @@ export interface ListProps {
   hasOutline?: boolean;
   dataSource: Array<ItemProps>;
   hasDivider?: boolean;
-  onSelect?: (value: string) => void;
+  onSelect?: (value: ItemProps) => void;
   className?: string;
 }
 
