@@ -1,6 +1,6 @@
 {
   "name": "ded-wds-react",
-  "version": "1.0.12-beta",
+  "version": "1.0.13-beta",
   "description": "Web Design System",
   "license": "MIT",
   "homepage": "https://uedteam.github.io/DED-WDS_REACT",
@@ -95,7 +95,6 @@
     "@types/node": "18.16.9",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
-    "@types/vanillajs-datepicker": "^1.3.5",
     "@typescript-eslint/eslint-plugin": "^7.3.0",
     "@typescript-eslint/parser": "^7.3.0",
     "@vitejs/plugin-react": "^4.2.0",
@@ -121,7 +120,6 @@
     "tailwindcss": "^3.4.17",
     "ts-node": "10.9.1",
     "typescript": "~5.4.2",
-    "vanillajs-datepicker": "^1.3.4",
     "vite": "^5.4.0",
     "vite-plugin-dts": "^3.9.1",
     "vite-plugin-svgo": "^1.6.2",
