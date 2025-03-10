@@ -66,6 +66,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             ? 'ded-checkbox-container-row'
             : 'ded-checkbox-container-column'
         }
+        ${className}
       `}
     >
       {dataSource.map((option, index) => {
@@ -77,7 +78,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             className={`ded-checkbox     
               ${getCombinedClassName('ded-text', size)}        
               ${option.isDisabled ? 'ded-checkbox-input-disabled' : ''} 
-              ${className}`}
+              `}
           >
             <input
               className="ded-checkbox-input"

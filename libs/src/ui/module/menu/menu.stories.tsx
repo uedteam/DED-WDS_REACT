@@ -100,6 +100,8 @@ export const Default: Story = {
   name: '預設項目',
   args: {},
   render(args) {
+    console.log(args);
+
     return <Menu {...args} />;
   },
 };

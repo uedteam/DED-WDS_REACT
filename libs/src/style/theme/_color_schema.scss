@@ -474,6 +474,7 @@ $status-colors: (
   .ded-icon-#{$size} {
     display: flex;
     align-items: center;
+    min-width: map.get($icon-size, $size);
     width: map.get($icon-size, $size);
     height: map.get($icon-size, $size);
   }

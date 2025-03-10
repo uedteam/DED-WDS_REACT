@@ -22,6 +22,9 @@ export interface SideNavProps {
   logoLink?: string;
   hasRWD?: boolean;
   hasLogo?: boolean;
+  userName: string;
+  caption: string;
+  userStatus: 'none' | 'online' | 'busy' | 'idle' | 'offline';
   hasSearch?: boolean;
   dataSource: ItemProps[];
   themeColor?: string;
@@ -39,35 +42,39 @@ const THEME_COLOR = {
 // 新增斷點常數
 const MOBILE_BREAKPOINT = 1024;
 
+/**
+ * 側邊導航欄元件
+ * @component
+ *
+ * @param {Object} props - 元件屬性
+ * @param {string} [props.mobileLogoSrc=''] - 手機版 Logo 圖片來源
+ * @param {string} [props.desktopLogoSrc=''] - 桌面版 Logo 圖片來源
+ * @param {string} [props.logoLink=''] - Logo 連結網址
+ * @param {boolean} [props.hasLogo=false] - 是否顯示 Logo
+ * @param {boolean} [props.hasRWD=true] - 是否啟用響應式設計
+ * @param {boolean} [props.hasSearch=false] - 是否顯示搜尋欄
+ * @param {THEME_COLOR} [props.themeColor=THEME_COLOR.Blue] - 主題顏色
+ * @param {ItemProps[]} props.dataSource - 導航選單資料來源
+ * @param {string} [props.className=''] - 自定義 CSS 類別名稱
+ *
+ * @returns {React.ReactElement} 側邊導航欄元件
+ * - 動態選單項目
+ */
 export const SideNav: React.FC<SideNavProps> = ({
-  /**
-   * 側邊導航欄元件
-   * @component
-   *
-   * @param {Object} props - 元件屬性
-   * @param {string} [props.mobileLogoSrc=''] - 手機版 Logo 圖片來源
-   * @param {string} [props.desktopLogoSrc=''] - 桌面版 Logo 圖片來源
-   * @param {string} [props.logoLink=''] - Logo 連結網址
-   * @param {boolean} [props.hasLogo=false] - 是否顯示 Logo
-   * @param {boolean} [props.hasRWD=true] - 是否啟用響應式設計
-   * @param {boolean} [props.hasSearch=false] - 是否顯示搜尋欄
-   * @param {THEME_COLOR} [props.themeColor=THEME_COLOR.Blue] - 主題顏色
-   * @param {ItemProps[]} props.dataSource - 導航選單資料來源
-   * @param {string} [props.className=''] - 自定義 CSS 類別名稱
-   *
-   * @returns {React.ReactElement} 側邊導航欄元件
-   * - 動態選單項目
-   */
   mobileLogoSrc = '',
   desktopLogoSrc = '',
   logoLink = '',
   hasLogo = false,
+  userName,
+  caption,
+  userStatus,
   hasRWD = true,
   hasSearch = false,
   themeColor = THEME_COLOR.Blue,
   dataSource,
   // menu,
   className = '',
+  ...props
 }: SideNavProps) => {
   const [color, setColor] = useState(THEME_COLOR.White);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -78,7 +85,7 @@ export const SideNav: React.FC<SideNavProps> = ({
     items.forEach((item) => {
       if (item.prefix) {
         item.prefix = React.cloneElement(item.prefix as React.ReactElement, {
-          fill: color,
+          fill: item.isDisabled ? '#C0C0C5' : color,
         });
       }
 
@@ -196,13 +203,13 @@ export const SideNav: React.FC<SideNavProps> = ({
         <div className="ded-side-nav-desktop">
           <Avatar
             alt="無圖顯示"
-            caption="Caption"
+            caption={caption}
             isShowInfo
             shape="circle"
             size="large"
             src="https://storage.googleapis.com/ded-wds-bucket/fox.png"
-            status="online"
-            userName="Name"
+            status={userStatus}
+            userName={userName}
             className=""
           />
           <Button
@@ -217,12 +224,12 @@ export const SideNav: React.FC<SideNavProps> = ({
         <div className="ded-side-nav-mobile">
           <Avatar
             alt="無圖顯示"
-            caption="Caption"
+            caption={caption}
             shape="circle"
             size="small"
             src="https://storage.googleapis.com/ded-wds-bucket/fox.png"
-            status="online"
-            userName="Name"
+            status={userStatus}
+            userName={userName}
             className=""
           />
         </div>

@@ -68,6 +68,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
               <Column sm={3}>
                 <Side>
                   <SideNav
+                    userName="John Doe"
+                    userStatus="online"
+                    caption="Software Engineer"
                     className=""
                     dataSource={[
                       {
@@ -217,6 +220,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
       <Layout>
         <Side>
           <SideNav
+            userName="John Doe"
+            userStatus="online"
+            caption="Software Engineer"
             className=""
             dataSource={[
               {

@@ -6,6 +6,8 @@ interface NavbarProps {
   dataSource: { label: string; path: string; order: number }[];
   hasLogo?: boolean;
   logoSrc: string;
+  logoLink?: string;
+  avatarSrc?: string;
   className?: string;
   onSearch?: (query: string) => void;
 }
@@ -14,6 +16,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   dataSource,
   hasLogo = true,
   logoSrc,
+  logoLink,
+  avatarSrc,
   className = '',
   onSearch,
 }) => {
@@ -40,15 +44,16 @@ export const Navbar: React.FC<NavbarProps> = ({
     <nav className={`navbar ${className}`}>
       <div className="navbar-menu">
         {hasLogo && (
-          <Button themeColor="primary" variant="text" onClick={() => ({})}>
+          <Button
+            themeColor="primary"
+            variant="text"
+            onClick={() => window.open(logoLink, '_self')}
+          >
             <img src={logoSrc} alt="Logo" className="navbar-logo" />
           </Button>
         )}
         <ul className="navbar-links">
           {currLinks.map((link) => (
-            // <li key={link.href}>
-            //   <a href={link.href}>{link.label}</a>
-            // </li>
             <Button
               key={link.label}
               themeColor="primary"
@@ -82,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="navbar-icons-icon">
             <Avatar
-              src="https://storage.googleapis.com/ded-wds-bucket/lion.png"
+              src={avatarSrc}
               alt="Avatar"
               size="small"
               status="online"

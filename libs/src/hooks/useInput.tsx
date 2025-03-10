@@ -1,16 +1,22 @@
 import { useState, useEffect, ChangeEventHandler } from 'react';
 
 export const useInput = (
-  currValue: string,
+  currValue: string | number,
   type: string,
+  maxLimit: number | undefined,
   onChange: ChangeEventHandler<HTMLInputElement> | undefined
 ) => {
   const [value, setValue] = useState(currValue);
   const [inputType, setInputType] = useState(type);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-    onChange && onChange(e);
+    if (maxLimit) {
+      setValue(e.target.value.slice(0, maxLimit));
+      onChange && onChange(e.target.value.slice(0, maxLimit));
+    } else {
+      setValue(e.target.value);
+      onChange && onChange(e.target.value);
+    }
   };
 
   const reset = () => {
