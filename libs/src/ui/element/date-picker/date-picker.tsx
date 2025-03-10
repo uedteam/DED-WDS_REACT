@@ -1,4 +1,3 @@
-import 'vanillajs-datepicker/css/datepicker-foundation.css';
 import React, { useEffect, useRef, forwardRef, useState } from 'react';
 import { Datepicker, DateRangePicker } from 'vanillajs-datepicker';
 import { Input } from '@src/ui';
