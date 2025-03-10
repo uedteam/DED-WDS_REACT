@@ -22,5 +22,11 @@
 - Pass the logoLink prop to the Navbar component
 - Add avatarSrc and logoLink props to the Navbar component
 - Update the avatar source in the `
+- Include the vanillajs-datepicker/css/datepicker-foundation.css in \_datepicker.scss
+- Add padding-inline to the .ded-input-group in \_input.scss
+- Set container-type: 'inline-size' in \_input.scss
+- Update styles in .ded-input and .ded-input-feat-icon in \_input.scss
+- Remove import 'vanillajs-datepicker/css/datepicker-foundation.css'; from date-- picker.tsx
+- Add conditional rendering for clear icon in Input component in input.tsx
 
 🪲 Bug Fix
