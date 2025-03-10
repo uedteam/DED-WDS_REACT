@@ -134,47 +134,49 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
 
-          <div className="ded-input-feat-icon">
-            {!isDisabled && hasClear && !isEmpty(value) && (
-              <div
-                onClick={onClear}
-                style={{ cursor: 'pointer' }}
-                className={`${getSizeClass('ded-icon', size)}`}
-              >
-                <SvgClose />
-              </div>
-            )}
+          {(hasClear || type === 'password') && (
+            <div className="ded-input-feat-icon">
+              {!isDisabled && hasClear && !isEmpty(value) && (
+                <div
+                  onClick={onClear}
+                  style={{ cursor: 'pointer' }}
+                  className={`${getSizeClass('ded-icon', size)}`}
+                >
+                  <SvgClose />
+                </div>
+              )}
 
-            {!isEmpty(value) && type === 'password' && (
-              <div
-                onClick={onVisibility}
-                style={{ cursor: 'pointer' }}
-                className={`${getSizeClass('ded-icon', size)}`}
-              >
-                {inputType === 'password' ? (
-                  <SvgVisibilityOff />
-                ) : (
-                  <SvgVisibility />
-                )}
-              </div>
-            )}
+              {!isEmpty(value) && type === 'password' && (
+                <div
+                  onClick={onVisibility}
+                  style={{ cursor: 'pointer' }}
+                  className={`${getSizeClass('ded-icon', size)}`}
+                >
+                  {inputType === 'password' ? (
+                    <SvgVisibilityOff />
+                  ) : (
+                    <SvgVisibility />
+                  )}
+                </div>
+              )}
 
-            {isOpen !== undefined && (
-              <div
-                onClick={onClear}
-                style={{ cursor: 'pointer' }}
-                className={`${getSizeClass('ded-icon', size)}`}
-              >
-                <SvgArrowDown
-                  width={20}
-                  height={20}
-                  className={
-                    isOpen ? 'ded-dropdown-open' : 'ded-dropdown-close'
-                  }
-                />
-              </div>
-            )}
-          </div>
+              {isOpen !== undefined && (
+                <div
+                  onClick={onClear}
+                  style={{ cursor: 'pointer' }}
+                  className={`${getSizeClass('ded-icon', size)}`}
+                >
+                  <SvgArrowDown
+                    width={20}
+                    height={20}
+                    className={
+                      isOpen ? 'ded-dropdown-open' : 'ded-dropdown-close'
+                    }
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
         <small
           className={`ded-input-hint ${
