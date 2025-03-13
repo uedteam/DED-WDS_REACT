@@ -1,8 +1,0 @@
-import{j as e}from"./jsx-runtime-DEdD30eg.js";import{b as a}from"./warning-tri-BnRwNKC6.js";import"./index-RYns6xqu.js";import{S as t}from"./home-49bMB0eq.js";import{M as p}from"./menu-Cht71pYN.js";import"./toast-DsajqLjU.js";import"./close-o-4V2u0k.js";import"./string-BqrfsRv8.js";import"./title-BdHUK5iL.js";import"./index-sbqOYYIm.js";const l=[{label:"Dashboard",prefix:e.jsx(t,{width:24,height:24}),path:"/dashboard",order:1,isDisabled:!0},{label:"Settings",prefix:e.jsx(t,{width:24,height:24}),path:"/settings",children:[{label:"Profile",prefix:e.jsx(a,{width:24,height:24}),path:"/settings/profile",order:1},{label:"Account",prefix:e.jsx(a,{width:24,height:24}),path:"/settings/account",order:2}],order:2},{label:"Help",prefix:e.jsx(t,{width:24,height:24}),path:"/help",order:3}],P={title:"Component/Menu",component:p,tags:["autodocs"],argTypes:{dataSource:{description:"資料來源",table:{category:"PROPS"}},isCollapsed:{description:"是否收合",table:{category:"PROPS"}},color:{description:"顏色",control:{type:"color"},table:{category:"PROPS"}},hasDivider:{description:"是否有分隔線",table:{category:"PROPS"}},className:{description:"客製化樣式",table:{category:"PROPS"}}},args:{dataSource:l,isCollapsed:!1,color:"#000000",hasDivider:!1,className:""},parameters:{docs:{title:"Menu",description:{component:"選單組件的呈現及說明。"}}}},r={name:"預設項目",args:{},render(o){return console.log(o),e.jsx(p,{...o})}};var s,i,n;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
-  name: '預設項目',
-  args: {},
-  render(args) {
-    console.log(args);
-    return <Menu {...args} />;
-  }
-}`,...(n=(i=r.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};const j=["Default"];export{r as Default,j as __namedExportsOrder,P as default};
