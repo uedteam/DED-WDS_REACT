@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as p}from"./index-DGGgOZVZ.js";import"./index-RYns6xqu.js";import"./iframe-CDyJzuff.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const a=`# 關於 Web Design system Storybook
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as o,am as a}from"./index-BJzZpHDQ.js";import"./index-RYns6xqu.js";import"./iframe-iyMg-leN.js";import"../sb-preview/runtime.js";import"./index-sbqOYYIm.js";import"./index-BwO1pRjM.js";import"./index-DrFu-skq.js";const p=`# 關於 Web Design system Storybook
 
 ## 關於 AUO Design system
 
@@ -99,7 +99,7 @@ export default defineConfig({
 
 ### 步驟三：放入相關資源並引用 SCSS 檔
 
-- 下載 [source.zip](https://storage.googleapis.com/ded-wds-bucket/uat/wds/source.zip)
+- 下載 [source-v1.0.16-beta.gz](https://storage.googleapis.com/ded-wds-bucket/uat/wds/source-v1.0.16-beta.gz)
 
 - 移除專案預設樣式 (App.css、index.css)、移除預設匯入 css 檔 (App.css、index.css)
 
@@ -149,4 +149,4 @@ Design system 為提供便利的功能，部分常見元件採用功能完善的
 `,`
 `,n.jsx(o,{title:"Introduction/Installation"}),`
 `,n.jsx(t.h1,{id:"installation",children:"Installation"}),`
-`,n.jsx(p,{children:a})]})}function S(s={}){const{wrapper:t}={...i(),...s.components};return t?n.jsx(t,{...s,children:n.jsx(e,{...s})}):e(s)}export{S as default};
+`,n.jsx(a,{children:p})]})}function S(s={}){const{wrapper:t}={...i(),...s.components};return t?n.jsx(t,{...s,children:n.jsx(e,{...s})}):e(s)}export{S as default};
