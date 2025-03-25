@@ -1,6 +1,7 @@
 @use 'sass:list';
 @use '../../theme/index' as *;
-@use 'vanillajs-datepicker/sass/datepicker-foundation';
+@use 'vanillajs-datepicker/css/datepicker-foundation.css';
+
 
 
 .datepicker {
