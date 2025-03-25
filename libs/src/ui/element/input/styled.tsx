@@ -1,4 +1,5 @@
 import { isEmpty } from 'lodash';
+import { ReactNode } from 'react';
 
 /**
  * 根據錯誤和描述值返回適當的邊框類別。
@@ -12,12 +13,12 @@ export const getBorderClass = ({
   error,
   description,
 }: {
-  error: string;
-  description: string;
+  error: ReactNode;
+  description: ReactNode;
 }) => {
   if (isEmpty(error) && isEmpty(description)) return '';
 
-  return error.length > 0 ? 'ded-input-border-error' : 'ded-input-border-desc';
+  return error ? 'ded-input-border-error' : 'ded-input-border-desc';
 };
 
 /**
@@ -30,14 +31,14 @@ export const getHintClass = ({
   error,
   description,
 }: {
-  error: string;
-  description: string;
+  error: ReactNode;
+  description: ReactNode;
 }) => {
-  if (error.length > 0) {
+  if (error) {
     return 'ded-input-hint-error';
   }
 
-  if (description.length > 0) {
+  if (description) {
     return 'ded-input-hint-desc';
   }
 };

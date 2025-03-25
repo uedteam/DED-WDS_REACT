@@ -35,7 +35,7 @@ export interface InputProps {
   size?: 'small' | 'medium' | 'large';
   currValue: string | number;
   maxLimit?: number | undefined;
-  hint?: { error: string; description: string };
+  hint?: { error: ReactNode; description: ReactNode };
   isDisabled?: boolean;
   isOpen?: boolean | undefined;
   className?: string;
@@ -114,7 +114,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               className={`ded-input-icon 
               ${getCombinedClassName('ded-icon', size)}
               ${isDisabled ? 'ded-input-icon-disable' : ''}
-              ${hint.error.length > 0 ? 'ded-input-icon-error' : ''}`}
+              ${hint.error ? 'ded-input-icon-error' : ''}`}
             >
               {prefix}
             </label>
@@ -134,7 +134,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
 
-          {(hasClear || type === 'password') && (
+          {(hasClear || type === 'password' || isOpen !== undefined) && (
             <div className="ded-input-feat-icon">
               {!isDisabled && hasClear && !isEmpty(value) && (
                 <div
@@ -183,7 +183,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             isDisabled ? 'ded-input-disable' : getHintClass(hint)
           }`}
         >
-          {hint.error.length > 0 ? hint.error : hint.description}
+          {hint.error ? hint.error : hint.description}
         </small>
       </div>
     );

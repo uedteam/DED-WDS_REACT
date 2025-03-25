@@ -297,6 +297,10 @@ dataSource={[
       label: 'Language'
     }
   ]}
+  userName="User Name"
+  caption="User Caption"
+  userStatus="online"
+  hasRWD
   hasSearch
   desktopLogoSrc="https://storage.googleapis.com/ded-wds-bucket/AUO_LOGO_W.svg"
   mobileLogoSrc="https://storage.googleapis.com/ded-wds-bucket/AUO_LOGO.svg"

@@ -1,12 +1,13 @@
+import { ReactNode } from 'react';
+
 /**
  * 根據錯誤訊息返回 textarea 邊框的 CSS 類名。
  *
  * @param error - 錯誤訊息。
  * @returns 如果錯誤訊息為空，則返回 undefined，否則返回 textarea 邊框的 CSS 類名。
  */
-export const getBorderClass = (error: string) => {
-  if (error.length <= 0) return '';
-  return 'ded-textarea-border-error';
+export const getBorderClass = (error: ReactNode) => {
+  if (error) return 'ded-textarea-border-error';
 };
 
 /**
@@ -20,14 +21,14 @@ export const getHintClass = ({
   error,
   description,
 }: {
-  error: string;
-  description: string;
+  error: ReactNode;
+  description: ReactNode;
 }) => {
-  if (error.length > 0) {
+  if (error) {
     return 'ded-textarea-hint-error';
   }
 
-  if (description.length > 0) {
+  if (description) {
     return 'ded-textarea-hint-desc';
   }
 };
