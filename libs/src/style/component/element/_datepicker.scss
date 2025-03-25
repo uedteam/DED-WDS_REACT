@@ -1,6 +1,7 @@
 @use 'sass:list';
 @use '../../theme/index' as *;
-@import 'vanillajs-datepicker/sass/datepicker-foundation.scss';
+@use 'vanillajs-datepicker/sass/datepicker-foundation';
+
 
 .datepicker {
   margin-top: $spacing-4;
