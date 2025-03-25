@@ -8,9 +8,10 @@ AUO Design system 是一套跨設計與程式的設計系統，採用原子化�
 
 ### 確認相容於以下版本
 
-1. "react": "19.0.0"
-2. "sass": "^1.81.0",
-3. "vite-plugin-svgr": "^4.3.0"
+1. "nodejs": "v21.7.1"
+2. "react": "19.0.0"
+3. "sass": "^1.81.0"
+4. "vite-plugin-svgr": "^4.3.0"
 
 ## 安裝方式
 

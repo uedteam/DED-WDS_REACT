@@ -355,7 +355,7 @@ export const Type: Story = {
           <div className={`ded-toast-header`}>
             <div className="ded-toast-header-message ded-toast-header-message-neutral">
               <SvgDisableCircle width={18} height={18} />
-              <Title level={5} themeColor="info">
+              <Title level={5} themeColor="neutral">
                 {title}
               </Title>
             </div>

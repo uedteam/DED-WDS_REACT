@@ -1,6 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from './textarea';
+import { StatusIndicator } from '@src/ui';
+import { SvgErrorCircle } from '@src/assets/icons';
 
 export default {
   title: 'Component/Textarea',
@@ -136,9 +138,35 @@ export const TextareaStatus: Story = {
       <>
         <Textarea
           {...args}
-          hint={{ error: '', description: 'Prompt message' }}
+          hint={{
+            error: '',
+            description: (
+              <StatusIndicator
+                themeColor="neutral"
+                variant="text"
+                prefix=""
+                isShowDot={false}
+              >
+                Prompt message
+              </StatusIndicator>
+            ),
+          }}
         />
-        <Textarea {...args} hint={{ error: 'Error', description: '' }} />
+        <Textarea
+          {...args}
+          hint={{
+            error: (
+              <StatusIndicator
+                themeColor="error"
+                variant="text"
+                prefix={<SvgErrorCircle />}
+              >
+                Error message
+              </StatusIndicator>
+            ),
+            description: '',
+          }}
+        />
         <Textarea {...args} isDisabled />
       </>
     );

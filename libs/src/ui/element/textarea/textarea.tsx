@@ -1,4 +1,4 @@
-import { useEffect, useState, useId } from 'react';
+import { useEffect, useState, useId, ReactNode } from 'react';
 import { getHintClass, getCountClass, getBorderClass } from './styled';
 
 /**
@@ -20,7 +20,7 @@ export interface TextareaProps {
   placeholder?: string;
   isDisabled?: boolean;
   limit?: number;
-  hint?: { error: string; description: string };
+  hint?: { error: ReactNode; description: ReactNode };
   currValue: string;
   className?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
@@ -101,7 +101,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           ${getHintClass(hint)} 
           ${isDisabled ? 'ded-textarea-disable' : ''}`}
       >
-        {hint.error.length > 0 ? hint.error : hint.description}
+        {hint.error ? hint.error : hint.description}
       </small>
     </div>
   );

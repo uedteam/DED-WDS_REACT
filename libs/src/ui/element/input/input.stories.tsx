@@ -8,8 +8,11 @@ import {
   SvgVisibilityOff,
   SvgClose,
   SvgLock,
+  SvgWarningTri,
+  SvgErrorCircle,
 } from '@src/assets/icons';
 import { ChangeEvent } from 'react';
+import { StatusIndicator } from '@src/ui';
 
 const IconComponents = {
   None: null,
@@ -147,7 +150,19 @@ export default {
     currValue: '',
     prefix: <SvgAccount />,
     maxLimit: 0,
-    hint: { error: '', description: 'Prompt message' },
+    hint: {
+      error: '',
+      description: (
+        <StatusIndicator
+          themeColor="neutral"
+          variant="text"
+          prefix=""
+          isShowDot={false}
+        >
+          Prompt message
+        </StatusIndicator>
+      ),
+    },
     isDisabled: false,
     className: '',
     onChange: (e: ChangeEvent) => action('changed')(e.target),
@@ -234,12 +249,35 @@ export const InputWithStatus: Story = {
         <Input
           {...args}
           label="Account"
-          hint={{ error: 'Error message', description: '' }}
+          hint={{
+            error: (
+              <StatusIndicator
+                themeColor="error"
+                variant="text"
+                prefix={<SvgErrorCircle />}
+              >
+                Error message
+              </StatusIndicator>
+            ),
+            description: '',
+          }}
         />
         <Input
           {...args}
           label="Account"
-          hint={{ error: '', description: 'Prompt message' }}
+          hint={{
+            error: '',
+            description: (
+              <StatusIndicator
+                themeColor="neutral"
+                variant="text"
+                prefix=""
+                isShowDot={false}
+              >
+                Prompt message
+              </StatusIndicator>
+            ),
+          }}
         />
       </>
     );

@@ -2,10 +2,10 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Navbar } from './navbar';
 
 const links = [
-  { label: 'Solutions', href: '#solutions', order: 2 },
-  { label: 'Products', href: '#products', order: 1 },
-  { label: 'Technologies', href: '#technologies', order: 4 },
-  { label: 'About', href: '#about', order: 3 },
+  { label: 'Solutions', path: '#solutions', order: 2 },
+  { label: 'Products', path: '#products', order: 1 },
+  { label: 'Technologies', path: '#technologies', order: 4 },
+  { label: 'About', path: '#about', order: 3 },
 ];
 
 export default {
