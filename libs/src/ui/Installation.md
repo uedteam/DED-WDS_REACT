@@ -99,7 +99,7 @@ export default defineConfig({
 
 ### 步驟三：放入相關資源並引用 SCSS 檔
 
-- 下載 [source.zip](https://storage.googleapis.com/ded-wds-bucket/uat/wds/source.zip)
+- 下載 [source-v1.0.16-beta.gz](https://storage.googleapis.com/ded-wds-bucket/uat/wds/source-v1.0.16-beta.gz)
 
 - 移除專案預設樣式 (App.css、index.css)、移除預設匯入 css 檔 (App.css、index.css)
 

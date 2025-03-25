@@ -1,32 +1,15 @@
-## V1.0.14-beta (2025/3/10)
+## V1.0.16-beta (2025/3/25)
 
 ✨ New Feature
 
 🆙 Update
 
-- Modify the useInput function to accept currValue as a number
-- Add a maxLimit parameter to the useInput function
-- Limit the input value to maxLimit characters
-- Modify the onChange handling in the handleInputChange function
-- Remove the font-size setting from the \_input.scss file
-- Update the background color in the \_navbar.scss file
-- Add a min-width style in the \_color_schema.scss file
-- Update the onClick event handler in the Checkbox component
-- Modify the Input component to accept currValue as a number type
-- Remove SvgAccount and change to no prefix in the Input component
-- Update the Dropdown component to use ItemProps for currItem and onSelect
-- Add a usage of currItem to pre-fill the item in the Dropdown component
-- Modify the onClick event in the Item component to pass the whole item object
-- Update the List component to use ItemProps for onSelect
-- Modify the onClick event in the navbar stories component
-- Pass the logoLink prop to the Navbar component
-- Add avatarSrc and logoLink props to the Navbar component
-- Update the avatar source in the `
-- Include the vanillajs-datepicker/css/datepicker-foundation.css in \_datepicker.scss
-- Add padding-inline to the .ded-input-group in \_input.scss
-- Set container-type: 'inline-size' in \_input.scss
-- Update styles in .ded-input and .ded-input-feat-icon in \_input.scss
-- Remove import 'vanillajs-datepicker/css/datepicker-foundation.css'; from date-- picker.tsx
-- Add conditional rendering for clear icon in Input component in input.tsx
+- Update the compatibility versions to include "nodejs": "v21.7.1"
+- Modify the hint message for the input element to include a StatusIndicator component
+- Update the hint structure for the Input and Textarea components to use ReactNode instead of strings
+- Add ReactNode import in element/input/styled.tsx and element/textarea/textarea.tsx
+- Modify the Type story to change the themeColor to "neutral" instead of "info"
+- Change the href keys in the navbar links to path
+- Add userName, caption, userStatus, and hasRWD props to the side-nav story options
 
 🪲 Bug Fix
